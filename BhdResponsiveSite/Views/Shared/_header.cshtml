@@ -1,0 +1,29 @@
+﻿    @{ 
+        var currentController = ViewContext.RouteData.Values["controller"] as string ?? "Home";
+        var currentAction = ViewContext.RouteData.Values["action"] as string ?? "Index";
+        var currentPage = (currentController + "-" + currentAction).ToLower();
+    }
+
+<div id="header-image"></div>
+<ul id="header-logo">
+    <li>
+        <img src="/Content/images/logo/black.png" alt="black" />
+    </li>
+    <li>
+        <img src="/Content/images/logo/hawk.png" alt="hawk" />
+    </li>
+    <li>
+        <img src="/Content/images/logo/down.png" alt="down" />
+    </li>
+</ul>
+
+<div id="navigation">
+    <ul>
+        <li>@Html.ActionLink("Home", "Index", "Home", null, new { @class = currentPage == "home-index" ? "current" : "" })</li>
+        <li>@Html.ActionLink("Gig Dates", "Index", "Gigs", null, new { @class = currentPage == "gigs-index" ? "current" : "" })</li>
+        <li>@Html.ActionLink("About", "Index", "Members", null, new { @class = currentPage == "members-index" ? "current" : "" })</li>
+        <li>@Html.ActionLink("Watch/Listen", "Index", "Music", null, new { @class = currentPage == "music-index" ? "current" : "" })</li>
+        <li>@Html.ActionLink("Links", "Index", "Links", null, new { @class = currentPage == "links-index" ? "current" : "" })</li>
+        <li>@Html.ActionLink("Contact Us", "Index", "Contact", null, new { @class = currentPage == "contact-index" ? "current" : "" })</li>
+    </ul>
+</div>

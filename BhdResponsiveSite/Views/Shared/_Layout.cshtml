@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <ul class="page">
+        <li id="header" class="main-section">
+            @Html.Partial("_header")
+        </li>
+        
+        <li id="main-content" class="main-section">
+            @RenderBody()
+        </li>
+
+        <li id="footer" class="main-section">
+            @Html.Partial("_footer")
+        </li>
+    </ul>
+    
+
+    @Scripts.Render("~/bundles/jquery")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

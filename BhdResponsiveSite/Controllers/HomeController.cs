@@ -16,5 +16,29 @@ namespace BhdResponsiveSite.Controllers
             return View();
         }
 
+        public ActionResult Gigs()
+        {
+            return View();
+        }
+
+        public ActionResult About()
+        {
+            return View();
+        }
+
+        public ActionResult Links()
+        {
+            return View();
+        }
+
+        public ActionResult Music()
+        {
+            return View();
+        }
+
+        public ActionResult Contact()
+        {
+            return View();
+        }
     }
 }

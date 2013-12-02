@@ -12,10 +12,10 @@
 <div id="navigation">
     <ul>
         <li>@Html.ActionLink("Home", "Index", "Home", null, new { @class = currentPage == "home-index" ? "current" : "" })</li>
-        <li>@Html.ActionLink("Gig Dates", "Index", "Gigs", null, new { @class = currentPage == "gigs-index" ? "current" : "" })</li>
-        <li>@Html.ActionLink("About", "Index", "Members", null, new { @class = currentPage == "members-index" ? "current" : "" })</li>
-        <li>@Html.ActionLink("Watch/Listen", "Index", "Music", null, new { @class = currentPage == "music-index" ? "current" : "" })</li>
-        <li>@Html.ActionLink("Links", "Index", "Links", null, new { @class = currentPage == "links-index" ? "current" : "" })</li>
-        <li>@Html.ActionLink("Contact Us", "Index", "Contact", null, new { @class = currentPage == "contact-index" ? "current" : "" })</li>
+        <li>@Html.ActionLink("Gig Dates", "Gigs", "Home", null, new { @class = currentPage == "gigs-index" ? "current" : "" })</li>
+        <li>@Html.ActionLink("About", "About", "Home", null, new { @class = currentPage == "members-index" ? "current" : "" })</li>
+        <li>@Html.ActionLink("Watch/Listen", "Music", "Home", null, new { @class = currentPage == "music-index" ? "current" : "" })</li>
+        <li>@Html.ActionLink("Links", "Links", "Home", null, new { @class = currentPage == "links-index" ? "current" : "" })</li>
+        <li>@Html.ActionLink("Contact Us", "Contact", "Home", null, new { @class = currentPage == "contact-index" ? "current" : "" })</li>
     </ul>
 </div>

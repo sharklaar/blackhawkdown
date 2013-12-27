@@ -12,11 +12,6 @@
         background: -moz-linear-gradient(top,  rgba(0,0,0,1) 0%, rgba(143,2,34,1) 35%, rgba(143,2,34,1) 63%, rgba(0,0,0,1) 100%); /* FF3.6+ */
         background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,1)), color-stop(35%,rgba(143,2,34,1)), color-stop(63%,rgba(143,2,34,1)), color-stop(100%,rgba(0,0,0,1))); /* Chrome,Safari4+ */
         background: -webkit-linear-gradient(top,  rgba(0,0,0,1) 0%,rgba(143,2,34,1) 35%,rgba(143,2,34,1) 63%,rgba(0,0,0,1) 100%); /* Chrome10+,Safari5.1+ */
-        background: -o-linear-gradient(top,  rgba(0,0,0,1) 0%,rgba(143,2,34,1) 35%,rgba(143,2,34,1) 63%,rgba(0,0,0,1) 100%); /* Opera 11.10+ */
-        background: -ms-linear-gradient(top,  rgba(0,0,0,1) 0%,rgba(143,2,34,1) 35%,rgba(143,2,34,1) 63%,rgba(0,0,0,1) 100%); /* IE10+ */
-        background: linear-gradient(to bottom,  rgba(0,0,0,1) 0%,rgba(143,2,34,1) 35%,rgba(143,2,34,1) 63%,rgba(0,0,0,1) 100%); /* W3C */
-        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
-    
     }
 
     #navigation {
@@ -39,7 +34,7 @@
         width: 44px;
         border: 0;
         color: #FFFFFF;
-        margin: 0px 0 0;
+        margin: 0 0 0;
     }
 
     #globalNavButton .bar {
@@ -95,4 +90,48 @@
         height: 5px;
         margin: 5px 8px;
     }
+}
+
+.promo {
+    width: 100%;
+    height: 100px;
+    margin: 30px 0;
+    position: relative;
+    border-radius: 10px;
+}
+
+a.promo-link {
+    height: 100px;
+    width: 95%;
+    display: block;
+    margin: 0 auto;
+    border: 8px solid #8f0222;
+    -webkit-box-shadow: 0px 2px 10px rgba(50, 50, 50, 1);
+    -moz-box-shadow: 0px 2px 10px rgba(50, 50, 50, 1);
+    box-shadow: 0px 2px 10px rgba(50, 50, 50, 1);
+    border-radius: 10px;
+    /*
+    background: rgb(0,0,0); 
+    background: -moz-linear-gradient(top,  rgba(0,0,0,1) 0%, rgba(143,2,34,1) 35%, rgba(143,2,34,1) 63%, rgba(0,0,0,1) 100%); 
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,1)), color-stop(35%,rgba(143,2,34,1)), color-stop(63%,rgba(143,2,34,1)), color-stop(100%,rgba(0,0,0,1)));
+    background: -webkit-linear-gradient(top,  rgba(0,0,0,1) 0%,rgba(143,2,34,1) 35%,rgba(143,2,34,1) 63%,rgba(0,0,0,1) 100%); 
+    background: linear-gradient(to bottom,  rgba(0,0,0,1) 0%,rgba(143,2,34,1) 35%,rgba(143,2,34,1) 63%,rgba(0,0,0,1) 100%);
+    border: 1px solid white;*/
+}
+
+.promo .music .promo-img {
+    background: url('images/music-thumb.jpg') 0 0 no-repeat;
+    background-size: cover;
+    background-origin: border-box;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.promo-text {
+    position: absolute;
+    top: 0;
+    padding: 10px;
+    width: 100%;
+
 }

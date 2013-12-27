@@ -141,6 +141,7 @@
     <Content Include="Content\images\logo\blackhawkdown.png" />
     <Content Include="Content\images\logo\down.png" />
     <Content Include="Content\images\logo\hawk.png" />
+    <Content Include="Content\images\music-thumb.jpg" />
     <Content Include="Content\images\twitter.png" />
     <Content Include="Content\images\youtube.png" />
     <Content Include="Content\mobile.css" />

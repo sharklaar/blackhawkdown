@@ -1,0 +1,98 @@
+﻿@media (max-width: 600px) {
+    .page {
+        padding: 0;
+        width: 100%;
+    }
+    
+    #header {
+        height: 50px;
+        padding-top: 10px;
+        width: 100%;
+        background: rgb(0,0,0); /* Old browsers */
+        background: -moz-linear-gradient(top,  rgba(0,0,0,1) 0%, rgba(143,2,34,1) 35%, rgba(143,2,34,1) 63%, rgba(0,0,0,1) 100%); /* FF3.6+ */
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,1)), color-stop(35%,rgba(143,2,34,1)), color-stop(63%,rgba(143,2,34,1)), color-stop(100%,rgba(0,0,0,1))); /* Chrome,Safari4+ */
+        background: -webkit-linear-gradient(top,  rgba(0,0,0,1) 0%,rgba(143,2,34,1) 35%,rgba(143,2,34,1) 63%,rgba(0,0,0,1) 100%); /* Chrome10+,Safari5.1+ */
+        background: -o-linear-gradient(top,  rgba(0,0,0,1) 0%,rgba(143,2,34,1) 35%,rgba(143,2,34,1) 63%,rgba(0,0,0,1) 100%); /* Opera 11.10+ */
+        background: -ms-linear-gradient(top,  rgba(0,0,0,1) 0%,rgba(143,2,34,1) 35%,rgba(143,2,34,1) 63%,rgba(0,0,0,1) 100%); /* IE10+ */
+        background: linear-gradient(to bottom,  rgba(0,0,0,1) 0%,rgba(143,2,34,1) 35%,rgba(143,2,34,1) 63%,rgba(0,0,0,1) 100%); /* W3C */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
+    
+    }
+
+    #navigation {
+        display: none;
+    }
+    
+    #header-image {
+        display: none;
+    }
+
+    #header-logo {
+        float: left;
+        top: 0;
+        width: 75%
+    }
+
+    #globalNavButton {
+        padding: 0;
+        float: right;
+        width: 44px;
+        border: 0;
+        color: #FFFFFF;
+        margin: 0px 0 0;
+    }
+
+    #globalNavButton .bar {
+        background-color: white;
+        border-radius: 3px;
+        box-shadow: 0 1px 0 rgba(0,0,0,0.25);
+        display: block;
+        height: 4px;
+        line-height: 14px;
+        margin: 4px 8px;
+        width: 25px;
+    }
+}
+
+
+@media (max-width: 321px) {
+    #header-logo {
+        float: left;
+        top: 0;
+        width: 75%;
+        margin:4%;
+    }
+
+    #globalNavButton .bar {
+        height: 4px;
+        margin: 4px 8px;
+    }
+}
+
+@media (min-width: 321px) and (max-width: 470px) {
+    #header-logo {
+        float: left;
+        top: 0;
+        width: 75%;
+        margin:3%;
+    }
+
+    #globalNavButton .bar {
+        height: 5px;
+        margin: 5px 8px;
+    }
+}
+
+@media (min-width: 470px) and (max-width: 600px) {
+    #header-logo {
+        float: left;
+        top: 0;
+        width: 75%;
+        margin:1%;
+    }
+
+    #globalNavButton .bar {
+        height: 5px;
+        margin: 5px 8px;
+    }
+}

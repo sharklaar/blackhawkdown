@@ -5,6 +5,7 @@
     background-color: #ccc;
     background: url('/Content/images/bgs/treadplate_background.jpg');
     width: 100%;
+    margin: 0;
 }
 
 header, footer, nav, section {
@@ -96,7 +97,8 @@ a {
 }
 
 .page {
-    width: 904px;
+    width: 95%;
+    max-width: 904px;
     margin: 0 auto; 
     background-color: #000;  
     background-color: rgba(0,0,0,0.4);
@@ -106,7 +108,7 @@ a {
 /***********    FOOTER PARTIAL CSS        ************************************************/
     
 #footer ul {    
-    width: 100%;
+    width: 95%;
     position: relative;
     margin: 0;
     padding: 0;   
@@ -125,16 +127,16 @@ a {
 /*************** HEADER PARTIAL CSS **************************************************/
 
 #header-image {
-    background: url('/Content/images/header-band.jpg');
+    background: url('/Content/images/header-band.jpg') 0 0 no-repeat;
     width: 100%;
     height: 191px;
+    background-size: 100%;
 }
 
 #header-logo {
     position: absolute;
     top: 110px;
     width: 100%;
-    padding-left: 13px;
 }
 
 #header-logo img {
@@ -142,8 +144,9 @@ a {
 }
 
 #navigation {
-    width: 100%;
+    width: 95%;
     border-radius: 0px 0px 10px 10px;
+    margin: 0 auto;
 }
 
 #navigation ul {
@@ -153,7 +156,8 @@ a {
 #navigation ul li {
     display: inline;
     float: left; 
-    text-align: center;  
+    text-align: center;
+    width: 16.666667%;
 }
 
 #navigation ul li a {
@@ -166,8 +170,8 @@ a {
     background: -ms-linear-gradient(top,  rgba(0,0,0,1) 0%,rgba(143,2,34,1) 35%,rgba(143,2,34,1) 63%,rgba(0,0,0,1) 100%); /* IE10+ */
     background: linear-gradient(to bottom,  rgba(0,0,0,1) 0%,rgba(143,2,34,1) 35%,rgba(143,2,34,1) 63%,rgba(0,0,0,1) 100%); /* W3C */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
-    padding: 10px 5px 10px 5px; 
-    width: 132px;   
+    padding: 10px 0 10px 0; 
+    width: 100%;   
     border-left: 1px solid black;
 }
 

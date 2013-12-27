@@ -93,45 +93,54 @@
 }
 
 .promo {
-    width: 100%;
-    height: 100px;
+    width: 95%;
+    height: 150px;
     margin: 30px 0;
     position: relative;
     border-radius: 10px;
+    border: 6px solid #8f0222;
+    border-radius: 10px;
+    -webkit-border-image: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#8f0222), color-stop(51%,#000000), color-stop(100%,#8f0222)) 6 6 6 6  repeat repeat;
+    box-shadow: 0 0 20px #888;
 }
 
 a.promo-link {
-    height: 100px;
-    width: 95%;
+    height: 150px;
+    width: 100%;
     display: block;
     margin: 0 auto;
-    border: 8px solid #8f0222;
-    -webkit-box-shadow: 0px 2px 10px rgba(50, 50, 50, 1);
-    -moz-box-shadow: 0px 2px 10px rgba(50, 50, 50, 1);
-    box-shadow: 0px 2px 10px rgba(50, 50, 50, 1);
-    border-radius: 10px;
-    /*
-    background: rgb(0,0,0); 
-    background: -moz-linear-gradient(top,  rgba(0,0,0,1) 0%, rgba(143,2,34,1) 35%, rgba(143,2,34,1) 63%, rgba(0,0,0,1) 100%); 
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,1)), color-stop(35%,rgba(143,2,34,1)), color-stop(63%,rgba(143,2,34,1)), color-stop(100%,rgba(0,0,0,1)));
-    background: -webkit-linear-gradient(top,  rgba(0,0,0,1) 0%,rgba(143,2,34,1) 35%,rgba(143,2,34,1) 63%,rgba(0,0,0,1) 100%); 
-    background: linear-gradient(to bottom,  rgba(0,0,0,1) 0%,rgba(143,2,34,1) 35%,rgba(143,2,34,1) 63%,rgba(0,0,0,1) 100%);
-    border: 1px solid white;*/
 }
 
-.promo .music .promo-img {
-    background: url('images/music-thumb.jpg') 0 0 no-repeat;
+.promo .promo-img {
     background-size: cover;
     background-origin: border-box;
+    background-repeat: no-repeat;
     display: block;
     width: 100%;
     height: 100%;
 }
 
+.promo .music .promo-img {
+    background-image: url('images/music-thumb.jpg');
+}
+
+.promo .gigs .promo-img {
+    background-image: url('images/gigs-thumb.jpg');
+}
+
+.promo .about .promo-img {
+    background-image: url('images/about-thumb.jpg');
+}
+
 .promo-text {
     position: absolute;
     top: 0;
-    padding: 10px;
+    padding: 10px 5px 15px 4%;
     width: 100%;
+    font-weight: bold;
+    width: 40%;
+}
 
+.even .promo-text {
+    right: 0;
 }

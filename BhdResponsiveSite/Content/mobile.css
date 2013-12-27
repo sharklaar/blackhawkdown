@@ -1,4 +1,15 @@
-﻿@media (max-width: 600px) {
+﻿
+
+@media (max-width: 600px) {
+
+    body {
+        font-size: .85em;
+        font-family: "Segoe UI", Verdana, Helvetica, Sans-Serif;
+        color: whitesmoke;
+        background-color: #ccc;
+        background: url('/Content/images/bgs/treadplate_background_mobile.jpg');
+    }
+
     .page {
         padding: 0;
         width: 100%;
@@ -135,7 +146,7 @@ a.promo-link {
 .promo-text {
     position: absolute;
     top: 0;
-    padding: 10px 5px 15px 4%;
+    padding: 0px 5px 0 4%;
     width: 100%;
     font-weight: bold;
     width: 40%;
@@ -143,4 +154,12 @@ a.promo-link {
 
 .even .promo-text {
     right: 0;
+}
+
+#footer ul {
+    margin: 0 auto;
+}
+
+#social-media img {
+    width: 100%;
 }

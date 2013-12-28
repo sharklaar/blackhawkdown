@@ -1,11 +1,15 @@
 ﻿body {
-    font-size: .85em;
+    font-size: 1em;
     font-family: "Segoe UI", Verdana, Helvetica, Sans-Serif;
     color: whitesmoke;
     background-color: #ccc;
     background: url('/Content/images/bgs/treadplate_background_mobile.jpg');
     width: 100%;
     margin: 0;
+}
+
+h1 {
+    font-size: 2em;
 }
 
 header, footer, nav, section {
@@ -101,7 +105,7 @@ a {
     max-width: 904px;
     margin: 0 auto; 
     background-color: #000;  
-    background-color: rgba(0,0,0,0.4);
+    background-color: rgba(0,0,0,0.65);
     padding: 20px;
 }
 
@@ -187,6 +191,15 @@ a {
 
 }
 
+.gig-list {
+    font-size: 1.6em;
+    line-height: 1.8em;
+}
 
+.gig-list a {
+    text-decoration: underline;
+}
 
-
+.gig-list a:hover {
+    text-decoration: none;
+}

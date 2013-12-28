@@ -58,6 +58,31 @@
         margin: 4px 8px;
         width: 25px;
     }
+    
+    #footer ul {
+        margin: 0 auto;
+    }
+
+    #social-media img {
+        width: 100%;
+    }
+    
+    .gigs-page h1 {
+        border-bottom: 1px solid #8f0222;
+        margin: 0;
+        padding-bottom: 10px;
+    }
+    
+    .gig-list {
+        font-size: 1em;
+        line-height: 1.7em;
+    }
+    
+    .gig-list li {
+        border-bottom: 1px solid #8f0222;
+        border-top: 5px solid black;
+        padding: 20px 0;
+    }
 }
 
 
@@ -156,10 +181,3 @@ a.promo-link {
     right: 0;
 }
 
-#footer ul {
-    margin: 0 auto;
-}
-
-#social-media img {
-    width: 100%;
-}

@@ -2,6 +2,22 @@
 
 @media (max-width: 600px) {
 
+    #navigation {
+        display: none;
+        width: 100%;
+        position: absolute;
+        top: 100%;
+        z-index: 10;
+    }
+    
+    #navigation ul {
+
+    }
+
+    #navigation ul li {
+        width: 100%;
+    }
+    
     body {
         font-size: .85em;
         font-family: "Segoe UI", Verdana, Helvetica, Sans-Serif;
@@ -23,10 +39,6 @@
         background: -moz-linear-gradient(top,  rgba(0,0,0,1) 0%, rgba(143,2,34,1) 35%, rgba(143,2,34,1) 63%, rgba(0,0,0,1) 100%); /* FF3.6+ */
         background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,1)), color-stop(35%,rgba(143,2,34,1)), color-stop(63%,rgba(143,2,34,1)), color-stop(100%,rgba(0,0,0,1))); /* Chrome,Safari4+ */
         background: -webkit-linear-gradient(top,  rgba(0,0,0,1) 0%,rgba(143,2,34,1) 35%,rgba(143,2,34,1) 63%,rgba(0,0,0,1) 100%); /* Chrome10+,Safari5.1+ */
-    }
-
-    #navigation {
-        display: none;
     }
     
     #header-image {

@@ -10,6 +10,7 @@ namespace BhdResponsiveSite
         {
             bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
                         "~/Scripts/custom/nav.js",
+                       "~/Scripts/custom/about-page.js",
                         "~/Scripts/jquery-{version}.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/jqueryui").Include(

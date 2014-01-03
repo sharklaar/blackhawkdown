@@ -2,16 +2,29 @@
 
 @media (max-width: 600px) {
 
-    .about {
-        height: 142px;
+    .about-page .about {
+        height: 4.5em;
         width: 100%;
         overflow: hidden;
-        position: relative;
+        position: relative;        
+        border-top: 5px solid black;
+    }
+    
+    .about.closed p {
+        opacity: 0.4;
+    }
+    
+    about.open p {
+        opacity: 1;
     }
     
     .read-more {
-        float:right;
+        float: right;
         font-weight: bold;
+        border-bottom: 1px solid #8f0222;
+        width: 100%;
+        text-align: right;
+        padding-bottom: 15px;
     }
     
     #navigation {

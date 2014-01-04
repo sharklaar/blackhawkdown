@@ -204,3 +204,21 @@ a {
 .gig-list a:hover {
     text-decoration: none;
 }
+
+.links {
+    text-align: center;
+}
+    
+.links a {
+    font-size: 1.3em;
+    text-decoration: underline;
+}
+    
+.links a:hover {
+    text-decoration: none;
+}
+    
+    
+    
+    
+    

@@ -8,10 +8,14 @@ namespace BhdResponsiveSite
         // For more information on Bundling, visit http://go.microsoft.com/fwlink/?LinkId=254725
         public static void RegisterBundles(BundleCollection bundles)
         {
-            bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
-                        "~/Scripts/custom/nav.js",
-                       "~/Scripts/custom/about-page.js",
-                        "~/Scripts/jquery-{version}.js"));
+            bundles.Add(new ScriptBundle("~/bundles/musicpage").Include(
+                        "~/Scripts/custom/music-page.js"));
+
+            bundles.Add(new ScriptBundle("~/bundles/aboutpage").Include(
+                        "~/Scripts/custom/about-page.js"));
+
+            bundles.Add(new ScriptBundle("~/bundles/shared").Include(
+                        "~/Scripts/custom/nav.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/jqueryui").Include(
                         "~/Scripts/jquery-ui-{version}.js"));
@@ -27,7 +31,8 @@ namespace BhdResponsiveSite
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                         "~/Content/site.css",
-                        "~/Content/mobile.css"));
+                        "~/Content/mobile.css",
+                        "~/Content/desktop.css"));
 
             bundles.Add(new StyleBundle("~/Content/themes/base/css").Include(
                         "~/Content/themes/base/jquery.ui.core.css",

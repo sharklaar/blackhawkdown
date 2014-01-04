@@ -126,15 +126,21 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\ContactController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Helpers\ContentHelper.cs" />
+    <Compile Include="Library\Contact.cs" />
+    <Compile Include="Library\Email.cs" />
+    <Compile Include="Models\ContactViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\desktop.css" />
     <Content Include="Content\images\about-thumb.jpg" />
+    <Content Include="Content\images\about\band.jpg" />
     <Content Include="Content\images\bgs\treadplate_background.jpg" />
     <Content Include="Content\images\bgs\treadplate_background_mobile.jpg" />
     <Content Include="Content\images\facebook.png" />
@@ -224,7 +230,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
@@ -251,7 +256,10 @@
     <Content Include="Views\Home\Music.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Contact\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Contact\ContactConfirm.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

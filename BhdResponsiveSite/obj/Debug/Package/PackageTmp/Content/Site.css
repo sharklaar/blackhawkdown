@@ -1,0 +1,224 @@
+﻿body {
+    font-size: 1em;
+    font-family: "Segoe UI", Verdana, Helvetica, Sans-Serif;
+    color: whitesmoke;
+    background-color: #ccc;
+    background: url('/Content/images/bgs/treadplate_background_mobile.jpg');
+    width: 100%;
+    margin: 0;
+}
+
+h1 {
+    font-size: 2em;
+}
+
+header, footer, nav, section {
+    display: block;
+}
+
+
+/* Styles for basic forms
+-----------------------------------------------------------*/
+fieldset {
+    border: 1px solid #ddd;
+    padding: 0 1.4em 1.4em 1.4em;
+    margin: 0 0 1.5em 0;
+}
+
+legend {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+textarea {
+    min-height: 75px;
+}
+
+.editor-label {
+    margin: 1em 0 0 0;
+}
+
+.editor-field {
+    margin: 0.5em 0 0 0;
+}
+
+
+/* Styles for validation helpers
+-----------------------------------------------------------*/
+.field-validation-error {
+    color: #f00;
+}
+
+.field-validation-valid {
+    display: none;
+}
+
+.input-validation-error {
+    border: 1px solid #f00;
+    background-color: #fee;
+}
+
+.validation-summary-errors {
+    font-weight: bold;
+    color: #f00;
+}
+
+.validation-summary-valid {
+    display: none;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style-type: none;
+}
+
+a {
+    color: whitesmoke;
+    text-decoration: none;
+}
+
+.clearfix:after {
+    content: ".";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	line-height: 0;
+	height: 0;
+}
+
+/* GRID SETUP
+-----------------------------------------------------------*/
+
+.main-section {
+    display: block;
+    width: 95%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.page {
+    width: 95%;
+    max-width: 904px;
+    margin: 0 auto; 
+    background-color: #000;  
+    background-color: rgba(0,0,0,0.65);
+    padding: 20px;
+}
+
+/***********    FOOTER PARTIAL CSS        ************************************************/
+    
+#footer ul {    
+    width: 95%;
+    position: relative;
+    margin: 0;
+    padding: 0;   
+}
+
+#social-media li {
+    width: 33%;
+    height: 100%;
+    margin: 0px auto;
+    float: left;
+    display: inline;
+    text-align: center;
+}
+
+
+/*************** HEADER PARTIAL CSS **************************************************/
+
+#header-image {
+    background: url('/Content/images/header-band.jpg') 0 0 no-repeat;
+    width: 100%;
+    height: 191px;
+    background-size: 100%;
+}
+
+#header-logo {
+    position: absolute;
+    top: 110px;
+    width: 100%;
+}
+
+#header-logo img {
+    width: 97%;
+}
+
+#navigation {
+    width: 95%;
+    border-radius: 0px 0px 10px 10px;
+    margin: 0 auto;
+    display: block;
+}
+
+#navigation ul {
+    height: 40px;
+}
+
+#navigation ul li {
+    display: inline;
+    float: left; 
+    text-align: center;
+    width: 16.666667%;
+}
+
+#navigation ul li a {
+    display: block;
+    background: rgb(0,0,0); /* Old browsers */
+    background: -moz-linear-gradient(top,  rgba(0,0,0,1) 0%, rgba(143,2,34,1) 35%, rgba(143,2,34,1) 63%, rgba(0,0,0,1) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,1)), color-stop(35%,rgba(143,2,34,1)), color-stop(63%,rgba(143,2,34,1)), color-stop(100%,rgba(0,0,0,1))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  rgba(0,0,0,1) 0%,rgba(143,2,34,1) 35%,rgba(143,2,34,1) 63%,rgba(0,0,0,1) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  rgba(0,0,0,1) 0%,rgba(143,2,34,1) 35%,rgba(143,2,34,1) 63%,rgba(0,0,0,1) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  rgba(0,0,0,1) 0%,rgba(143,2,34,1) 35%,rgba(143,2,34,1) 63%,rgba(0,0,0,1) 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  rgba(0,0,0,1) 0%,rgba(143,2,34,1) 35%,rgba(143,2,34,1) 63%,rgba(0,0,0,1) 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
+    padding: 10px 0 10px 0; 
+    width: 100%;   
+    border-left: 1px solid black;
+}
+
+#navigation ul li a.current, #navigation ul li a:hover {
+    background: rgb(0,0,0); /* Old browsers */
+    background: -moz-linear-gradient(top,  rgba(0,0,0,1) 0%, rgba(193,3,32,1) 35%, rgba(193,3,32,1) 65%, rgba(0,0,0,1) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,1)), color-stop(35%,rgba(193,3,32,1)), color-stop(65%,rgba(193,3,32,1)), color-stop(100%,rgba(0,0,0,1))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  rgba(0,0,0,1) 0%,rgba(193,3,32,1) 35%,rgba(193,3,32,1) 65%,rgba(0,0,0,1) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  rgba(0,0,0,1) 0%,rgba(193,3,32,1) 35%,rgba(193,3,32,1) 65%,rgba(0,0,0,1) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  rgba(0,0,0,1) 0%,rgba(193,3,32,1) 35%,rgba(193,3,32,1) 65%,rgba(0,0,0,1) 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  rgba(0,0,0,1) 0%,rgba(193,3,32,1) 35%,rgba(193,3,32,1) 65%,rgba(0,0,0,1) 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
+
+}
+
+.gig-list {
+    font-size: 1.6em;
+    line-height: 1.8em;
+}
+
+.gig-list a {
+    text-decoration: underline;
+}
+
+.gig-list a:hover {
+    text-decoration: none;
+}
+
+.links {
+    text-align: center;
+}
+    
+.links a {
+    font-size: 1.3em;
+    text-decoration: underline;
+}
+    
+.links a:hover {
+    text-decoration: none;
+}
+    
+    
+    
+    
+    

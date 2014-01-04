@@ -1,0 +1,44 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>BlackHawkDown</h1>
+<p>
+    BlackHawkDown are a five piece heavy rock group like no other. Mixing influences from across rock, grunge, 
+    electronica and metal their fierce riffs and harmonised vocal stories will elate as well as shock. Every 
+    song carries a different edge that grips you from the start and reminds you that this band are not playing by the numbers.
+</p>
+
+<p class="desktop-only">
+    Their material reaches out to fans of many genres so delve as deeply into the depths of BlackHawkDown's psyche as you dare. You won't be disappointed.
+</p>
+
+<p class="desktop-only">
+    Each member of BlackHawkDown brings their own unique musical culture to the overall sound. Likened to a melting pot of Seattle grunge, industrial rock and alternative metal it is easy to understand their appeal across a spectrum of music fans young and old.
+</p>
+
+<ul class="promo-boxes">
+    <li class="promo wide">
+        <a href="@Url.Action("Music", "Home")" class="promo-link music odd">
+            <div class="promo-img"></div>
+            <div class="promo-text">
+                <p>Want to hear some bitchin' tunes?</p>
+                <p>Check out our music on the videos page...</p>
+                <p class="desktop-only">We've got some more coming soon so keep an eye on this page...</p>
+            </div>
+        </a>
+    </li>
+    <li class="promo">
+        <a href="@Url.Action("Gigs", "Home")" class="promo-link gigs even">
+            <div class="promo-img"></div>
+            <div class="promo-text"><p>Are we coming<br />to a town near you?<br /></p>Check our tour dates!</div>
+        </a>
+    </li>
+    <li class="promo">
+        <a href="@Url.Action("About", "Home")" class="promo-link about odd">
+            <div class="promo-img"></div>
+            <div class="promo-text"><p>Want to know more about the band?</p> Head to the band page to see who's who.</div>
+        </a>
+    </li>
+</ul>

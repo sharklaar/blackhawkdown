@@ -129,8 +129,7 @@
     }
     
     #header {
-        height: 50px;
-        padding-top: 10px;
+        height: 44px;
         width: 100%;
         background: rgb(0,0,0); /* Old browsers */
         background: -moz-linear-gradient(top,  rgba(0,0,0,1) 0%, rgba(143,2,34,1) 35%, rgba(143,2,34,1) 63%, rgba(0,0,0,1) 100%); /* FF3.6+ */
@@ -144,8 +143,18 @@
 
     #header-logo {
         float: left;
-        top: 6px;        
-        width: 75%
+        top: 0;
+        width: 75%;
+    }
+    
+    .link-logo {
+        height: 24px;
+        position: absolute;
+        padding: 10px;
+    }
+    
+    #header-logo img {
+        width: 235px;
     }
 
     #globalNavButton {
@@ -154,7 +163,10 @@
         width: 44px;
         border: 0;
         color: #FFFFFF;
-        margin: 0 0 0;
+        margin: 0px 0 0;
+        height: 35px;
+        border-left: 1px solid black;
+        padding-top: 10px;
     }
 
     #globalNavButton .bar {
@@ -164,7 +176,7 @@
         display: block;
         height: 4px;
         line-height: 14px;
-        margin: 4px 8px;
+        margin: 3px 8px;
         width: 25px;
     }
     
@@ -196,45 +208,15 @@
 
 
 @media (max-width: 321px) {
-    #header-logo {
-        float: left;
-        top: 0;
-        width: 75%;
-        margin:4%;
-    }
 
-    #globalNavButton .bar {
-        height: 4px;
-        margin: 4px 8px;
-    }
 }
 
 @media (min-width: 321px) and (max-width: 470px) {
-    #header-logo {
-        float: left;
-        top: 18%;
-        width: 75%;
-        margin:3%;
-    }
 
-    #globalNavButton .bar {
-        height: 5px;
-        margin: 5px 8px;
-    }
 }
 
 @media (min-width: 470px) and (max-width: 600px) {
-    #header-logo {
-        float: left;
-        top: 16%;
-        width: 75%;
-        margin:1%;
-    }
 
-    #globalNavButton .bar {
-        height: 5px;
-        margin: 5px 8px;
-    }
 }
 
 .promo {

@@ -147,6 +147,7 @@
     <Content Include="Content\images\about\shark.jpg" />
     <Content Include="Content\images\bgs\treadplate_background.jpg" />
     <Content Include="Content\images\bgs\treadplate_background_mobile.jpg" />
+    <Content Include="Content\images\bhd-poster.jpg" />
     <Content Include="Content\images\facebook.png" />
     <Content Include="Content\images\gigs-thumb.jpg" />
     <Content Include="Content\images\header-band.jpg" />
@@ -264,6 +265,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Contact\ContactConfirm.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Home\NextGig.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

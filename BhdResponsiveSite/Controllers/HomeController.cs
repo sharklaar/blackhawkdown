@@ -35,5 +35,10 @@ namespace BhdResponsiveSite.Controllers
         {
             return View();
         }
+
+        public ActionResult NextGig()
+        {
+            return View();
+        }
     }
 }

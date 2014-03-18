@@ -1,0 +1,13 @@
+﻿@{
+    ViewBag.Title = "Members";
+    Layout = "~/Views/Shared/_LayoutNoFade.cshtml";
+}
+<div id="main-content">
+    <div id="bhd-image">
+        <img src="../../Content/themes/base/images/bhd_image.jpg" width="800px" />
+    </div>
+    <div id="homepage-content">
+        <h1>@ViewBag.PageTitle</h1>
+        @Html.Raw(@ViewBag.PageText)
+    </div>
+</div>

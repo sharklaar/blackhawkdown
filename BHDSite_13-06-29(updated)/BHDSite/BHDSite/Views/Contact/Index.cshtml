@@ -1,0 +1,73 @@
+﻿@model BHDSite.Models.ContactViewModel
+@{
+    ViewBag.Title = "Contact Us";
+    Layout = "~/Views/Shared/_LayoutNoFade.cshtml";
+}
+
+@section MetaContent
+{
+    <meta name="keywords" content="BlackHawkDown, rock music, band, metal, stamford, black hawk down, contact, get in touch" />
+    <meta name="description" content="Contact BlackHawkDown" />
+}
+
+<div id="main-content">
+<h1>Contact Us</h1>
+<div id="content">
+    <p>
+        For booking enquiries, please call Helen Spooner on 07950 022703
+    </p>
+</div>
+
+@using (Html.BeginForm())
+{ 
+    @Html.ValidationSummary(true) 
+    <div id="contact-form">
+        <fieldset>
+            <legend id="contact-heading">Contact BlackHawkDown</legend>
+            <div class="editor-label">
+                Your email address                
+            </div>
+            <div class="editor-field">
+                @Html.TextBoxFor(model => model.From)
+                @Html.ValidationMessageFor(model => model.From)
+            </div>
+            <div class="editor-label">
+                @Html.LabelFor(model => model.Subject)
+            </div>
+            <div class="editor-field">
+                @Html.TextBoxFor(model => model.Subject)
+                @Html.ValidationMessageFor(model => model.Subject)
+            </div>
+            <div class="editor-label">
+                @Html.LabelFor(model => model.Message)
+            </div>
+            <div class="editor-field" id="message">
+                @Html.TextAreaFor(model => model.Message,
+                          new
+                          {
+                              id = "text",
+                              style = "width:703px; height:260px;"
+                          })
+                @Html.ValidationMessageFor(model => model.Message)
+            </div>
+            <p>
+                <input type="submit" value="Send" id="submitButton"/>
+            </p>
+        </fieldset>
+    </div>
+}
+</div>
+
+<script type="text/javascript">
+    $("#submitButton").click(function () {        
+        var x = document.getElementById("From").value;        
+        var atpos = x.indexOf("@@");        
+        var dotpos = x.lastIndexOf(".");
+        if (atpos < 1 || dotpos < atpos + 2 || dotpos + 2 >= x.length) {
+            alert("Not a valid e-mail address");
+            return false;
+        }
+    });
+
+    
+</script>

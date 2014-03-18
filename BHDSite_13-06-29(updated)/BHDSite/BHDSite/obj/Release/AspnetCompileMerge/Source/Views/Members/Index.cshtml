@@ -1,0 +1,109 @@
+﻿@{
+    ViewBag.Title = "Members";
+    Layout = "~/Views/Shared/_LayoutNoFade.cshtml";
+}
+
+<script type="text/javascript">
+    function changeClass(eleID) {
+        removeOn(eleID);
+        var currTabElem = document.getElementById(eleID);
+
+        currTabElem.setAttribute("class", "on");
+        currTabElem.setAttribute("className", "on");
+
+        return false;
+    }
+
+    function getElementsByClassName(classname, node) {
+        if (!node) node = document.getElementsByTagName("body")[0];
+        var a = [];
+        var re = new RegExp('\\b' + classname + '\\b');
+        var els = node.getElementsByTagName("*");
+        for (var i = 0, j = els.length; i < j; i++)
+            if (re.test(els[i].className)) a.push(els[i]);
+        return a;
+    }
+
+    function removeOn(id) {
+        var elements = new Array();
+        elements = getElementsByClassName('on');
+        for (i in elements) {
+            elements[i].className = elements[i].className.replace
+      (/(?:^|\s)on(?!\S)/g, 'off');
+        }
+    }
+</script>
+
+<div id="member-nav">
+<ul class="member-nav">
+    <li><span class="member-link"><a href="" onclick="changeClass('about-band'); return false">About the Band</a></span></li>
+    <li><span class="member-link"><a href="" onclick="changeClass('ben'); return false">Ben</a></span></li>
+    <li><span class="member-link"><a href="" onclick="changeClass('andy'); return false">Andy</a></span></li>
+    <li><span class="member-link"><a href="" onclick="changeClass('norb'); return false">Norb</a></span></li>
+    <li><span class="member-link"><a href="" onclick="changeClass('shark'); return false">Shark</a></span></li>
+</ul>
+
+</div>
+<div id="about-band" class="on">
+<div class="bio">
+<h1>
+    @ViewBag.BandTitle
+</h1>
+   @Html.Raw(@ViewBag.BandText)
+</div>
+<div class="photo">
+    <img src="http://i1122.photobucket.com/albums/l523/sharklaar/band-website-images/band_photo_zps0facbdda.jpg" width="930px" alt="BlackHawkDown" />
+</div>
+</div>
+
+<div id="ben" class="off">
+    <div class="bio">
+        <h1>@ViewBag.BenTitle</h1>
+        <p>
+            @Html.Raw(@ViewBag.BenText)
+        </p>
+    </div>
+
+    <div class="photo">
+        <img src="http://i1122.photobucket.com/albums/l523/sharklaar/band-website-images/ben-image_zps4233e9ce.png" alt="Ben. A gay bastard." width="930px" height="600px" />
+    </div>
+</div>
+
+<div id="andy" class="off">
+    <div class="bio">
+        <h1>@ViewBag.AndyTitle</h1>
+        <p>
+            @Html.Raw(@ViewBag.AndyText)
+        </p>
+    </div>
+
+    <div class="photo">
+        <img src="http://i1122.photobucket.com/albums/l523/sharklaar/band-website-images/dirt_zps387d8008.jpg" alt="Ben. A gay bastard." width="930px" height="600px" />
+    </div>
+</div>
+
+<div id="norb" class="off">
+    <div class="bio">
+        <h1>@ViewBag.NorbTitle</h1>
+        <p>
+            @Html.Raw(@ViewBag.NorbText)
+        </p>
+    </div>
+
+    <div class="photo">
+        <img src="http://i1122.photobucket.com/albums/l523/sharklaar/band-website-images/pole_zps25415e7e.jpg" alt="Ben. A gay bastard." width="930px" height="600px" />
+    </div>
+</div>
+
+<div id="shark" class="off">
+    <div class="bio">
+        <h1>@ViewBag.SharkTitle</h1>
+        <p>
+            @Html.Raw(@ViewBag.SharkText)
+        </p>
+    </div>
+
+    <div class="photo">
+        <img src="http://i1122.photobucket.com/albums/l523/sharklaar/band-website-images/shark_zpse0385932.jpg" alt="Ben. A gay bastard." width="930px" height="600px" />
+    </div>
+</div>

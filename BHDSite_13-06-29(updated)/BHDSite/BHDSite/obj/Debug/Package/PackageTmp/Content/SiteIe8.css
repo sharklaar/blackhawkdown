@@ -1,0 +1,31 @@
+﻿
+#member-nav ul li a  {
+    display: block;
+    width: 136px;
+    border-radius: 10px 10px 10px 10px; 
+    background-color: Gray;
+    filter:alpha(opacity=60);
+    padding: 6px;
+    color: White;
+    text-decoration: none;
+}
+
+#member-nav ul li a:hover  {
+    background: rgba(84, 84, 84, 0.4); 
+    background-color: #545454;
+    filter:alpha(opacity=40);    
+}
+
+#navigation li a {
+    position: relative;
+    top: -10px;
+}
+
+#navigation li a.current, #navigation li a:hover {
+    background-color: #545454;
+    filter:alpha(opacity=60);
+}
+
+#navigation li a:hover {
+    filter:alpha(opacity=60);
+}

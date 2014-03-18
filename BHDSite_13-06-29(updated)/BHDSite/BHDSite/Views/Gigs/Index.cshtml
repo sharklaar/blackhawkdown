@@ -1,0 +1,17 @@
+﻿@model BHDSite.Models.Gig
+
+@{
+    ViewBag.Title = "Tour Dates";
+    Layout = "~/Views/Shared/_LayoutNoFade.cshtml";
+}
+
+@section MetaContent
+{
+    <meta name="keywords" content="BlackHawkDown, rock music, band, metal, stamford, black hawk down, gig listing, tour dates" />
+    <meta name="description" content="About BlackHawkDown - gig dates" />
+}
+
+<div id="main-content">
+    <h1>@Html.Raw(@Model.GigPageTitle)</h1>
+    @Html.Raw(@Model.GigPageText)
+</div>

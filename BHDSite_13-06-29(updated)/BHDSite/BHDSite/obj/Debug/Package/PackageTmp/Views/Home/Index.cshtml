@@ -1,0 +1,22 @@
+﻿@model BHDSite.Models.Home
+
+@{
+    ViewBag.Title = "Members";
+    Layout = "~/Views/Shared/_LayoutNoFade.cshtml";
+}
+
+@section MetaContent
+{
+    <meta name="keywords" content="BlackHawkDown, rock music, band, metal, stamford, black hawk down" />
+    <meta name="description" content="BlackHawkDown - homepage" />
+}
+
+<div id="main-content">
+    <div id="bhd-image">
+        <img src="../../Content/themes/base/images/bhd_image.jpg" width="800px" />
+    </div>
+    <div id="homepage-content">
+        <h1>@Model.HomePageTitle</h1>
+        @Html.Raw(@Model.HomePageText)
+    </div>
+</div>

@@ -1,0 +1,130 @@
+﻿@model BHDSite.Models.Member
+
+@{    
+    Layout = "~/Views/Shared/_LayoutNoFade.cshtml";
+}
+<script type="text/javascript">
+    function changeClass(eleID) {
+        removeOn(eleID);
+        var currTabElem = document.getElementById(eleID);
+
+        currTabElem.setAttribute("class", "on");
+        currTabElem.setAttribute("className", "on");
+
+        return false;
+    }
+
+    function getElementsByClassName(classname, node) {
+        if (!node) node = document.getElementsByTagName("body")[0];
+        var a = [];
+        var re = new RegExp('\\b' + classname + '\\b');
+        var els = node.getElementsByTagName("*");
+        for (var i = 0, j = els.length; i < j; i++)
+            if (re.test(els[i].className)) a.push(els[i]);
+        return a;
+    }
+
+    function removeOn(id) {
+        var elements = new Array();
+        elements = getElementsByClassName('on');
+        for (i in elements) {
+            elements[i].className = elements[i].className.replace
+      (/(?:^|\s)on(?!\S)/g, 'off');
+        }
+    }
+</script>
+@section MetaContent
+{
+    <meta name="keywords" content="BlackHawkDown, rock music, band, metal, stamford, black hawk down, about, band members" />
+    <meta name="description" content="About BlackHawkDown - band bio" />
+}
+<div id="member-nav">
+    <ul class="member-nav">
+        <li><span class="member-link"><a href="" onclick="changeClass('about-band'); return false">
+            About the Band</a></span></li>
+        <li><span class="member-link"><a href="" onclick="changeClass('ben'); return false">
+            Ben</a></span></li>
+        <li><span class="member-link"><a href="" onclick="changeClass('andy'); return false">
+            Andy</a></span></li>
+        <li><span class="member-link"><a href="" onclick="changeClass('norb'); return false">
+            Norb</a></span></li>
+        <li><span class="member-link"><a href="" onclick="changeClass('shark'); return false">
+            Shark</a></span></li>
+        <li><span class="member-link"><a href="" onclick="changeClass('hemy'); return false">
+            Hemy</a></span></li>
+    </ul>
+</div>
+<h1>
+    About BlackHawkDown</h1>
+<div id="about-band" class="on">
+    <div class="photo">
+        <img src="../../Content/themes/base/images/band_photo.jpg" width="930px" alt="BlackHawkDown" />
+    </div>
+    <div class="bio">
+        <h2>
+            @Model.BandTitle            
+        </h2>
+        @Html.Raw(@Model.BandText)
+    </div>
+</div>
+<div id="ben" class="off">
+    <div class="photo">
+        <img src="../../Content/themes/base/images/Ben.jpg" alt="Ben. A gay bastard."
+            width="930px" height="600px" />
+    </div>
+    <div class="bio">
+        <h2>@Model.BenTitle</h2>
+        <p>
+            @Html.Raw(@Model.BenText)
+        </p>
+    </div>
+</div>
+<div id="andy" class="off">
+    <div class="photo">
+        <img src="../../Content/themes/base/images/Andy.jpg" alt="Andy. Dirt. McGurk." width="930px"
+            height="600px" />
+    </div>
+    <div class="bio">
+        <h2>@Model.AndyTitle</h2>
+        <p>
+            @Html.Raw(@Model.AndyText)
+        </p>
+    </div>
+</div>
+<div id="norb" class="off">
+    <div class="photo">
+        <img src="../../Content/themes/base/images/Norb.jpg" alt="Norb. He plays the bass." width="930px"
+            height="600px" />
+    </div>
+    <div class="bio">
+        <h2>@Model.NorbTitle</h2>
+        <p>
+            @Html.Raw(@Model.NorbText)
+        </p>
+    </div>
+</div>
+<div id="shark" class="off">
+    <div class="photo">
+        <img src="../../Content/themes/base/images/shark.jpg" alt="Marc. He's a shark."
+            width="930px" height="600px" />
+    </div>
+    <div class="bio">
+        <h2>@Model.SharkTitle</h2>
+        <p>
+            @Html.Raw(@Model.SharkText)
+        </p>
+    </div>
+</div>
+
+<div id="hemy" class="off">
+    <div class="photo">
+        <img src="../../Content/themes/base/images/hemy.jpg" alt="Marc. He's a shark."
+            width="930px" height="600px" />
+    </div>
+    <div class="bio">
+        <h2>@Model.HemyTitle</h2>
+        <p>
+            @Html.Raw(@Model.HemyText)
+        </p>
+    </div>
+</div>

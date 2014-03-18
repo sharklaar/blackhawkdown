@@ -1,0 +1,46 @@
+﻿@model BHDSite.Models.ContactViewModel
+@{
+    ViewBag.Title = "Contact Us";
+    Layout = "~/Views/Shared/_LayoutNoFade.cshtml";
+}
+
+<div id="main-content">
+@using (Html.BeginForm())
+{ 
+    @Html.ValidationSummary(true) 
+    <div id="contact-form">
+        <fieldset>
+            <legend id="contact-heading">Contact BlackHawkDown</legend>
+            <div class="editor-label">
+                @Html.LabelFor(model => model.From)
+            </div>
+            <div class="editor-field">
+                @Html.TextBoxFor(model => model.From)
+                @Html.ValidationMessageFor(model => model.From)
+            </div>
+            <div class="editor-label">
+                @Html.LabelFor(model => model.Subject)
+            </div>
+            <div class="editor-field">
+                @Html.TextBoxFor(model => model.Subject)
+                @Html.ValidationMessageFor(model => model.Subject)
+            </div>
+            <div class="editor-label">
+                @Html.LabelFor(model => model.Message)
+            </div>
+            <div class="editor-field" id="message">
+                @Html.TextAreaFor(model => model.Message,
+                          new
+                          {
+                              id = "text",
+                              style = "width:703px; height:300px;"
+                          })
+                @Html.ValidationMessageFor(model => model.Message)
+            </div>
+            <p>
+                <input type="submit" value="Send" />
+            </p>
+        </fieldset>
+    </div>
+}
+</div>

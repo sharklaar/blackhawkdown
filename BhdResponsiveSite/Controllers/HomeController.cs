@@ -40,5 +40,10 @@ namespace BhdResponsiveSite.Controllers
         {
             return View();
         }
+
+        public ActionResult FreeStuff()
+        {
+            return View();
+        }
     }
 }

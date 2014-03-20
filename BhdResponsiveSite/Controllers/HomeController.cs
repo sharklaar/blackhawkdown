@@ -1,9 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿
 using System.Web.Mvc;
 using BhdResponsiveSite.Library;
+using BhdResponsiveSite.Models;
+using BHDSite.Library;
 
 namespace BhdResponsiveSite.Controllers
 {
@@ -14,9 +13,26 @@ namespace BhdResponsiveSite.Controllers
 
         public ActionResult Index()
         {
-            //var helper = new GoogleDriveHelper();
-            //helper.WriteEmailToDatabase("marc@blackhawkdown.org.uk");
-            
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult Index(EmailOnlyModel emailVm)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View(emailVm);
+            }
+
+            var contact = new Contact
+            {
+                From = emailVm.Email,
+                Message = "",
+                Subject = "your free tracks"
+            };
+
+            new Email().SendAutoResponse(contact);
+
             return View();
         }
 

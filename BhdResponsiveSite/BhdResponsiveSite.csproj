@@ -160,6 +160,7 @@
     <Compile Include="Library\Email.cs" />
     <Compile Include="Library\GoogleDriveHelper.cs" />
     <Compile Include="Models\ContactViewModel.cs" />
+    <Compile Include="Models\EmailOnlyModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

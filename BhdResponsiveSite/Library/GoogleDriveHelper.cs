@@ -1,6 +1,5 @@
 ﻿using Google.GData.Client;
 using Google.GData.Spreadsheets;
-using System.Linq;
 
 namespace BhdResponsiveSite.Library
 {
@@ -32,8 +31,8 @@ namespace BhdResponsiveSite.Library
                 {
                     _link = entry.Links.FindService(GDataSpreadsheetsNameTable.WorksheetRel, null);
 
-                    WorksheetQuery worksheetQuery = new WorksheetQuery(_link.HRef.ToString());
-                    WorksheetFeed worksheetFeed = _spreadsheetsService.Query(worksheetQuery);
+                    var worksheetQuery = new WorksheetQuery(_link.HRef.ToString());
+                    var worksheetFeed = _spreadsheetsService.Query(worksheetQuery);
 
                     return worksheetFeed.Entries;
                 }
@@ -47,18 +46,18 @@ namespace BhdResponsiveSite.Library
 
             var worksheet = _worksheets[0] as WorksheetEntry;
 
-            AtomLink listFeedLink = worksheet.Links.FindService(GDataSpreadsheetsNameTable.ListRel, null);
+            if (worksheet == null) return;
+            var listFeedLink = worksheet.Links.FindService(GDataSpreadsheetsNameTable.ListRel, null);
             
-            ListQuery listQuery = new ListQuery(listFeedLink.HRef.ToString());
+            var listQuery = new ListQuery(listFeedLink.HRef.ToString());
 
-            ListFeed listFeed = _spreadsheetsService.Query(listQuery); 
+            var listFeed = _spreadsheetsService.Query(listQuery); 
             
-            ListEntry row = new ListEntry();
+            var row = new ListEntry();
 
-            row.Elements.Add(new ListEntry.Custom() { LocalName = "email", Value = emailAddress }); 
+            row.Elements.Add(new ListEntry.Custom { LocalName = "email", Value = emailAddress }); 
             
             _spreadsheetsService.Insert(listFeed, row);
-
         }
     }
 }

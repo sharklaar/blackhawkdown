@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
-using BHDSite.Models;
+﻿using System.Web.Mvc;
+using BhdResponsiveSite.Library;
 using BHDSite.Library;
+using BHDSite.Models;
 
-namespace BHD.Controllers
+namespace BhdResponsiveSite.Controllers
 {
     public class ContactController : Controller
     {
@@ -22,28 +19,23 @@ namespace BHD.Controllers
         }
 
         [HttpPost]
-        public ActionResult Index(ContactViewModel contactVM)
+        public ActionResult Index(ContactViewModel contactVm)
         {
             if (!ModelState.IsValid)
             {
-                return View(contactVM);
+                return View(contactVm);
             }
 
             var contact = new Contact
             {
-                From = contactVM.Email,
-                Subject = contactVM.Subject,
-                Message = contactVM.Message
+                From = contactVm.Email,
+                Subject = contactVm.Subject,
+                Message = contactVm.Message
             };
 
             new Email().Send(contact);
 
             return RedirectToAction("ContactConfirm");
-        }
-
-        public ActionResult Contact()
-        {
-            return View(new ContactViewModel());
         }
 
         public ActionResult ContactConfirm()

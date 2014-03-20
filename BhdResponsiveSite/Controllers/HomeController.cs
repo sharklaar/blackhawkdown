@@ -14,8 +14,8 @@ namespace BhdResponsiveSite.Controllers
 
         public ActionResult Index()
         {
-            var helper = new GoogleDriveHelper();
-            helper.WriteEmailToDatabase("marc@blackhawkdown.org.uk");
+            //var helper = new GoogleDriveHelper();
+            //helper.WriteEmailToDatabase("marc@blackhawkdown.org.uk");
             
             return View();
         }

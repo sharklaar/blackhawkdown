@@ -3,11 +3,14 @@ using System.Web.Mvc;
 using BhdResponsiveSite.Library;
 using BhdResponsiveSite.Models;
 using BHDSite.Library;
+using System.Text;
+using System;
 
 namespace BhdResponsiveSite.Controllers
 {
     public class HomeController : Controller
     {
+        private const string AUTO_RESPONSE_MESSAGE = "Hey there rock fan, thanks for registering with BlackHawkDown!<br />";
         //
         // GET: /Home/
 
@@ -24,10 +27,15 @@ namespace BhdResponsiveSite.Controllers
                 return View(emailVm);
             }
 
+            var driveHelper = new GoogleDriveHelper();
+            driveHelper.WriteEmailToDatabase(emailVm.Email);
+
+            var messageBody = GetMessageBody();
+
             var contact = new Contact
             {
                 From = emailVm.Email,
-                Message = "",
+                Message = GetMessageBody(),
                 Subject = "your free tracks"
             };
 
@@ -64,6 +72,28 @@ namespace BhdResponsiveSite.Controllers
         public ActionResult FreeStuff()
         {
             return View();
+        }
+
+        private string GetMessageBody()
+        {
+            var mailBody = new StringBuilder();
+            mailBody.Append("Hey there rock fan!");
+            mailBody.Append(Environment.NewLine);
+            mailBody.Append(Environment.NewLine);
+            mailBody.Append("Thanks for registering with BlackHawkDown.org.uk. In return, as promised, please find below your link to download THREE FREE TRACKS!");
+            mailBody.Append(Environment.NewLine);
+            mailBody.Append(Environment.NewLine);
+            mailBody.Append("http://www.blackhawkdown.org.uk/freetrackdownload");
+            mailBody.Append(Environment.NewLine);
+            mailBody.Append(Environment.NewLine);
+            mailBody.Append("Thanks again, and drop in on the site from time to time, we'll be adding some new tracks to our videos page soon.");
+            mailBody.Append(Environment.NewLine);
+            mailBody.Append(Environment.NewLine);
+            mailBody.Append("Cheers");
+            mailBody.Append(Environment.NewLine);
+            mailBody.Append("BlackHawkDown");
+
+            return mailBody.ToString();
         }
     }
 }

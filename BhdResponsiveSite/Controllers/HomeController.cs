@@ -1,18 +1,12 @@
-﻿
-using System.Web.Mvc;
-using BhdResponsiveSite.Library;
+﻿using BhdResponsiveSite.Library;
 using BhdResponsiveSite.Models;
-using BHDSite.Library;
-using System.Text;
 using System;
-using Postal;
+using System.Web.Mvc;
 
 namespace BhdResponsiveSite.Controllers
 {
     public class HomeController : Controller
     {
-        // GET: /Home/
-
         public ActionResult Index()
         {
             return View();
@@ -26,24 +20,10 @@ namespace BhdResponsiveSite.Controllers
                 return View(emailVm);
             }
 
-            var driveHelper = new GoogleDriveHelper();
-            driveHelper.WriteEmailToDatabase(emailVm.Email);
+            WriteEmailToDatabase(emailVm);
 
-            dynamic email = new Postal.Email("FreeTracks");
-            email.To = emailVm.Email;
-
-
-            var messageBody = GetMessageBody();
-
-            var contact = new Contact
-            {
-                From = emailVm.Email,
-                Message = GetMessageBody(),
-                Subject = "your free tracks"
-            };
-
-            new Library.Email().SendAutoResponse(contact);
-
+            SendAutoResponse(emailVm);
+            
             return View();
         }
 
@@ -77,26 +57,27 @@ namespace BhdResponsiveSite.Controllers
             return View();
         }
 
-        private string GetMessageBody()
+        private void WriteEmailToDatabase(EmailOnlyModel emailVm)
         {
-            var mailBody = new StringBuilder();
-            mailBody.Append("Hey there rock fan!");
-            mailBody.Append(Environment.NewLine);
-            mailBody.Append(Environment.NewLine);
-            mailBody.Append("Thanks for registering with BlackHawkDown.org.uk. In return, as promised, please find below your link to download THREE FREE TRACKS!");
-            mailBody.Append(Environment.NewLine);
-            mailBody.Append(Environment.NewLine);
-            mailBody.Append("http://www.blackhawkdown.org.uk/freetrackdownload");
-            mailBody.Append(Environment.NewLine);
-            mailBody.Append(Environment.NewLine);
-            mailBody.Append("Thanks again, and drop in on the site from time to time, we'll be adding some new tracks to our videos page soon.");
-            mailBody.Append(Environment.NewLine);
-            mailBody.Append(Environment.NewLine);
-            mailBody.Append("Cheers");
-            mailBody.Append(Environment.NewLine);
-            mailBody.Append("BlackHawkDown");
+            var driveHelper = new GoogleDriveHelper();
+            driveHelper.WriteEmailToDatabase(emailVm.Email);
+        }
 
-            return mailBody.ToString();
+        private void SendAutoResponse(EmailOnlyModel emailVm)
+        {
+            var emailHelper = new Email();
+            var client = emailHelper.GetClient();
+
+            dynamic email = new Postal.Email("FreeTracks");
+            email.To = emailVm.Email;
+
+            try
+            {
+                client.Send(email);
+            }
+            catch (Exception)
+            {
+            }
         }
     }
 }

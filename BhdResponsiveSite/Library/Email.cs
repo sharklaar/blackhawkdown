@@ -19,30 +19,10 @@ namespace BhdResponsiveSite.Library
             SendMessage(mail);
         }
 
-        public void SendAutoResponse(Contact contact)
-        {
-            var mail = new MailMessage(
-                "websiteadmin@blackhawkdown.org.uk",
-                contact.From,
-                "Your free tracks from BlackHawkDown",
-                contact.Message
-                );
-
-            SendMessage(mail);
-        }
-
         private void SendMessage(MailMessage mail)
         {
-            var cred = new NetworkCredential("websiteadmin@blackhawkdown.org.uk", "kickintheface");
+            var mailClient = GetClient();
 
-            var mailClient = new SmtpClient("smtp.gmail.com", 587)
-            {
-                EnableSsl = true,
-                DeliveryMethod = SmtpDeliveryMethod.Network,
-                UseDefaultCredentials = false,
-                Timeout = 20000,
-                Credentials = cred
-            };
             try
             {
                 mailClient.Send(mail);
@@ -50,6 +30,20 @@ namespace BhdResponsiveSite.Library
             catch (Exception ex)
             {
             }
+        }
+
+        public SmtpClient GetClient()
+        {
+            var cred = new NetworkCredential("websiteadmin@blackhawkdown.org.uk", "kickintheface");
+
+            return new SmtpClient("smtp.gmail.com", 587)
+            {
+                EnableSsl = true,
+                DeliveryMethod = SmtpDeliveryMethod.Network,
+                UseDefaultCredentials = false,
+                Timeout = 20000,
+                Credentials = cred
+            };
         }
     }
 }

@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width" />
     <title>@ViewBag.Title</title>
     <meta name="description" content="@ViewBag.Description">
+    <meta name="keywords" content="@ViewBag.Keywords"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/knockout/2.3.0/knockout-min.js" type="text/javascript"></script>
     @Styles.Render("~/Content/css")
@@ -30,9 +32,9 @@
             @Html.Partial("_header")
         </li>
         
-@*        <li id="email" class="main-section">
+        <li id="email" class="main-section clearfix">
             @Html.Partial("_email")
-        </li>*@
+        </li>
 
         <li id="main-content" class="main-section">
             @RenderBody()

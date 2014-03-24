@@ -1,20 +1,18 @@
 ﻿@model BhdResponsiveSite.Models.EmailOnlyModel
 
-<div class="email-section">
-    <p>Enter your email address here to receive 3 free tracks!</p>
-    <p>You will receive a link to download three BlackHawkDown tracks by email within the next few minutes</p>
+<div class="email-section clearfix">
+    <p>Enter your email address here to receive <strong>3 free tracks!</strong> You will receive a link to download three BlackHawkDown tracks by email within the next few minutes</p>
 </div>
 @using (Html.BeginForm())
 {
-    @Html.ValidationSummary(true) 
-    <div class="editor-label">
-        @Html.LabelFor(model => model.Email)
+    <div class="email-box">
+        @Html.ValidationSummary(true) 
+        <div class="enter-email">
+            @Html.TextBoxFor(model => model.Email)
+            @Html.ValidationMessageFor(model => model.Email)
+        </div>
+        <p>
+            <input type="submit" value="Send" class="submit-email" />
+        </p>
     </div>
-    <div class="enter-email">
-        @Html.TextBoxFor(model => model.Email)
-        @Html.ValidationMessageFor(model => model.Email)
-    </div>
-    <p>
-        <input type="submit" value="Send" />
-    </p>
 }

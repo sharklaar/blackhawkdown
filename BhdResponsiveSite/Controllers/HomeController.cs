@@ -5,13 +5,12 @@ using BhdResponsiveSite.Models;
 using BHDSite.Library;
 using System.Text;
 using System;
+using Postal;
 
 namespace BhdResponsiveSite.Controllers
 {
     public class HomeController : Controller
     {
-        private const string AUTO_RESPONSE_MESSAGE = "Hey there rock fan, thanks for registering with BlackHawkDown!<br />";
-        //
         // GET: /Home/
 
         public ActionResult Index()
@@ -30,6 +29,10 @@ namespace BhdResponsiveSite.Controllers
             var driveHelper = new GoogleDriveHelper();
             driveHelper.WriteEmailToDatabase(emailVm.Email);
 
+            dynamic email = new Postal.Email("FreeTracks");
+            email.To = emailVm.Email;
+
+
             var messageBody = GetMessageBody();
 
             var contact = new Contact
@@ -39,7 +42,7 @@ namespace BhdResponsiveSite.Controllers
                 Subject = "your free tracks"
             };
 
-            new Email().SendAutoResponse(contact);
+            new Library.Email().SendAutoResponse(contact);
 
             return View();
         }

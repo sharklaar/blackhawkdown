@@ -27,6 +27,11 @@ namespace BhdResponsiveSite.Controllers
             return View();
         }
 
+        public ActionResult FreeTracks()
+        {
+            return View();
+        }
+
         public ActionResult Gigs()
         {
             return View();
@@ -70,12 +75,14 @@ namespace BhdResponsiveSite.Controllers
 
             dynamic email = new Postal.Email("FreeTracks");
             email.To = emailVm.Email;
-
+            var service = Postal.Email.CreateEmailService();
+            var mailToSend = service.CreateMailMessage(email);
+            
             try
             {
-                client.Send(email);
+                client.Send(mailToSend);
             }
-            catch (Exception)
+            catch (Exception ex)
             {
             }
         }

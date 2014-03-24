@@ -324,3 +324,17 @@ a {
 
 }
 
+.track-download {
+    text-align: center;    
+}
+
+.track-download a {
+    text-decoration: underline;
+    font-size: 1.8em;
+    text-align: center;
+}
+
+.track-download a:hover {
+    text-decoration: none;
+}
+

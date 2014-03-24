@@ -188,6 +188,9 @@
     <Content Include="Content\images\twitter.png" />
     <Content Include="Content\images\youtube.png" />
     <Content Include="Content\mobile.css" />
+    <Content Include="Content\mp3s\Exposed.mp3" />
+    <Content Include="Content\mp3s\Poison in My Blood.mp3" />
+    <Content Include="Content\mp3s\simplify.mp3" />
     <Content Include="Content\themes\base\jquery-ui.css" />
     <Content Include="Content\themes\base\jquery.ui.accordion.css" />
     <Content Include="Content\themes\base\jquery.ui.all.css" />
@@ -320,6 +323,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Emails\FreeTracks.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Home\FreeTracks.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

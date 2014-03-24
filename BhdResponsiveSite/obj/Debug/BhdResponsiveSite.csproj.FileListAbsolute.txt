@@ -66,3 +66,5 @@ C:\dev\blackhawkdown\BhdResponsiveSite\obj\Debug\BhdResponsiveSite.dll
 C:\dev\blackhawkdown\BhdResponsiveSite\obj\Debug\BhdResponsiveSite.pdb
 C:\dev\blackhawkdown\BhdResponsiveSite\bin\Postal.dll
 C:\dev\blackhawkdown\BhdResponsiveSite\bin\Postal.xml
+C:\dev\blackhawkdown\BhdResponsiveSite\bin\Newtonsoft.Json.dll
+C:\dev\blackhawkdown\BhdResponsiveSite\bin\Newtonsoft.Json.xml

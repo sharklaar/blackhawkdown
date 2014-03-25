@@ -1,0 +1,18 @@
+﻿@model BhdResponsiveSite.Models.EmailOnlyModel
+
+<div class="email-section clearfix">
+    <p>Enter your email address here to receive <strong>3 free tracks!</strong> You will receive a link to download three BlackHawkDown tracks by email within the next few minutes</p>
+</div>
+@using (Html.BeginForm())
+{
+    <div class="email-box">
+        @Html.ValidationSummary(true) 
+        <div class="enter-email">
+            @Html.TextBoxFor(model => model.Email)
+            @Html.ValidationMessageFor(model => model.Email)
+        </div>
+        <p>
+            <input type="submit" value="Send" class="submit-email" />
+        </p>
+    </div>
+}

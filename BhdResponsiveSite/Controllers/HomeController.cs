@@ -2,6 +2,7 @@
 using BhdResponsiveSite.Models;
 using System;
 using System.Web.Mvc;
+using System.Web;
 
 namespace BhdResponsiveSite.Controllers
 {
@@ -21,6 +22,8 @@ namespace BhdResponsiveSite.Controllers
             }
 
             WriteEmailToDatabase(emailVm);
+
+            AddCookie();
 
             SendAutoResponse(emailVm);
             
@@ -66,6 +69,13 @@ namespace BhdResponsiveSite.Controllers
         {
             var driveHelper = new GoogleDriveHelper();
             driveHelper.WriteEmailToDatabase(emailVm.Email);
+        }
+
+        private void AddCookie()
+        {
+            var cookie = new HttpCookie("bhd_subscribe", "true");
+            cookie.Expires = DateTime.Now.AddYears(1);
+            Request.Cookies.Add(cookie);
         }
 
         private void SendAutoResponse(EmailOnlyModel emailVm)

@@ -32,9 +32,13 @@
             @Html.Partial("_header")
         </li>
         
-        <li id="email" class="main-section clearfix">
-            @Html.Partial("_email")
-        </li>
+        @if (Request.Cookies["bhd_subscribe"] == null)
+        {
+            <li id="email" class="main-section clearfix">
+                @Html.Partial("_email")
+            </li>
+        }
+
 
         <li id="main-content" class="main-section">
             @RenderBody()

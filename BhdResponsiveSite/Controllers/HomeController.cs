@@ -12,22 +12,29 @@ namespace BhdResponsiveSite.Controllers
         {
             return View();
         }
+        
+        [ChildActionOnly]
+        public ActionResult Email()
+        {
+            return PartialView("_email");
+        }
 
+        [ChildActionOnly]
         [HttpPost]
-        public ActionResult Index(EmailOnlyModel emailVm)
+        public ActionResult Email(EmailOnlyModel emailVm)
         {
             if (!ModelState.IsValid)
             {
-                return View(emailVm);
+                return PartialView("_email");
             }
 
             WriteEmailToDatabase(emailVm);
 
             AddCookie();
 
-            SendAutoResponse(emailVm);
-            
-            return View();
+            SendAutoResponse(emailVm); 
+
+            return PartialView("_email", emailVm);
         }
 
         public ActionResult FreeTracks()

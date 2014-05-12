@@ -2,6 +2,34 @@
 
 @media (max-width: 768px) 
 {
+    .intro-text {
+        width: 100%;
+        float: none;
+    }
+    .main-promo {
+        width: auto;
+        display: block;
+        float: none;
+    }
+
+    .main-promo .promo, .main-promo .promo a.promo-link {
+        height: 150px;
+        position: relative;
+    }
+
+    .main-promo .promo a:before {
+        content: none;
+        display: none;
+        position: absolute;
+        top: 91px;
+        left: 126px;
+        background: url('images/youtube-sprite.png') 0px -65px no-repeat;
+        height: 61px;
+        width: 87px;
+        z-index: 1;
+        cursor: pointer;
+    }
+
     .desktop-only {
         display: none;
     }
@@ -38,11 +66,11 @@
     .thumb-list .promo {
         height: auto;
         position: relative;
-        width: 28%;
+        width: 30%;
         margin: 0 0 25px 1%;
         display: inline-block;
-        border: 4px solid #8f0222;
-        -webkit-border-image: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#8f0222), color-stop(51%,#000000), color-stop(100%,#8f0222)) 4 4 4 4 repeat repeat;
+        border: 1px solid #8f0222;
+        border-radius: 10px;
     }
     
     .thumb-list .promo img {
@@ -50,6 +78,7 @@
         height: auto;
         margin: 0 auto;
         position: relative;
+        border-radius: 10px;
         top: 2px;
     }
     
@@ -219,6 +248,10 @@
         width: 100%;
         margin-bottom:10px;
     }
+    .promo .music .promo-img {
+        background-image: url('images/music-thumb.jpg');
+        background-position: 0 0;
+    }
 }
 
 
@@ -234,15 +267,18 @@
 
 }
 
+.main-video.promo {
+    margin: 30px auto;
+    border-radius: 0;
+}
 .promo {
     width: 95%;
     height: 150px;
     margin: 30px 0;
     position: relative;
     border-radius: 10px;
-    border: 6px solid #8f0222;
+    border: 1px solid #8f0222;
     border-radius: 10px;
-    -webkit-border-image: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#8f0222), color-stop(51%,#000000), color-stop(100%,#8f0222)) 6 6 6 6  repeat repeat;
     box-shadow: 0 0 20px #888;
 }
 
@@ -260,6 +296,7 @@ a.promo-link {
     display: block;
     width: 100%;
     height: 100%;
+    border-radius: 10px;
 }
 
 .promo .music .promo-img {
@@ -279,7 +316,7 @@ a.promo-link {
     top: 0;
     padding: 0px 5px 0 4%;
     width: 100%;
-    font-weight: bold;
+    font-weight: normal;
     width: 40%;
 }
 

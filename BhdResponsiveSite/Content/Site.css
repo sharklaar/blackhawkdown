@@ -336,3 +336,43 @@ a {
     text-decoration: none;
 }
 
+.intro-text {
+    width: 57%;
+    display: block;
+    float: left;
+    margin-right: 20px;
+}
+
+.main-promo {
+    width: 35%;
+    display: block;
+    float: left;
+    cursor: pointer;
+}
+
+.main-promo .promo, .main-promo .promo a.promo-link {
+    height: 245px;
+    position: relative;
+}
+
+.main-promo .promo a:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 91px;
+    left: 126px;
+    background: url('images/youtube-sprite.png') 0px -65px no-repeat;
+    height: 61px;
+    width: 87px;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.main-promo .promo a:hover:before {
+    background-position: 0 0;
+}
+
+.promo .music .promo-img {
+    background-position: -124px 0;
+    border-radius: 10px;
+}

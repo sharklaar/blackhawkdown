@@ -31,11 +31,15 @@
         <li id="header" class="main-section">
             @Html.Partial("_header")
         </li>
-        
+
         @if (Request.Cookies["bhd_subscribe"] == null)
         {
+
             <li id="email" class="main-section clearfix">
-                @Html.Partial("_email")
+                @*@Html.Partial("_email")*@
+                @{
+                    Html.RenderAction("Email", "Home");
+                }
             </li>
         }
 
@@ -48,9 +52,9 @@
             @Html.Partial("_footer")
         </li>
     </ul>
-    
 
-    
+
+
     @RenderSection("scripts", required: false)
 </body>
 </html>

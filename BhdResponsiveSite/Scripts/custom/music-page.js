@@ -11,9 +11,9 @@
 };
 
 var initialVideos = [
-        new Video("Free Man", "mf5vExXL1vk", + "0"),
+        new Video("Poison In My Blood", "g_66lMURxac", + "0"),
         new Video("Simplify", "9MbQ_i9P9aU", + "0"),
-        new Video("Poison In My Blood", "g_66lMURxac", + "0")
+        new Video("Free Man - Live", "mf5vExXL1vk", + "0")
 ];
 
 
@@ -28,6 +28,10 @@ var VideoModel = function (videos) {
     };
 
     self.setCurrentVideo = function(video) {
+        for (var i = 0; i < videos.length; i++) {
+            videos[i].isCurrent(false);
+        }
+
         video.isCurrent(true);
         self.currentVideo(video);
     };

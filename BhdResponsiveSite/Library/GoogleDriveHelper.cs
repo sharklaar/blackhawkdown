@@ -1,5 +1,6 @@
 ﻿using Google.GData.Client;
 using Google.GData.Spreadsheets;
+using System;
 
 namespace BhdResponsiveSite.Library
 {
@@ -55,7 +56,8 @@ namespace BhdResponsiveSite.Library
             
             var row = new ListEntry();
 
-            row.Elements.Add(new ListEntry.Custom { LocalName = "email", Value = emailAddress }); 
+            row.Elements.Add(new ListEntry.Custom { LocalName = "email", Value = emailAddress });
+            row.Elements.Add(new ListEntry.Custom { LocalName = "date", Value = DateTime.Now.ToShortDateString() });
             
             _spreadsheetsService.Insert(listFeed, row);
         }

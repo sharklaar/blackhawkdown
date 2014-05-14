@@ -16,6 +16,9 @@ namespace BhdResponsiveSite.Controllers
         [ChildActionOnly]
         public ActionResult Email()
         {
+            if (Request.Cookies["bhd_subscribe"] != null)
+                return null;
+
             return PartialView("_email");
         }
 
@@ -23,18 +26,27 @@ namespace BhdResponsiveSite.Controllers
         [HttpPost]
         public ActionResult Email(EmailOnlyModel emailVm)
         {
+            if (Request.Cookies["bhd_subscribe"] != null)
+                return null;
+
             if (!ModelState.IsValid)
             {
-                return PartialView("_email");
+                return PartialView("_email", emailVm);
             }
 
             WriteEmailToDatabase(emailVm);
+            try
+            {
+                AddCookie();
 
-            AddCookie();
+                SendAutoResponse(emailVm);
 
-            SendAutoResponse(emailVm); 
-
-            return PartialView("_email", emailVm);
+                return null;
+            }
+            catch (Exception ex)
+            {
+                return PartialView("_email", emailVm);
+            }            
         }
 
         public ActionResult FreeTracks()
@@ -82,7 +94,7 @@ namespace BhdResponsiveSite.Controllers
         {
             var cookie = new HttpCookie("bhd_subscribe", "true");
             cookie.Expires = DateTime.Now.AddYears(1);
-            Request.Cookies.Add(cookie);
+            Response.Cookies.Add(cookie);
         }
 
         private void SendAutoResponse(EmailOnlyModel emailVm)

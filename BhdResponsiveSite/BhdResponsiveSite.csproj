@@ -186,6 +186,7 @@
     <Content Include="Content\images\logo\hawk.png" />
     <Content Include="Content\images\music-thumb.jpg" />
     <Content Include="Content\images\twitter.png" />
+    <Content Include="Content\images\youtube-sprite.png" />
     <Content Include="Content\images\youtube.png" />
     <Content Include="Content\mobile.css" />
     <Content Include="Content\mp3s\Exposed.mp3" />

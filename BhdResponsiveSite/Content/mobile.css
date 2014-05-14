@@ -18,11 +18,9 @@
     }
 
     .main-promo .promo a:before {
-        content: none;
-        display: none;
         position: absolute;
-        top: 91px;
-        left: 126px;
+        top: 43px;
+        left: 61%;
         background: url('images/youtube-sprite.png') 0px -65px no-repeat;
         height: 61px;
         width: 87px;
@@ -251,6 +249,13 @@
     .promo .music .promo-img {
         background-image: url('images/music-thumb.jpg');
         background-position: 0 0;
+    }
+    .free-music {
+        width: 100%;
+    }
+
+    .free-music-text {
+        width: 100%;
     }
 }
 

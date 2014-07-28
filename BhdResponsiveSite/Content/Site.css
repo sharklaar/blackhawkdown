@@ -417,3 +417,10 @@ a {
 .free-music-text p {
     margin: 0;
 }
+
+.login {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+}

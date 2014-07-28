@@ -1,0 +1,27 @@
+﻿@model BhdResponsiveSite.Models.AccountModel
+
+@{
+    ViewBag.Title = "Signup";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Sign up for a BlackHawkDown account</h2>
+ @using (Html.BeginForm("CreateAccount", "Account", FormMethod.Post))
+ {
+     @Html.TextBoxFor(m => m.Username, new { @Value = "Username" })
+     @Html.TextBoxFor(m => m.FirstName, new { @Value = "First name" })
+     @Html.TextBoxFor(m => m.LastName, new { @Value = "Last name" })
+     @Html.TextBoxFor(m => m.Email, new { @Value = "Email address" })
+     @Html.TextBoxFor(m => m.Password, new { @Value = "Password" })
+     @Html.TextBox("ConfirmPassword", "Confirm password")
+     
+ }
+
+<script type="text/javascript">
+    $("input[name=Username], input[name=Password], input[name=FirstName], input[name=LastName], input[name=Email], input[name=ConfirmPassword]").focus(function () {
+        var defaultText = $(this).val();
+        if (defaultText === "Username" || defaultText === "Password" || defaultText === "First name" || defaultText === "Last name" || defaultText === "Email address" || defaultText === "Confirm password") {
+            $(this).val('');
+        }
+    });
+</script>

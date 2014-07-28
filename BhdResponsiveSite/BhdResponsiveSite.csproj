@@ -154,6 +154,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\ContactController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
@@ -163,6 +164,7 @@
     <Compile Include="Library\Contact.cs" />
     <Compile Include="Library\Email.cs" />
     <Compile Include="Library\GoogleDriveHelper.cs" />
+    <Compile Include="Models\AccountModel.cs" />
     <Compile Include="Models\ContactViewModel.cs" />
     <Compile Include="Models\EmailOnlyModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -344,6 +346,9 @@
     <Content Include="LogoAssets\Text element.eps" />
     <Content Include="LogoAssets\Text element.pdf" />
     <None Include="Properties\PublishProfiles\Profile1.pubxml" />
+    <Content Include="Views\Account\Members.cshtml" />
+    <Content Include="Views\Account\Signup.cshtml" />
+    <Content Include="Views\Account\CreateAccount.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

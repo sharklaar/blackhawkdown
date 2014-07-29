@@ -1,4 +1,5 @@
-﻿using BhdResponsiveSite.Models;
+﻿using BhdResponsiveSite.Library;
+using BhdResponsiveSite.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,11 +12,19 @@ namespace BhdResponsiveSite.Controllers
     {
         //
         // GET: /Account/
+        private readonly GoogleDriveHelper _driveHelper = new GoogleDriveHelper();
 
         public ActionResult Login(AccountModel account)
         {
+            var loginValidated = _driveHelper.GetUserWithLoginCredentials(account);
 
-            return View("Members", account);
+            if (loginValidated)
+            {
+                return View("Members", account);
+            }
+
+            return View("FailedLogin");
+
         }
 
         public ActionResult Signup()
@@ -24,10 +33,11 @@ namespace BhdResponsiveSite.Controllers
         }
 
         [HttpPost]
-        public ActionResult CreateAccount()
+        public ActionResult CreateAccount(AccountModel account)
         {
+            _driveHelper.WriteNewUserToDatabase(account);
+
             return View();
         }
-
     }
 }

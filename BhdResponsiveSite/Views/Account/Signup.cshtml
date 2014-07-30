@@ -4,16 +4,42 @@
     ViewBag.Title = "Signup";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.js"></script>
 <h2>Sign up for a BlackHawkDown account</h2>
  @using (Html.BeginForm("CreateAccount", "Account", FormMethod.Post))
  {
-     @Html.TextBoxFor(m => m.Username, new { @Value = "Username" })
-     @Html.TextBoxFor(m => m.FirstName, new { @Value = "First name" })
-     @Html.TextBoxFor(m => m.LastName, new { @Value = "Last name" })
-     @Html.TextBoxFor(m => m.Email, new { @Value = "Email address" })
-     @Html.PasswordFor(m => m.Password, new { @Value = "Password" })
-     @Html.Password("ConfirmPassword", "Confirm password")
+     <div class="signup-field">
+         @Html.LabelFor(m => m.Username)
+         @Html.TextBoxFor(m => m.Username, new { @Value = "Username" })
+         @Html.ValidationMessageFor(m => m.Username)
+     </div>
+     <div class="signup-field">
+         @Html.LabelFor(m => m.FirstName)
+         @Html.TextBoxFor(m => m.FirstName, new { @Value = "First name" })
+         @Html.ValidationMessageFor(m => m.FirstName)
+     </div>
+     <div class="signup-field">
+         @Html.LabelFor(m => m.LastName)
+         @Html.TextBoxFor(m => m.LastName, new { @Value = "Last name" })
+         @Html.ValidationMessageFor(m => m.LastName)
+     </div>
+     <div class="signup-field">
+         @Html.LabelFor(m => m.Email)
+         @Html.TextBoxFor(m => m.Email, new { @Value = "Email address" })
+         @Html.ValidationMessageFor(m => m.Email)
+     </div>
+     <div class="signup-field">
+         @Html.LabelFor(m => m.Password)
+         @Html.PasswordFor(m => m.Password, new { @Value = "Password" })
+         @Html.ValidationMessageFor(m => m.Password)
+     </div>
+         <div class="signup-field">
+         @Html.LabelFor(m => m.ConfirmPassword)
+         @Html.PasswordFor(m => m.ConfirmPassword, new { @Value = "Confirm password" })
+         @Html.ValidationMessageFor(m => m.ConfirmPassword)
+     </div>
+
      <input type="submit" value="Sign up now" class="submit-button" />
      
  }
@@ -23,15 +49,6 @@
         var defaultText = $(this).val();
         if (defaultText === "Username" || defaultText === "Password" || defaultText === "First name" || defaultText === "Last name" || defaultText === "Email address" || defaultText === "Confirm password") {
             $(this).val('');
-        }
-    });
-
-    $('.submit-button').click(function (e) {
-        var password = $("input[name=Password]").val();
-        var confirmPassword = $("input[name=ConfirmPassword]").val();
-        if (password != confirmPassword) {
-            e.preventDefault();
-            alert('poo');
         }
     });
 </script>

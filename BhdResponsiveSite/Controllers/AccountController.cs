@@ -35,9 +35,15 @@ namespace BhdResponsiveSite.Controllers
         [HttpPost]
         public ActionResult CreateAccount(AccountModel account)
         {
-            _driveHelper.WriteNewUserToDatabase(account);
-
-            return View();
+            if (ModelState.IsValid)
+            {
+                _driveHelper.WriteNewUserToDatabase(account);
+                return View(account);
+            }
+            else
+            {
+                return View("Signup", account);
+            }
         }
     }
 }

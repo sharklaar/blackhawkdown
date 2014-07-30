@@ -25,4 +25,13 @@
             $(this).val('');
         }
     });
+
+    $('.submit-button').click(function (e) {
+        var password = $("input[name=Password]").val();
+        var confirmPassword = $("input[name=ConfirmPassword]").val();
+        if (password != confirmPassword) {
+            e.preventDefault();
+            alert('poo');
+        }
+    });
 </script>

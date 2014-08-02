@@ -14,13 +14,17 @@
 
 <div id="header-image">
     <div class="login">
-        @using (Html.BeginForm("Login", "Account", FormMethod.Post))
+    @if (Request.Cookies["bhd_login"] == null)
+    {
+        using (Html.BeginForm("Login", "Account", FormMethod.Post))
         {
             @Html.TextBoxFor(m => m.Username, new { @Value = "Username", id = "username-textbox" })
             @Html.PasswordFor(m => m.Password, new { @Value = "Password" })
             <input type="submit" value="Login" class="submit-button" />
         }
         @Html.ActionLink("Not already a member? SIGN UP!", "Signup", "Account")
+    }
+
     </div>
 </div>
 <div id="header-logo">

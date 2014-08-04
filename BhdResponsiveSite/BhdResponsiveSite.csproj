@@ -157,6 +157,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\ContactController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\StoreController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -352,6 +353,7 @@
     <Content Include="Views\Account\Signup.cshtml" />
     <Content Include="Views\Account\CreateAccount.cshtml" />
     <Content Include="Views\Account\FailedLogin.cshtml" />
+    <Content Include="Views\Store\Index.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

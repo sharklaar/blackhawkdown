@@ -157,6 +157,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\ContactController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\StoreController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -191,6 +192,9 @@
     <Content Include="Content\images\logo\down.png" />
     <Content Include="Content\images\logo\hawk.png" />
     <Content Include="Content\images\music-thumb.jpg" />
+    <Content Include="Content\images\store\Album.jpg" />
+    <Content Include="Content\images\store\tshirt-bloke.jpg" />
+    <Content Include="Content\images\store\tshirt-ladies.jpg" />
     <Content Include="Content\images\twitter.png" />
     <Content Include="Content\images\youtube-sprite.png" />
     <Content Include="Content\images\youtube.png" />
@@ -352,6 +356,7 @@
     <Content Include="Views\Account\Signup.cshtml" />
     <Content Include="Views\Account\CreateAccount.cshtml" />
     <Content Include="Views\Account\FailedLogin.cshtml" />
+    <Content Include="Views\Store\Index.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

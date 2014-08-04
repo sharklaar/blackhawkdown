@@ -88,14 +88,14 @@ namespace BhdResponsiveSite.Library
             _spreadsheetsService.Insert(listFeed, row);
         }
 
-        public bool GetUserWithLoginCredentials(AccountModel accountModel)
+        public AccountModel GetUserWithLoginCredentials(AccountModel accountModel)
         {
             _worksheets = GetWorksheetFeed("accounts");
 
             var worksheet = _worksheets[0] as WorksheetEntry;
 
             if (worksheet == null) 
-                return false;
+                return null;
 
             var cellQuery = new CellQuery(worksheet.CellFeedLink);
 
@@ -107,10 +107,13 @@ namespace BhdResponsiveSite.Library
             {
                 if (cell.Row == cellRow && cell.Column == 4)
                 {
-                    return cell.Value == accountModel.Password;
+                    if (cell.Value == accountModel.Password)
+                    {
+                        return GetUserAccountDetails(cellRow);
+                    }                    
                 }
             }
-            return false;
+            return null;
         }
 
         private int GetCellRowForUser(CellFeed cellFeed, AccountModel accountModel)
@@ -126,6 +129,48 @@ namespace BhdResponsiveSite.Library
                 }
             }
             return 0;
+        }
+
+        private AccountModel GetUserAccountDetails(int sheetRow)
+        {
+            var userModel = new AccountModel();
+
+            _worksheets = GetWorksheetFeed("accounts");
+
+            var worksheet = _worksheets[0] as WorksheetEntry;
+
+            if (worksheet == null)
+                return null;
+
+            var cellQuery = new CellQuery(worksheet.CellFeedLink);
+            cellQuery.MinimumRow = (uint)sheetRow;
+            cellQuery.MaximumRow = (uint)sheetRow;
+
+            var cellFeed = _spreadsheetsService.Query(cellQuery);
+
+            foreach (CellEntry cell in cellFeed.Entries)
+            {
+                if (cell.Cell.Column == 1)
+                {
+                    userModel.Email = cell.Value;
+                }
+                if (cell.Cell.Column == 2)
+                {
+                    userModel.FirstName = cell.Value;
+                }
+                if(cell.Cell.Column == 3)
+                {
+                    userModel.LastName = cell.Value;
+                }
+                if (cell.Cell.Column == 5)
+                {
+                    userModel.Username = cell.Value;
+                }
+            }
+
+
+
+            return userModel;
         }
     }
 }

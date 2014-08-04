@@ -173,10 +173,12 @@
     <Content Include="Content\desktop.css" />
     <Content Include="Content\images\about-thumb.jpg" />
     <Content Include="Content\images\about\andy.jpg" />
+    <Content Include="Content\images\about\ant.jpg" />
     <Content Include="Content\images\about\band.jpg" />
     <Content Include="Content\images\about\ben.jpg" />
     <Content Include="Content\images\about\hemy.jpg" />
     <Content Include="Content\images\about\shark.jpg" />
+    <Content Include="Content\images\band.jpg" />
     <Content Include="Content\images\bgs\hawk.png" />
     <Content Include="Content\images\bgs\treadplate_background.jpg" />
     <Content Include="Content\images\bgs\treadplate_background_mobile.jpg" />

@@ -20,6 +20,7 @@ namespace BhdResponsiveSite.Controllers
 
             if (loginValidated)
             {
+                AddCookie();
                 return View("Members", account);
             }
 
@@ -38,12 +39,18 @@ namespace BhdResponsiveSite.Controllers
             if (ModelState.IsValid)
             {
                 _driveHelper.WriteNewUserToDatabase(account);
-                return View(account);
+                AddCookie();
+                return View("Members", account);
             }
-            else
-            {
-                return View("Signup", account);
-            }
+            return View("Signup", account);
+
+        }
+
+        private void AddCookie()
+        {
+            var cookie = new HttpCookie("bhd_signin", "true");
+            cookie.Expires = DateTime.Now.AddYears(1);
+            Response.Cookies.Add(cookie);
         }
     }
 }

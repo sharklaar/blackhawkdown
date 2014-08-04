@@ -3,7 +3,7 @@
     font-family: "Segoe UI", Verdana, Helvetica, Sans-Serif;
     color: whitesmoke;
     background-color: #ccc;
-    background: url('/Content/images/bgs/hawk.png') 0 0 no-repeat;
+    background: url('/Content/images/bgs/treadplate_background.jpg') 0 0 no-repeat;
     background-size: cover;
     width: 100%;
     margin: 0;
@@ -434,6 +434,10 @@ a {
     display: inline-block;
 }
 
-.signup-field input {
+input {
     color: gray;
+}
+
+.submit-button {
+    color: black;
 }

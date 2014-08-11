@@ -1,8 +1,6 @@
 ﻿using BhdResponsiveSite.Library;
 using BhdResponsiveSite.Models;
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
@@ -21,6 +19,7 @@ namespace BhdResponsiveSite.Controllers
             if (validatedAccount != null)
             {
                 AddCookie();
+                Session["login"] = validatedAccount;
 
                 return View("Members", validatedAccount);                
 
@@ -29,6 +28,15 @@ namespace BhdResponsiveSite.Controllers
             return View("FailedLogin");
 
         }
+
+        public ActionResult Members()
+        {
+            if (Session["login"] != null)
+                return View();
+
+            return View("FailedLogin");
+        }
+
 
         public ActionResult Signup()
         {

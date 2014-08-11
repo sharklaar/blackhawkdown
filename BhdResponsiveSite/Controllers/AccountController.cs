@@ -31,8 +31,12 @@ namespace BhdResponsiveSite.Controllers
 
         public ActionResult Members()
         {
+            var sessionAccount = new AccountModel();
             if (Session["login"] != null)
-                return View();
+            {
+                sessionAccount = Session["login"] as AccountModel;
+                return View(sessionAccount);
+            }
 
             return View("FailedLogin");
         }

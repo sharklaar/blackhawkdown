@@ -3,14 +3,21 @@
     font-family: "Segoe UI", Verdana, Helvetica, Sans-Serif;
     color: whitesmoke;
     background-color: #ccc;
-    background: url('/Content/images/bgs/hawk.png') 0 0 no-repeat;
-    background-size: cover;
+    background: url('/Content/images/bgs/treadplate_background_mobile.jpg') 0 0 repeat;
     width: 100%;
     margin: 0;
 }
 
 h1 {
     font-size: 2em;
+}
+
+.promo .promo-text {
+    padding-top: 7px;
+}
+
+.promo p {
+    -webkit-margin-before: 0;
 }
 
 header, footer, nav, section {
@@ -416,4 +423,39 @@ a {
 }
 .free-music-text p {
     margin: 0;
+}
+
+.login {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+}
+
+.signup-field {
+    display: block;
+}
+
+.signup-field label {
+    width: 200px;
+    display: inline-block;
+}
+
+input {
+    color: gray;
+}
+
+.submit-button {
+    color: black;
+}
+
+/* store page */
+
+img.store-item-img {
+    height: 200px;
+    width: 200px;
+}
+
+.store-item {
+    
 }

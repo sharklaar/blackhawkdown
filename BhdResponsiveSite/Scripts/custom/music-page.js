@@ -25,6 +25,7 @@ var VideoModel = function (videos) {
     self.playVideo = function(video) {
         video.autoplay("1");
         self.setCurrentVideo(video);
+        _trackEvent('Video Thumbnails', 'Select', self.currentVideo.title);
     };
 
     self.setCurrentVideo = function(video) {

@@ -3,6 +3,7 @@
     var currentAction = ViewContext.RouteData.Values["action"] as string ?? "Index";
     var currentPage = (currentController + "-" + currentAction).ToLower();
  }
+@using System.Configuration
 @model BhdResponsiveSite.Models.AccountModel
 
     
@@ -13,20 +14,21 @@
     </div>
 
 <div id="header-image">
-
-    <div class="login">
-    @if (Request.Cookies["bhd_login"] == null)
+    @if (ConfigurationManager.AppSettings["EnableLoginPage"] == "true")
     {
-        using (Html.BeginForm("Login", "Account", FormMethod.Post))
-        {
-            @Html.TextBoxFor(m => m.Username, new { @Value = "Username", id = "username-textbox" })
-            @Html.PasswordFor(m => m.Password, new { @Value = "Password" })
-            <input type="submit" value="Login" class="submit-button" />
-        }
-        @Html.ActionLink("Not already a member? SIGN UP!", "Signup", "Account")
+        <div class="login">
+            @if (Request.Cookies["bhd_login"] == null)
+            {
+                using (Html.BeginForm("Login", "Account", FormMethod.Post))
+                {
+                    @Html.TextBoxFor(m => m.Username, new {@Value = "Username", id = "username-textbox"})
+                    @Html.PasswordFor(m => m.Password, new {@Value = "Password"})
+                    <input type="submit" value="Login" class="submit-button" />
+                }
+                @Html.ActionLink("Not already a member? SIGN UP!", "Signup", "Account")
+            }
+        </div>
     }
-
-    </div>
 </div>
 <div id="header-logo">
     <a href="@Url.Action("Index", "Home")" class="link-logo">

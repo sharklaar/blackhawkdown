@@ -12,6 +12,14 @@ h1 {
     font-size: 2em;
 }
 
+.promo .promo-text {
+    padding-top: 7px;
+}
+
+.promo p {
+    -webkit-margin-before: 0;
+}
+
 header, footer, nav, section {
     display: block;
 }

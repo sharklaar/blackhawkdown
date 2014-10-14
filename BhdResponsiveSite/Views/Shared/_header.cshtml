@@ -3,6 +3,8 @@
     var currentAction = ViewContext.RouteData.Values["action"] as string ?? "Index";
     var currentPage = (currentController + "-" + currentAction).ToLower();
  }
+@using System.Configuration
+@model BhdResponsiveSite.Models.AccountModel
 
     
     <div id="globalNavButton">
@@ -11,11 +13,28 @@
         <span class="bar"></span>
     </div>
 
-<div id="header-image"></div>
+<div id="header-image">
+    @if (ConfigurationManager.AppSettings["EnableLoginPage"] == "true")
+    {
+        <div class="login">
+            @if (Request.Cookies["bhd_login"] == null)
+            {
+                using (Html.BeginForm("Login", "Account", FormMethod.Post))
+                {
+                    @Html.TextBoxFor(m => m.Username, new {@Value = "Username", id = "username-textbox"})
+                    @Html.PasswordFor(m => m.Password, new {@Value = "Password"})
+                    <input type="submit" value="Login" class="submit-button" />
+                }
+                @Html.ActionLink("Not already a member? SIGN UP!", "Signup", "Account")
+            }
+        </div>
+    }
+</div>
 <div id="header-logo">
     <a href="@Url.Action("Index", "Home")" class="link-logo">
         <img src="/Content/images/logo/blackhawkdown.png" alt="down" />
     </a>
+
 </div>
 
 <div id="navigation" class="clearfix">
@@ -28,3 +47,12 @@
         <li>@Html.ActionLink("Contact Us", "Index", "Contact", null, new { @class = currentPage == "contact-index" ? "current" : "" })</li>
     </ul>
 </div>
+
+<script type="text/javascript">
+    $("input[name=Username], input[name=Password]").focus(function () {
+        var defaultText = $(this).val();
+        if (defaultText === "Username" || defaultText === "Password") {
+            $(this).val('');
+        }
+    });
+</script>

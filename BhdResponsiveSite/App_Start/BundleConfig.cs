@@ -9,6 +9,7 @@ namespace BhdResponsiveSite
         public static void RegisterBundles(BundleCollection bundles)
         {
             bundles.Add(new ScriptBundle("~/bundles/musicpage").Include(
+                        "~/Scripts/lunametrics-youtube-v6.js",
                         "~/Scripts/custom/music-page.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/aboutpage").Include(

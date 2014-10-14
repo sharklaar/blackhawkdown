@@ -12,6 +12,14 @@ h1 {
     font-size: 2em;
 }
 
+.promo .promo-text {
+    padding-top: 7px;
+}
+
+.promo p {
+    -webkit-margin-before: 0;
+}
+
 header, footer, nav, section {
     display: block;
 }
@@ -415,4 +423,39 @@ a {
 }
 .free-music-text p {
     margin: 0;
+}
+
+.login {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+}
+
+.signup-field {
+    display: block;
+}
+
+.signup-field label {
+    width: 200px;
+    display: inline-block;
+}
+
+input {
+    color: gray;
+}
+
+.submit-button {
+    color: black;
+}
+
+/* store page */
+
+img.store-item-img {
+    height: 200px;
+    width: 200px;
+}
+
+.store-item {
+    
 }

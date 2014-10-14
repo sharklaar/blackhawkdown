@@ -1,0 +1,103 @@
+﻿@{
+    ViewBag.Title = "Store | BlackHawkDown";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="store-page">
+    <h2>Store</h2>
+    
+    <div class="store-item">
+        <form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post" target="paypal">
+
+            <input type="hidden" name="cmd" value="_cart">
+            <input type="hidden" name="add" value="1">
+
+            <input type="hidden" name="business" value="marcdaffern-facilitator@hotmail.com">
+            <input type="hidden" name="item_name" value="Men's t-shirt">
+
+            <input type="hidden" name="amount" value="10.00">
+            <input type="hidden" name="shopping_url" 
+                   value="@Request.Url">
+
+            <input type="hidden" name="return" value="@Request.Url">
+            <input type="hidden" name="cancel_return" value="@Request.Url">
+            <img class="store-item-img" src="~/Content/images/store/tshirt-bloke.jpg" />
+            <input type="hidden" name="bn" value="PP-ShopCartBF:x-click-but22.gif:NonHosted">
+            <input type="image" src="https://www.paypal.com/en_US/i/btn/x-click-but22.gif" border="0"
+
+                   name="submit" alt="Make payments with PayPal - it's fast, free and secure!">
+            <img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">
+        </form>
+    </div>
+    <div class="store-item">
+
+        <form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post" target="paypal">
+
+            <input type="hidden" name="cmd" value="_cart">
+            <input type="hidden" name="add" value="1">
+
+            <input type="hidden" name="business" value="marcdaffern-facilitator@hotmail.com">
+            <input type="hidden" name="item_name" value="Ladies' t-shirt">
+
+            <input type="hidden" name="amount" value="5.00">
+            <input type="hidden" name="shipping" value="1.00">
+
+            <input type="hidden" name="shopping_url" 
+                   value="@Request.Url">
+            <input type="hidden" name="return" value="@Request.Url">
+
+            <input type="hidden" name="cancel_return" value="@Request.Url">
+    
+            <img class="store-item-img" src="~/Content/images/store/tshirt-ladies.jpg" />
+            <input type="hidden" name="bn" value="PP-ShopCartBF:x-click-but22.gif:NonHosted">
+    
+            <input type="image" src="https://www.paypal.com/en_US/i/btn/x-click-but22.gif" border="0"
+                   name="submit" alt="Make payments with PayPal - it's fast, free and secure!">
+
+            <img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1"
+                 height="1">
+        </form>
+    </div>
+    
+    <div class="store-item">
+        <form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post" target="paypal">
+            
+            <input type="hidden" name="cmd" value="_cart">
+            <input type="hidden" name="add" value="1">
+
+            <input type="hidden" name="business" value="marcdaffern-facilitator@hotmail.com">
+            <input type="hidden" name="item_name" value="CD Album">
+
+            <input type="hidden" name="amount" value="5.00">
+            <input type="hidden" name="shipping" value="1.00">
+
+            <input type="hidden" name="shopping_url" 
+                   value="@Request.Url">
+            <input type="hidden" name="return" value="@Request.Url">
+
+            <input type="hidden" name="cancel_return" value="@Request.Url">
+            <img class="store-item-img" src="~/Content/images/store/Album.jpg" />
+            <input type="hidden" name="bn" value="PP-ShopCartBF:x-click-but22.gif:NonHosted">
+    
+            <input type="image" src="https://www.paypal.com/en_US/i/btn/x-click-but22.gif" border="0"
+                   name="submit" alt="Make payments with PayPal - it's fast, free and secure!">
+
+            <img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1"
+                 height="1">
+        </form>
+    </div>
+
+    <form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post" target="paypal">
+
+        <input type="hidden" name="cmd" value="_cart">
+
+        <input type="hidden" name="display" value="1">
+        <input type="hidden" name="business" value="marcdaffern-facilitator@hotmail.com">
+
+        <input type="hidden" name="shopping_url" 
+               value="@Request.Url">
+        <input type="image" src="https://www.paypal.com/en_US/i/btn/view_cart_02.gif" 
+               name="submit" alt="Make payments with PayPal - it's fast, free and secure!">
+
+    </form>
+</div>

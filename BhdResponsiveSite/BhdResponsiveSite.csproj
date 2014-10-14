@@ -154,8 +154,10 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\ContactController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\StoreController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -163,6 +165,7 @@
     <Compile Include="Library\Contact.cs" />
     <Compile Include="Library\Email.cs" />
     <Compile Include="Library\GoogleDriveHelper.cs" />
+    <Compile Include="Models\AccountModel.cs" />
     <Compile Include="Models\ContactViewModel.cs" />
     <Compile Include="Models\EmailOnlyModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -171,10 +174,12 @@
     <Content Include="Content\desktop.css" />
     <Content Include="Content\images\about-thumb.jpg" />
     <Content Include="Content\images\about\andy.jpg" />
+    <Content Include="Content\images\about\ant.jpg" />
     <Content Include="Content\images\about\band.jpg" />
     <Content Include="Content\images\about\ben.jpg" />
     <Content Include="Content\images\about\hemy.jpg" />
     <Content Include="Content\images\about\shark.jpg" />
+    <Content Include="Content\images\band.jpg" />
     <Content Include="Content\images\bgs\hawk.png" />
     <Content Include="Content\images\bgs\treadplate_background.jpg" />
     <Content Include="Content\images\bgs\treadplate_background_mobile.jpg" />
@@ -187,6 +192,9 @@
     <Content Include="Content\images\logo\down.png" />
     <Content Include="Content\images\logo\hawk.png" />
     <Content Include="Content\images\music-thumb.jpg" />
+    <Content Include="Content\images\store\Album.jpg" />
+    <Content Include="Content\images\store\tshirt-bloke.jpg" />
+    <Content Include="Content\images\store\tshirt-ladies.jpg" />
     <Content Include="Content\images\twitter.png" />
     <Content Include="Content\images\youtube-sprite.png" />
     <Content Include="Content\images\youtube.png" />
@@ -257,6 +265,7 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\knockout-2.1.0.debug.js" />
     <Content Include="Scripts\knockout-2.1.0.js" />
+    <Content Include="Scripts\lunametrics-youtube-v6.js" />
     <Content Include="Scripts\modernizr-2.5.3.js" />
     <Content Include="Scripts\_references.js" />
     <Content Include="Web.config">
@@ -344,6 +353,11 @@
     <Content Include="LogoAssets\Text element.eps" />
     <Content Include="LogoAssets\Text element.pdf" />
     <None Include="Properties\PublishProfiles\Profile1.pubxml" />
+    <Content Include="Views\Account\Members.cshtml" />
+    <Content Include="Views\Account\Signup.cshtml" />
+    <Content Include="Views\Account\CreateAccount.cshtml" />
+    <Content Include="Views\Account\FailedLogin.cshtml" />
+    <Content Include="Views\Store\Index.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

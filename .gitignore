@@ -1,0 +1,24 @@
+_ReSharper.CTM
+*.trx
+reports/
+deployment/
+[Bb]in/
+[Oo]bj/
+*6.0.ReSharper.user
+obj/
+src/**/bin/
+src/bin/**/*
+*.suo
+/**/*.user
+*.vsmdi
+*.user
+*.DotSettings
+*.*.DotSettings.user
+*.vsmdi
+
+build/
+Visual Studio*
+rewrite.config
+*.suo
+packages/*
+!packages/repositories.config

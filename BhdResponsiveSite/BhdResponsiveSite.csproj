@@ -172,6 +172,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\desktop.css" />
+    <Content Include="Content\images\about-thumb-1.jpg" />
     <Content Include="Content\images\about-thumb.jpg" />
     <Content Include="Content\images\about\andy.jpg" />
     <Content Include="Content\images\about\ant.jpg" />
@@ -187,6 +188,9 @@
     <Content Include="Content\images\facebook.png" />
     <Content Include="Content\images\gigs-thumb.jpg" />
     <Content Include="Content\images\header-band.jpg" />
+    <Content Include="Content\images\Layout\header-image.png" />
+    <Content Include="Content\images\Layout\homepage-full-header.jpg" />
+    <Content Include="Content\images\Layout\homepage-header.jpg" />
     <Content Include="Content\images\logo\black.png" />
     <Content Include="Content\images\logo\blackhawkdown.png" />
     <Content Include="Content\images\logo\down.png" />

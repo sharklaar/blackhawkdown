@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Operations Version="1.0" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+  <Operation Name="Rename Refactor" Key="b950fcc5-9413-412c-8fbb-3f5544f8cdb1" ChangeDateTime="10/27/2014 15:12:13">
+    <Property Name="ElementName" Value="[dbo].[Pages].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Pages]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="PageId_pkey" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="cf531567-b3bf-4df8-8586-d5f4776dd7ef" ChangeDateTime="10/27/2014 15:13:05">
+    <Property Name="ElementName" Value="[dbo].[Blocks].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Blocks]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="BlockId_pkey" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="b5ec76ca-26d3-421d-820c-5eece3fd5571" ChangeDateTime="10/27/2014 15:15:43">
+    <Property Name="ElementName" Value="[dbo].[FK_Blocks_ToTable]" />
+    <Property Name="ElementType" Value="SqlForeignKeyConstraint" />
+    <Property Name="ParentElementName" Value="[dbo].[Blocks]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="[FK_Blocks_Page]" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="8f6690a9-3956-40bb-9d8d-b2c5a45847a5" ChangeDateTime="10/27/2014 15:17:25">
+    <Property Name="ElementName" Value="[dbo].[Pages].[PageId_pkey]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Pages]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="PageId_PK" />
+  </Operation>
+</Operations>

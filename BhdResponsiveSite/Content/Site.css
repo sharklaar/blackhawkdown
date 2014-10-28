@@ -149,6 +149,7 @@ a {
     position: absolute;
     top: 110px;
     width: 100%;
+    left: 12px;
 }
 
 #header-logo img {

@@ -362,6 +362,7 @@
     <Content Include="Views\Account\CreateAccount.cshtml" />
     <Content Include="Views\Account\FailedLogin.cshtml" />
     <Content Include="Views\Store\Index.cshtml" />
+    <Content Include="Views\Home\Demo.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

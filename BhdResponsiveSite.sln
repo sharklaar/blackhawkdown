@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BhdResponsiveSite", "BhdResponsiveSite\BhdResponsiveSite.csproj", "{D8E8FC08-B344-4735-A2E2-07545A5AA9EA}"
 EndProject
-Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "BhdResponsiveSite.Data", "BhdResponsiveSite.Data\BhdResponsiveSite.Data.sqlproj", "{C93273FE-A905-4179-921C-31AF8AE62627}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,12 +13,6 @@ Global
 		{D8E8FC08-B344-4735-A2E2-07545A5AA9EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D8E8FC08-B344-4735-A2E2-07545A5AA9EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D8E8FC08-B344-4735-A2E2-07545A5AA9EA}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C93273FE-A905-4179-921C-31AF8AE62627}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C93273FE-A905-4179-921C-31AF8AE62627}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C93273FE-A905-4179-921C-31AF8AE62627}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
-		{C93273FE-A905-4179-921C-31AF8AE62627}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C93273FE-A905-4179-921C-31AF8AE62627}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C93273FE-A905-4179-921C-31AF8AE62627}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

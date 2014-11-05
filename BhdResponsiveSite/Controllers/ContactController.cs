@@ -23,7 +23,8 @@ namespace BhdResponsiveSite.Controllers
         {
             if (!ModelState.IsValid)
             {
-                return View(contactVm);
+                return null;
+                //return View(contactVm);
             }
 
             var contact = new Contact

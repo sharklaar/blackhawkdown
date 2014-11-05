@@ -1,0 +1,9 @@
+﻿@{
+    ViewBag.Title = "Members";
+}
+@using System.Web.Razor.Parser
+@model BhdResponsiveSite.Models.AccountModel
+
+<h2>Welcome @Model.FirstName</h2>
+
+@Html.ActionLink("download a file", "DownloadFile", "Account", new {name = "Exposed.mp3"})

@@ -230,77 +230,77 @@ var pauseFlagArray = new Array();
 //When our caged monster wishes to act
 //we are ready to hold it's chains
 //and enslave it to our will.
-function onPlayerStateChange(event) { 
-	//Let us accept the player which was massaged
-	//by the mousey hands of woman or man
-	var videoURL = event.target.getVideoUrl();
-	//We must strip from it, the true identity
-	var regex = /v=(.+)$/;
-	var matches = videoURL.match(regex);
-	videoID = matches[1];
-	//and prepare for it's true title
-	thisVideoTitle = "";
-	//we look through all the array
-	//which at first glance may seem unfocused
-	//but tis the off kilter response
-	//from the magical moore json
-	//which belies  this approach
-	//Tis a hack? A kludge?
-	//These are fighting words, sir!
-	for (j=0; j<videoArray.length; j++) {
-		//tis the video a match?
-	    if (videoArray[j]==videoID) {
-			//apply the true title!
-	        thisVideoTitle = videoTitle[j]||"";
-			console.log(thisVideoTitle);
-			//should we have a title, alas naught else
-			if(thisVideoTitle.length>0){
-				if(showTitle==3){
-					thisVideoTitle = thisVideoTitle + " | " + videoID;
-				}else if(showTitle==2){
-					thisVideoTitle = videoID;
-				}
-			}else{
-				thisVideoTitle = videoID;
-			}
-			//Should the video rear it's head
+function onPlayerStateChange(event) {
+    //Let us accept the player which was massaged
+    //by the mousey hands of woman or man
+    var videoURL = event.target.getVideoUrl();
+    //We must strip from it, the true identity
+    var regex = /v=(.+)$/;
+    var matches = videoURL.match(regex);
+    videoID = matches[1];
+    //and prepare for it's true title
+    thisVideoTitle = "";
+    //we look through all the array
+    //which at first glance may seem unfocused
+    //but tis the off kilter response
+    //from the magical moore json
+    //which belies  this approach
+    //Tis a hack? A kludge?
+    //These are fighting words, sir!
+    for (j = 0; j < videoArray.length; j++) {
+        //tis the video a match?
+        if (videoArray[j] == videoID) {
+            //apply the true title!
+            thisVideoTitle = videoTitle[j] || "";
+            console.log(thisVideoTitle);
+            //should we have a title, alas naught else
+            if (thisVideoTitle.length > 0) {
+                if (showTitle == 3) {
+                    thisVideoTitle = thisVideoTitle + " | " + videoID;
+                } else if (showTitle == 2) {
+                    thisVideoTitle = videoID;
+                }
+            } else {
+                thisVideoTitle = videoID;
+            }
+            //Should the video rear it's head
             if (event.data == YT.PlayerState.PLAYING) {
-				_gaq.push(['_trackEvent', 'Videos', 'Play', thisVideoTitle]); 
-        	    //ga('send', 'event', 'Videos', 'Play', thisVideoTitle);
-				//thy video plays
-				//reaffirm the pausal beast is not with us
-        		pauseFlagArray[j] = false;
-        	} 
-			//should the video tire out and cease
-        	if (event.data == YT.PlayerState.ENDED){
-				_gaq.push(['_trackEvent', 'Videos', 'Watch to End', thisVideoTitle]); 
-        		//ga('send', 'event', 'Videos', 'Watch to End', thisVideoTitle);
-        	} 
-			//and should we tell it to halt, cease, heal.
-			//confirm the pause has but one head and it flies not its flag
-			//lo the pause event will spawn a many headed monster
-			//with events overflowing
-        	if (event.data == YT.PlayerState.PAUSED && pauseFlagArray[j] != true){
-				_gaq.push(['_trackEvent', 'Videos', 'Pause', thisVideoTitle]); 
-        		//ga('send', 'event', 'Videos', 'Pause', thisVideoTitle);
-				//tell the monster it may have
-				//but one head
-        		pauseFlagArray[j] = true;
-        	}
-			//and should the monster think, before it doth play
-			//after we command it to move
-        	if (event.data == YT.PlayerState.BUFFERING){
-				_gaq.push(['_trackEvent', 'Videos', 'Buffering', thisVideoTitle]); 
-        		//ga('send', 'event', 'Videos', 'Buffering', thisVideoTitle);
-        	}
-			//and should it cue
-			//for why not track this as well.
-        	if (event.data == YT.PlayerState.CUED){
-				_gaq.push(['_trackEvent', 'Videos', 'Cueing', thisVideoTitle]); 
-        		//ga('send', 'event', 'Videos', 'Cueing', thisVideoTitle);
-        	}
+                _gaq.push(['_trackEvent', 'Videos', 'Play', thisVideoTitle]);
+                //ga('send', 'event', 'Videos', 'Play', thisVideoTitle);
+                //thy video plays
+                //reaffirm the pausal beast is not with us
+                pauseFlagArray[j] = false;
+            }
+            //should the video tire out and cease
+            if (event.data == YT.PlayerState.ENDED) {
+                _gaq.push(['_trackEvent', 'Videos', 'Watch to End', thisVideoTitle]);
+                //ga('send', 'event', 'Videos', 'Watch to End', thisVideoTitle);
+            }
+            //and should we tell it to halt, cease, heal.
+            //confirm the pause has but one head and it flies not its flag
+            //lo the pause event will spawn a many headed monster
+            //with events overflowing
+            if (event.data == YT.PlayerState.PAUSED && pauseFlagArray[j] != true) {
+                _gaq.push(['_trackEvent', 'Videos', 'Pause', thisVideoTitle]);
+                //ga('send', 'event', 'Videos', 'Pause', thisVideoTitle);
+                //tell the monster it may have
+                //but one head
+                pauseFlagArray[j] = true;
+            }
+            //and should the monster think, before it doth play
+            //after we command it to move
+            if (event.data == YT.PlayerState.BUFFERING) {
+                _gaq.push(['_trackEvent', 'Videos', 'Buffering', thisVideoTitle]);
+                //ga('send', 'event', 'Videos', 'Buffering', thisVideoTitle);
+                should
+                //and } it cue
+                //for why not track this as well.
+                if (event.data == YT.PlayerState.CUED) {
+                    _gaq.push(['_trackEvent', 'Videos', 'Cueing', thisVideoTitle]);
+                    //ga('send', 'event', 'Videos', 'Cueing', thisVideoTitle);
+                }
 
-	    }
-	}
-} 
-//fin
+            }
+        }
+    }
+}

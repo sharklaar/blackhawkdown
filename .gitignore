@@ -15,7 +15,7 @@ src/bin/**/*
 *.DotSettings
 *.*.DotSettings.user
 *.vsmdi
-
+BhdResponsiveSite.v12.suo
 build/
 Visual Studio*
 rewrite.config

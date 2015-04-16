@@ -379,7 +379,48 @@ a {
     width: 35%;
     display: block;
     float: left;
-    cursor: pointer;
+    text-align: center;
+}
+
+.main-promo .main-promo-text {
+    margin-top: 10px;
+}
+.main-promo a.inline {
+    text-decoration: underline;
+    font-weight: 700;
+}
+
+.main-promo a:hover {
+    text-decoration: none;
+}
+
+.main-promo .main-cta {
+    position: relative;
+    bottom: 38px;
+    display: block;
+    width: 100%;
+    background: rgb(0,0,0); /* Old browsers */
+    background: -moz-linear-gradient(top,  rgba(0,0,0,1) 0%, rgba(143,2,34,1) 35%, rgba(143,2,34,1) 63%, rgba(0,0,0,1) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,1)), color-stop(35%,rgba(143,2,34,1)), color-stop(63%,rgba(143,2,34,1)), color-stop(100%,rgba(0,0,0,1))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  rgba(0,0,0,1) 0%,rgba(143,2,34,1) 35%,rgba(143,2,34,1) 63%,rgba(0,0,0,1) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  rgba(0,0,0,1) 0%,rgba(143,2,34,1) 35%,rgba(143,2,34,1) 63%,rgba(0,0,0,1) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  rgba(0,0,0,1) 0%,rgba(143,2,34,1) 35%,rgba(143,2,34,1) 63%,rgba(0,0,0,1) 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  rgba(0,0,0,1) 0%,rgba(143,2,34,1) 35%,rgba(143,2,34,1) 63%,rgba(0,0,0,1) 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
+    
+    padding: 7px 0;
+}
+
+.main-promo .main-cta:hover {
+        background: rgb(0,0,0); /* Old browsers */
+    background: -moz-linear-gradient(top,  rgba(0,0,0,1) 0%, rgba(193,3,32,1) 35%, rgba(193,3,32,1) 65%, rgba(0,0,0,1) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,1)), color-stop(35%,rgba(193,3,32,1)), color-stop(65%,rgba(193,3,32,1)), color-stop(100%,rgba(0,0,0,1))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  rgba(0,0,0,1) 0%,rgba(193,3,32,1) 35%,rgba(193,3,32,1) 65%,rgba(0,0,0,1) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  rgba(0,0,0,1) 0%,rgba(193,3,32,1) 35%,rgba(193,3,32,1) 65%,rgba(0,0,0,1) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  rgba(0,0,0,1) 0%,rgba(193,3,32,1) 35%,rgba(193,3,32,1) 65%,rgba(0,0,0,1) 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  rgba(0,0,0,1) 0%,rgba(193,3,32,1) 35%,rgba(193,3,32,1) 65%,rgba(0,0,0,1) 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
+
 }
 
 .main-promo .promo, .main-promo .promo a.promo-link {
@@ -389,7 +430,7 @@ a {
 
 .main-promo .promo a:before {
     content: "";
-    display: block;
+    display: none;
     position: absolute;
     top: 91px;
     left: 126px;
@@ -398,6 +439,13 @@ a {
     width: 87px;
     z-index: 1;
     cursor: pointer;
+}
+
+.main-promo h2 {
+    margin: 0 0 10px;
+}
+.main-promo .promo-img {
+    background-image: url(/Content/images/courtesans.jpg);
 }
 
 .main-promo .promo a:hover:before {

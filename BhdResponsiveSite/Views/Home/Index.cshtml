@@ -24,14 +24,15 @@
 
 <div class="main-promo">
     <div class="promo">
-        <a href="@Url.Action("Music", "Home")" class="promo-link music odd" onclick="_gaq.push(['_trackEvent', 'Home Links', 'Click', 'Music Page'])">
+        @*<a href="@Url.Action("Music", "Home")" class="promo-link music odd" onclick="_gaq.push(['_trackEvent', 'Home Links', 'Click', 'Music Page'])">*@
             <div class="promo-img"></div>
             <div class="promo-text">
-                <p>OUR MUSIC</p>
-                <p>Check out our music on the videos page...</p>
-                <p class="desktop-only">We've got some more coming soon so keep an eye on this page...</p>
+                <h2>Gig News!</h2>
+                <p class="main-promo-text">BHD will be supporting <a class="inline" onclick="_gaq.push(['_trackEvent', 'Home Links', 'Click', 'Courtesans website'])" target="_blank" href="http://www.thecourtesans.org/">The Courtesans</a> at Mama Liz's Voodoo Lounge in May.</p>
             </div>
-        </a>
+        @*</a>*@
+        <a class="main-cta" onclick="_gaq.push(['_trackEvent', 'Home Links', 'Click', 'Courtesans tickets'])" target="_blank" href="http://www.wegottickets.com/event/312162">Order your tickets now!</a>
+
     </div>
 </div>
 
@@ -39,7 +40,7 @@
     <li class="promo">
         <a href="@Url.Action("Gigs", "Home")" class="promo-link gigs even">
             <div class="promo-img"></div>
-            <div class="promo-text"><p>Our next gig!<br /><br />The Met Lounge<br />Peterborough<br />20/03/2015</p></div>
+            <div class="promo-text"><p>Our next gig!<br /><br />The Voodoo Lounge<br />Stamford<br />15/05/2015</p></div>
         </a>
     </li>
     <li class="promo">

@@ -62,9 +62,4 @@ C:\dev\blackhawkdown\BhdResponsiveSite\bin\System.Web.WebPages.Razor.xml
 C:\dev\blackhawkdown\BhdResponsiveSite\obj\Debug\BhdResponsiveSite.dll
 C:\dev\blackhawkdown\BhdResponsiveSite\obj\Debug\BhdResponsiveSite.pdb
 C:\dev\blackhawkdown\BhdResponsiveSite\obj\Debug\BhdResponsiveSite.csprojResolveAssemblyReference.cache
-C:\dev\blackhawkdown\BhdResponsiveSite\bin\System.Net.Http.Formatting.dll
-C:\dev\blackhawkdown\BhdResponsiveSite\bin\System.Web.Http.dll
-C:\dev\blackhawkdown\BhdResponsiveSite\bin\System.Web.Http.WebHost.dll
-C:\dev\blackhawkdown\BhdResponsiveSite\bin\System.Net.Http.Formatting.xml
-C:\dev\blackhawkdown\BhdResponsiveSite\bin\System.Web.Http.xml
-C:\dev\blackhawkdown\BhdResponsiveSite\bin\System.Web.Http.WebHost.xml
+C:\dev\blackhawkdown\BhdResponsiveSite\bin\BhdResponsiveSite.dll.config

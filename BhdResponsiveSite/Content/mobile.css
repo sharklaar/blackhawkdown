@@ -26,6 +26,7 @@
         width: 87px;
         z-index: 1;
         cursor: pointer;
+        display: none;
     }
 
     .desktop-only {
@@ -245,7 +246,7 @@
         margin-bottom:10px;
     }
     .promo .music .promo-img {
-        background-image: url('images/music-thumb.jpg');
+        background-image: url('images/courtesans.jpg');
         background-position: 0 0;
     }
     .free-music {

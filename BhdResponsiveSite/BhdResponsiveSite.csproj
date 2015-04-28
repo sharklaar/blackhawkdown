@@ -171,6 +171,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include=".gitignore" />
     <Content Include="Content\desktop.css" />
     <Content Include="Content\images\about-thumb-1.jpg" />
     <Content Include="Content\images\about-thumb.jpg" />
@@ -251,6 +252,8 @@
     <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="googlec80367a1ca2a3b24.html" />
+    <Content Include="robots.txt" />
     <Content Include="Scripts\custom\about-page.js" />
     <Content Include="Scripts\custom\music-page.js" />
     <Content Include="Scripts\custom\nav.js" />
@@ -271,6 +274,7 @@
     <Content Include="Scripts\lunametrics-youtube-v6.js" />
     <Content Include="Scripts\modernizr-2.5.3.js" />
     <Content Include="Scripts\_references.js" />
+    <Content Include="sitemap.xml" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>

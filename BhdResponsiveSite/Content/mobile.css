@@ -13,7 +13,7 @@
     }
 
     .main-promo .promo, .main-promo .promo a.promo-link {
-        height: 150px;
+        height: 174px;
         position: relative;
     }
 
@@ -253,7 +253,27 @@
         width: 100%;
     }
 
+    .free-music-copy-section {
+        width: 100%;
+    }
     .free-music-text {
+        width: 100%;
+    }
+
+    #email form {
+        width: 100%;
+    }
+
+    .enter-email input {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .email-box p {
+        margin: 0;
+    }
+
+    .submit-email {
         width: 100%;
     }
 }

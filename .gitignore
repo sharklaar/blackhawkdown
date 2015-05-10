@@ -6,8 +6,8 @@ deployment/
 [Oo]bj/
 *6.0.ReSharper.user
 obj/
-src/**/bin/
-src/bin/**/*
+BhdResponsiveSite/**/bin/
+BhdResponsiveSite/bin/**/*
 *.suo
 /**/*.user
 *.vsmdi

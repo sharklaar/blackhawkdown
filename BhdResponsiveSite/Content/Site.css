@@ -1,4 +1,9 @@
-﻿body {
+﻿@font-face {
+  font-family: 'die';
+  src: url('fonts/die.ttf')  format('truetype')
+}
+
+body {
     font-size: 1em;
     font-family: "Segoe UI", Verdana, Helvetica, Sans-Serif;
     color: whitesmoke;
@@ -9,7 +14,19 @@
 }
 
 h1 {
-    font-size: 2em;
+    font-size: 3em;
+    font-family: 'die', Verdana, Helvetica, sans-serif;
+    margin: 10px 0 0;
+}
+
+h2, h3 {
+    font-family: 'die', Verdana, Helvetica, sans-serif;
+}
+
+.promo h2, .promo h3 {
+    text-align: left;
+    margin: 5px 0;
+    font-size: 1.2rem;
 }
 
 .promo .promo-text {

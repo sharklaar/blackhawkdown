@@ -353,6 +353,7 @@
     <Content Include="Views\Home\FreeTracks.cshtml" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\fonts\die.ttf" />
     <None Include="Properties\PublishProfiles\Profile1.pubxml" />
     <Content Include="Views\Account\Members.cshtml" />
     <Content Include="Views\Account\Signup.cshtml" />

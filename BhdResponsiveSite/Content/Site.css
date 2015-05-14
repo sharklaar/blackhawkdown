@@ -516,3 +516,8 @@ img.store-item-img {
 .store-item {
     
 }
+
+.press-kit-page a {
+    display: block;
+    font-size: 1.4rem;
+}

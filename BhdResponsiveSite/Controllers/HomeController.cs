@@ -89,6 +89,11 @@ namespace BhdResponsiveSite.Controllers
             return View();
         }
 
+        public ActionResult PressKit()
+        {
+            return View();
+        }
+
         private void WriteEmailToDatabase(EmailOnlyModel emailVm)
         {
             var driveHelper = new GoogleDriveHelper();

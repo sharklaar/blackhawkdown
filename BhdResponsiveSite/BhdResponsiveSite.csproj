@@ -360,6 +360,7 @@
     <Content Include="Views\Account\FailedLogin.cshtml" />
     <Content Include="Views\Store\Index.cshtml" />
     <Content Include="Views\Home\Demo.cshtml" />
+    <Content Include="Views\Home\PressKit.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

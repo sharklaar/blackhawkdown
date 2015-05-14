@@ -296,8 +296,8 @@
     border-radius: 0;
 }
 .promo {
-    width: 95%;
-    height: 150px;
+    width: 100%;
+    height: 165px;
     margin: 30px 0;
     position: relative;
     border-radius: 10px;
@@ -325,6 +325,15 @@ a.promo-link {
     width: 100%;
     height: 100%;
     border-radius: 10px;
+}
+
+li.promo .promo-img {
+    height: 110%;
+}
+
+li.promo.text-only {
+    height: 211px;
+    background-color: #000;
 }
 
 .promo .music .promo-img {

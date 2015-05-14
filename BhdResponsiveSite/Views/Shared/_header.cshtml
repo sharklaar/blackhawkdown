@@ -21,8 +21,8 @@
             {
                 using (Html.BeginForm("Login", "Account", FormMethod.Post))
                 {
-                    @Html.TextBoxFor(m => m.Username, new {@Value = "Username", id = "username-textbox"})
-                    @Html.PasswordFor(m => m.Password, new {@Value = "Password"})
+                    @Html.TextBoxFor(m => m.Username, new {@placeholder = "Username", id = "username-textbox"})
+                    @Html.PasswordFor(m => m.Password, new {@placeholder = "Password"})
                     <input type="submit" value="Login" class="submit-button" />
                 }
                 @Html.ActionLink("Not already a member? SIGN UP!", "Signup", "Account")
@@ -47,12 +47,3 @@
         <li>@Html.ActionLink("Contact Us", "Index", "Contact", null, new { @class = currentPage == "contact-index" ? "current" : "" })</li>
     </ul>
 </div>
-
-<script type="text/javascript">
-    $("input[name=Username], input[name=Password]").focus(function () {
-        var defaultText = $(this).val();
-        if (defaultText === "Username" || defaultText === "Password") {
-            $(this).val('');
-        }
-    });
-</script>

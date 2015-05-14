@@ -1,7 +1,6 @@
 ﻿@{
     ViewBag.Title = "Music Videos of Our Songs | BlackHawkDown";
     Layout = "~/Views/Shared/_Layout.cshtml";
-    @Scripts.Render("~/bundles/musicpage")
 }
 
 <ul class="videos-page">
@@ -14,8 +13,8 @@
     </li>
 
     <li class="thumbnails">
-    <h3 class="mobile-only">Tap a video to play</h3>
-    <h3 class="desktop-only">click a video to play</h3>
+        <h3 class="mobile-only">Tap a video to play</h3>
+        <h3 class="desktop-only">click a video to play</h3>
         <ul class="thumb-list" data-bind="foreach: videos">
             <li class="thumbnail promo" data-bind="click: $root.playVideo, css: {current: isCurrent} ">
                 <img height="150" width="200" data-bind="attr:{src: image}" />
@@ -24,3 +23,6 @@
         </ul>
     </li>
 </ul>
+@section Scripts {
+    @Scripts.Render("~/bundles/musicpage");
+}

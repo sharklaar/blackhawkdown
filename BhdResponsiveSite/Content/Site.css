@@ -477,12 +477,21 @@ a {
     border-radius: 10px;
 }
 
-.promo.text-only {
+.text-only {
     width: 100%;
-    padding: 5px 10px;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
+}
+.text-only h2 {
+    text-align: center;
+}
+.text-only .promo {    
+    background-color: black;
+}
+
+.text-only .promo-text {
+    width: 90%;
 }
 
 .free-music {

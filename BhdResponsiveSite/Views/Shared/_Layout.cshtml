@@ -5,11 +5,11 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
     <meta name="description" content="@ViewBag.Description">
     <meta name="keywords" content="@ViewBag.Keywords"/>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="google-site-verification" content="MowVZN16pe6WGv5ctqjCcLR0zLOkdFoex0PWBxAo-88" />
-
     <meta property="og:image" content="~/Content/images/band.jpg" />
     <meta property="og:title" content="BlackHawkDown UK Official Website" />
     <meta property="og:url" content="@Request.Url" />
@@ -48,7 +48,6 @@
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/knockout/2.3.0/knockout-min.js" type="text/javascript"></script>
-    @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/shared")
     @RenderSection("scripts", required: false)
     <script type="text/javascript">

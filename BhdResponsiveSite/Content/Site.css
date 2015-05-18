@@ -488,6 +488,7 @@ a {
 }
 .text-only .promo {    
     background-color: black;
+    min-height: 210px;
 }
 
 .text-only .promo-text {

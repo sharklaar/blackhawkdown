@@ -3,6 +3,7 @@ using BhdResponsiveSite.Models;
 using System;
 using System.Web.Mvc;
 using System.Web;
+using BhdResponsiveSite.Helpers;
 
 namespace BhdResponsiveSite.Controllers
 {
@@ -40,13 +41,14 @@ namespace BhdResponsiveSite.Controllers
                 AddCookie();
 
                 SendAutoResponse(emailVm);
-
-                return null;
+                emailVm.JustSentEmail = true;
+                return PartialView("_email", emailVm);
             }
             catch (Exception ex)
             {
                 return PartialView("_email", emailVm);
-            }            
+            }
+            
         }
 
         public ActionResult FreeTracks()
@@ -96,8 +98,8 @@ namespace BhdResponsiveSite.Controllers
 
         private void WriteEmailToDatabase(EmailOnlyModel emailVm)
         {
-            var driveHelper = new GoogleDriveHelper();
-            driveHelper.WriteEmailToDatabase(emailVm.Email);
+            var driveHelper = new DatabaseHelper();
+            driveHelper.WriteEmailToDatabase(emailVm);
         }
 
         private void AddCookie()

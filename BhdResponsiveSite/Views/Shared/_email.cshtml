@@ -1,25 +1,39 @@
 ﻿@model BhdResponsiveSite.Models.EmailOnlyModel
 <div class="email-section clearfix">
 
-    <div class="free-music-copy-section">
-        <div class="free-music">
-            Download our demo tracks for free
+
+
+    @if (Model == null || !Model.JustSentEmail)
+    {
+        <div class="free-music-copy-section">
+            <div class="free-music">
+                Download our demo tracks for free
+            </div>
+            <div class="free-music-text">
+                <p>Sign up to our occasional newsletter for free demo tracks and future exclusives. You'll receive a link to download three BlackHawkDown tracks by email in a moment...</p>
+            </div>
         </div>
-        <div class="free-music-text">
-            <p>Sign up to our occasional newsletter for free demo tracks and future exclusives. You'll receive a link to download three BlackHawkDown tracks by email in a moment...</p>
-        </div>
-    </div>
-    @using (Html.BeginForm())
+        using (Html.BeginForm())
+        {
+            <div class="email-box">
+                @Html.ValidationSummary(true)
+                <div class="enter-email">
+                    @Html.TextBoxFor(model => model.Email, new { placeholder = "your@emailaddress.com" })
+                    @Html.ValidationMessageFor(model => model.Email)
+                </div>
+                <p>
+                    <input type="submit" value="Send" class="submit-email" />
+                </p>
+            </div>
+        }
+    }
+    
+    else if (Model.JustSentEmail)
     {
         <div class="email-box">
-            @Html.ValidationSummary(true)
-            <div class="enter-email">
-                @Html.TextBoxFor(model => model.Email, new { @placeholder = "your@emailaddress.com" })
-                @Html.ValidationMessageFor(model => model.Email)
-            </div>
-            <p>
-                <input type="submit" value="Send" class="submit-email" />
-            </p>
+            Thanks for registering! @Html.ActionLink("Download your free tracks", "FreeTracks", "Home")
         </div>
     }
+
+
 </div>

@@ -560,3 +560,8 @@ img.store-item-img {
     text-align: left;
     font-size: 1.3rem;
 }
+
+.free-tracks-link {
+    cursor: pointer;
+    text-decoration: underline;
+}

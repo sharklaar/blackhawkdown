@@ -31,7 +31,7 @@
     else if (Model.JustSentEmail)
     {
         <div class="email-box">
-            Thanks for registering! @Html.ActionLink("Download your free tracks", "FreeTracks", "Home")
+            Thanks for registering! @Html.ActionLink("Download your free tracks here", "FreeTracks", "Home", new { Class = "free-tracks-link" })
         </div>
     }
 

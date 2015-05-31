@@ -355,6 +355,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\fonts\die.ttf" />
+    <Content Include="Content\press-kit\bhd-presskit-images.zip" />
     <None Include="Properties\PublishProfiles\Profile1.pubxml" />
     <Content Include="Views\Account\Members.cshtml" />
     <Content Include="Views\Account\Signup.cshtml" />

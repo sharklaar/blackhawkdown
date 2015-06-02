@@ -161,6 +161,7 @@ a {
 }
 
 #header-logo {
+    padding-top: 10px;
     width: 100%;
     left: 12px;
 }
@@ -573,8 +574,13 @@ img.store-item-img {
     width: 100%;
 }
 
-.home-page .video-block, .videos-page, .page-block {
+.videos-page, .page-block {
     max-width: 960px;
+    margin: 0 auto;
+}
+
+.home-page .video-block {
+    max-width: 800px;
     margin: 0 auto;
 }
 .home-page .main-video.promo {

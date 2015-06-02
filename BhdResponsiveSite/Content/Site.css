@@ -317,7 +317,7 @@ a {
     background: linear-gradient(to bottom, rgba(0,0,0,1) 0%,rgba(143,2,34,1) 35%,rgba(143,2,34,1) 63%,rgba(0,0,0,1) 100%); /* W3C */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
     border-radius: 5px;
-    width: 158px;
+    width: 100%;
     color: white;
 }
 
@@ -348,7 +348,9 @@ a {
 }
 
     .enter-email input {
-        padding: 2px;
+        padding: 4px;
+        width: 100%;
+        box-sizing: border-box;
     }
 
 .track-download {
@@ -564,4 +566,34 @@ img.store-item-img {
 .free-tracks-link {
     cursor: pointer;
     text-decoration: underline;
+}
+
+.home-page {
+    margin: 0 auto;
+    width: 100%;
+}
+
+.home-page .video-block, .videos-page, .page-block {
+    max-width: 960px;
+    margin: 0 auto;
+}
+.home-page .main-video.promo {
+    position:relative;
+	padding-bottom:56.25%;
+	padding-top:30px;
+	height:0;
+	overflow:hidden;
+}
+
+.home-page .full-width-video-container iframe {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+}
+
+.home-page .page-text {
+    width: 100%;
+    text-align: center;
 }

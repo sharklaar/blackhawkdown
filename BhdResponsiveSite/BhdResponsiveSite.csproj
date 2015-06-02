@@ -162,6 +162,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Helpers\ContentHelper.cs" />
+    <Compile Include="Helpers\DatabaseHelper.cs" />
     <Compile Include="Library\Contact.cs" />
     <Compile Include="Library\Email.cs" />
     <Compile Include="Library\GoogleDriveHelper.cs" />
@@ -354,6 +355,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\fonts\die.ttf" />
+    <Content Include="Content\press-kit\bhd-presskit-images.zip" />
     <None Include="Properties\PublishProfiles\Profile1.pubxml" />
     <Content Include="Views\Account\Members.cshtml" />
     <Content Include="Views\Account\Signup.cshtml" />
@@ -362,6 +364,8 @@
     <Content Include="Views\Store\Index.cshtml" />
     <Content Include="Views\Home\Demo.cshtml" />
     <Content Include="Views\Home\PressKit.cshtml" />
+    <Content Include="Views\Emails\FreeTracks.Html.cshtml" />
+    <Content Include="Views\Emails\FreeTracks.Text.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

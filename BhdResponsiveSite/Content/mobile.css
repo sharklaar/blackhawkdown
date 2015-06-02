@@ -130,7 +130,7 @@
     }
     
     #navigation ul {
-
+        margin-top: 0;
     }
 
     #navigation ul li {
@@ -156,7 +156,7 @@
     }
     
     #header {
-        height: 44px;
+        height: 55px;
         width: 100%;
         background: rgb(0,0,0); /* Old browsers */
         background: -moz-linear-gradient(top,  rgba(0,0,0,1) 0%, rgba(143,2,34,1) 35%, rgba(143,2,34,1) 63%, rgba(0,0,0,1) 100%); /* FF3.6+ */
@@ -190,7 +190,7 @@
         width: 44px;
         border: 0;
         color: #FFFFFF;
-        margin: 0px 0 0;
+        margin: 7px 0 0;
         height: 35px;
         border-left: 1px solid black;
         padding-top: 10px;
@@ -359,5 +359,6 @@ li.promo.text-only {
 
 .even .promo-text {
     right: 0;
+    width: 48%;
 }
 

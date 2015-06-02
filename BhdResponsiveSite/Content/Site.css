@@ -600,6 +600,7 @@ img.store-item-img {
 }
 
 .home-page .page-text {
-    width: 100%;
+    width: 95%;
     text-align: center;
+    margin: 0 auto;
 }

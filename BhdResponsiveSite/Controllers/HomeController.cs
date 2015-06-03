@@ -96,6 +96,15 @@ namespace BhdResponsiveSite.Controllers
             return View();
         }
 
+        public FileResult Download(string file)
+        {
+            var filename = Server.MapPath("~/Content/press-kit/images/") + file;
+            byte[] fileBytes = System.IO.File.ReadAllBytes(filename);
+            var response = new FileContentResult(fileBytes, "application/octet-stream");
+            response.FileDownloadName = filename;
+            return response;
+        }
+
         private void WriteEmailToDatabase(EmailOnlyModel emailVm)
         {
             var driveHelper = new DatabaseHelper();

@@ -595,6 +595,10 @@ img.store-item-img {
     margin: 5px;
 }
 
+.press-kit-page .press-kit-image-thumbs a {
+    display: inline-block;
+}
+
 .press-kit-page .press-kit-image-thumbs img.white {
     background-color: #cfcfcf;
 }

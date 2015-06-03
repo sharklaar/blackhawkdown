@@ -3,13 +3,13 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<ul class="videos-page">
+<ul class="videos-page page-block">
     <li class="heading">
         <h1>Our Music</h1>
     </li>
 
-    <li class="main-video promo" data-bind="with: currentVideo()">           
-        <iframe data-bind="attr: { src: embedCode() }" frameborder="0" allowfullscreen="" scrolling="no"></iframe>    
+    <li class="main-video promo" data-bind="with: currentVideo()">
+        <iframe data-bind="attr: { src: embedCode() }" frameborder="0" allowfullscreen="" scrolling="no"></iframe>
     </li>
 
     <li class="thumbnails">

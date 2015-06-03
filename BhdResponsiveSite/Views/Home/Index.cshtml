@@ -5,40 +5,48 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1>BlackHawkDown</h1>
+<div class="home-page page-block">
+    <h1>EP NEws!</h1>
 
-<div class="main-promo-wrapper">
-    <div class="main-promo">
-        <div class="promo">
-            <a href="@Url.Action("Music", "Home")" class="promo-link music odd" onclick="_gaq.push(['_trackEvent', 'Home Links', 'Click', 'Music Page'])">
-                <div class="promo-img"></div>
-                <div class="promo-text">
-                    <h2>Our Music</h2>
-                    <p class="main-promo-text">CLICK HERE <br /> to watch a collection of live music and recorded videos</p>
-                </div>
-            </a>
+    <div class="video-block">
+        <div class="full-width-video-container main-video promo">
+            <iframe width="560" height="349" src="http://www.youtube.com/embed/JVyLC4Wjr6E?rel=0" frameborder="0" allowfullscreen="" scrolling="no"></iframe>
         </div>
     </div>
+    <div class="page-text">
+        <p>
+            Our Debut, four track EP has been mixed and mastered, the artwork complete and we're waiting shipment of some CDs!
+            Here's a snippet of Freeman - the first track to be released (along with a video!). Enter your email address above to hear some more tracks...
+        </p>
+    </div>
+    <div class="main-promo-wrapper">
+        <div class="main-promo">
+            <div class="promo">
+                <a href="@Url.Action("Music", "Home")" class="promo-link music odd" onclick="_gaq.push(['_trackEvent', 'Home Links', 'Click', 'Music Page'])">
+                    <div class="promo-img"></div>
+                    <div class="promo-text">
+                        <h2>Our Music</h2>
+                        <p class="main-promo-text">CLICK HERE <br /> to watch a collection of live music and recorded videos</p>
+                    </div>
+                </a>
+            </div>
+        </div>
 
-    <div class="main-promo text-only">
-        <div class="promo">
-            <div class="promo-text">
-                <h2>EP NEws!</h2>
-                <p>Our Debut, four track EP has been mixed and mastered, the artwork complete and we're waiting shipment of some CDs!</p>
-                <p>Release date is still to be confirmed - sign up to our newsletter so we can keep you updated about pre-release sale and competitions to win signed CDs and merch!</p>
+        <div class="main-promo">
+            <div class="promo">
+                <a href="@Url.Action("Gigs", "Home")" class="promo-link gigs even" onclick="_gaq.push(['_trackEvent', 'Home Links', 'Click', 'Gigs Page'])">
+                    <div class="promo-img"></div>
+                    <div class="promo-text">
+                        <div class="promo-text"><h3>Our nExt gig!</h3><p>The Hole in the Wall<br />Spalding<br />19/06/2015</p></div>
+                    </div>
+                </a>
             </div>
         </div>
     </div>
-</div>
 
     <ul class="promo-boxes">
 
-        <li class="promo">
-            <a href="@Url.Action("Gigs", "Home")" class="promo-link gigs even">
-                <div class="promo-img"></div>
-                <div class="promo-text"><h3>Our nExt gig!</h3><p>The Hole in the Wall<br />Spalding<br />19/06/2015</p></div>
-            </a>
-        </li>
+
         <li class="promo">
             <a href="@Url.Action("About", "Home")" class="promo-link about odd">
                 <div class="promo-img"></div>
@@ -46,3 +54,4 @@
             </a>
         </li>
     </ul>
+</div>

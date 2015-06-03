@@ -602,6 +602,10 @@ img.store-item-img {
 .press-kit-page .press-kit-image-thumbs img.white {
     background-color: #cfcfcf;
 }
+
+.press-kit-page .bio {
+    max-width: 960px;
+}
 .free-tracks-link {
     cursor: pointer;
     text-decoration: underline;

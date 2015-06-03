@@ -34,5 +34,34 @@ namespace BhdResponsiveSite.Helpers
                 connection.Close();
             }
         }
+
+        public List<string> GetEmailAddresses()
+        {
+            var emails = new List<string>();
+
+            _connectionString = ConfigurationManager.ConnectionStrings["dbConnection"].ConnectionString;
+            var connection = new SqlConnection(_connectionString);
+            connection.Open();
+            try
+            {
+                var cmd = new SqlCommand("RetrieveAllEmailAddresses", connection)
+                {
+                    CommandType = CommandType.StoredProcedure
+                };
+
+                var reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    var email = reader[0];
+                    emails.Add(email.ToString());
+                }
+            }
+            finally
+            {
+                connection.Close();
+            }
+
+            return emails;
+        } 
     }
 }

@@ -157,6 +157,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\ContactController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\SharksEmailController.cs" />
     <Compile Include="Controllers\StoreController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -169,6 +170,7 @@
     <Compile Include="Models\AccountModel.cs" />
     <Compile Include="Models\ContactViewModel.cs" />
     <Compile Include="Models\EmailOnlyModel.cs" />
+    <Compile Include="Models\EmailSendingModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -379,6 +381,7 @@
     <Content Include="Views\Home\PressKit.cshtml" />
     <Content Include="Views\Emails\FreeTracks.Html.cshtml" />
     <Content Include="Views\Emails\FreeTracks.Text.cshtml" />
+    <Content Include="Views\SharksEmail\Index.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

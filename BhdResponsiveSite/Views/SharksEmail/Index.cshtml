@@ -1,0 +1,16 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model BhdResponsiveSite.Models.EmailSendingModel
+    
+
+<div class="shark-email-page page-block">
+    <h1>Shark's email page</h1>
+
+    @using (Html.BeginForm("SendEmails", "SharksEmail", FormMethod.Post, new { @Class = "email-type-form" }))
+    {
+        @Html.TextBoxFor(m => m.EmailType, new { @placeholder = "Enter email type to send" })
+        <input type="submit" value="Send Emails!" />
+    }
+</div>

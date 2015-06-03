@@ -2,6 +2,9 @@
 
 @media (max-width: 768px) 
 {
+    .press-kit-social-links a {
+        font-size: 0.8rem;
+    }
     .intro-text {
         width: 100%;
         float: none;

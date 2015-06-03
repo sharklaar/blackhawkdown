@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Net;
 using System.Net.Mail;
+using BhdResponsiveSite.Models;
 using BHDSite.Library;
 using Postal;
 
@@ -44,6 +45,26 @@ namespace BhdResponsiveSite.Library
                 Timeout = 20000,
                 Credentials = cred
             };
+        }
+
+
+        public void SendAutoResponse(EmailOnlyModel emailVm, string emailType)
+        {
+            var emailHelper = new Email();
+            var client = emailHelper.GetClient();
+
+            dynamic email = new Postal.Email(emailType);
+            email.To = emailVm.Email;
+            var service = Postal.Email.CreateEmailService();
+            var mailToSend = service.CreateMailMessage(email);
+
+            try
+            {
+                client.Send(mailToSend);
+            }
+            catch (Exception ex)
+            {
+            }
         }
     }
 }

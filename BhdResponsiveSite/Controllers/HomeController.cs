@@ -27,6 +27,8 @@ namespace BhdResponsiveSite.Controllers
         [HttpPost]
         public ActionResult Email(EmailOnlyModel emailVm)
         {
+            var emailHelper = new Email();
+
             if (Request.Cookies["bhd_subscribe"] != null)
                 return null;
 
@@ -40,7 +42,7 @@ namespace BhdResponsiveSite.Controllers
             {
                 AddCookie();
 
-                SendAutoResponse(emailVm);
+                emailHelper.SendAutoResponse(emailVm, "FreeTracks");
                 emailVm.JustSentEmail = true;
                 return PartialView("_email", emailVm);
             }
@@ -116,25 +118,6 @@ namespace BhdResponsiveSite.Controllers
             var cookie = new HttpCookie("bhd_subscribe", "true");
             cookie.Expires = DateTime.Now.AddYears(1);
             Response.Cookies.Add(cookie);
-        }
-
-        private void SendAutoResponse(EmailOnlyModel emailVm)
-        {
-            var emailHelper = new Email();
-            var client = emailHelper.GetClient();
-
-            dynamic email = new Postal.Email("FreeTracks");
-            email.To = emailVm.Email;
-            var service = Postal.Email.CreateEmailService();
-            var mailToSend = service.CreateMailMessage(email);
-            
-            try
-            {
-                client.Send(mailToSend);
-            }
-            catch (Exception ex)
-            {
-            }
         }
     }
 }

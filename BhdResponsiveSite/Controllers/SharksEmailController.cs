@@ -22,8 +22,21 @@ namespace BhdResponsiveSite.Controllers
         {
             var emails = GetEmailList();
             emailSendingmodel.EmailList = emails;
-            
-            return null;
+
+            var emailHelper = new Library.Email();
+
+            var resultsList = new List<string>();
+
+            foreach (var email in emailSendingmodel.EmailList)
+            {
+                var emailModel = new EmailOnlyModel { Email = email };
+
+                var result = "success";//emailHelper.SendAutoResponse(emailModel, emailSendingmodel.EmailType);
+
+                resultsList.Add(result);
+            }
+
+            return View("EmailsSent");
         }
 
         private List<string> GetEmailList()

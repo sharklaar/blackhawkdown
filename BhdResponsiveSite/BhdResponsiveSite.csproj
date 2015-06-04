@@ -395,6 +395,7 @@
     <Content Include="Views\Emails\FreeTracks.Html.cshtml" />
     <Content Include="Views\Emails\FreeTracks.Text.cshtml" />
     <Content Include="Views\SharksEmail\Index.cshtml" />
+    <Content Include="Views\SharksEmail\EmailsSent.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

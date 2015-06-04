@@ -48,22 +48,25 @@ namespace BhdResponsiveSite.Library
         }
 
 
-        public void SendAutoResponse(EmailOnlyModel emailVm, string emailType)
+        public string SendAutoResponse(EmailOnlyModel emailVm, string emailType)
         {
             var emailHelper = new Email();
             var client = emailHelper.GetClient();
 
             dynamic email = new Postal.Email(emailType);
             email.To = emailVm.Email;
+            email.From = "BlackHawkDown";
             var service = Postal.Email.CreateEmailService();
             var mailToSend = service.CreateMailMessage(email);
 
             try
             {
                 client.Send(mailToSend);
+                return "success";
             }
             catch (Exception ex)
             {
+                return "fail: " + ex.Message;
             }
         }
     }

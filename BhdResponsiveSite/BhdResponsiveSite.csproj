@@ -174,7 +174,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include=".gitignore" />
     <Content Include="Content\desktop.css" />
     <Content Include="Content\images\about-thumb-1.jpg" />
     <Content Include="Content\images\about-thumb.jpg" />

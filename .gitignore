@@ -22,3 +22,5 @@ rewrite.config
 *.suo
 packages/*
 !packages/repositories.config
+BhdResponsiveSite/obj/Debug/*
+BhdResponsiveSite/bin/*

@@ -9,8 +9,7 @@
     <h1>EP NEws!</h1>
 
     <div class="video-block">
-        <div class="full-width-video-container main-video promo">
-            <iframe width="560" height="349" src="http://www.youtube.com/embed/JVyLC4Wjr6E?rel=0" frameborder="0" allowfullscreen="" scrolling="no"></iframe>
+        <div id="yt-wrapper" class="full-width-video-container main-video promo">
         </div>
     </div>
     <div class="page-text">
@@ -55,3 +54,10 @@
         </li>
     </ul>
 </div>
+@section Scripts {
+    <script>
+        $(document).ready(function () {
+            $('<iframe width="460" height="234" src="http://www.youtube.com/embed/JVyLC4Wjr6E?rel=0" frameborder="0" allowfullscreen></iframe>').appendTo('#yt-wrapper');
+        });
+    </script>
+}

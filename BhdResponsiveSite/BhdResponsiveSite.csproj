@@ -156,6 +156,7 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\ContactController.cs" />
+    <Compile Include="Controllers\ErrorController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\SharksEmailController.cs" />
     <Compile Include="Controllers\StoreController.cs" />
@@ -396,6 +397,8 @@
     <Content Include="Views\Emails\FreeTracks.Text.cshtml" />
     <Content Include="Views\SharksEmail\Index.cshtml" />
     <Content Include="Views\SharksEmail\EmailsSent.cshtml" />
+    <Content Include="Views\Error\NotFound.cshtml" />
+    <Content Include="Views\Error\ServerError.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

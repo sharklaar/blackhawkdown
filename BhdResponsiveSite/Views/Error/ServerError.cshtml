@@ -1,0 +1,21 @@
+﻿@{
+    ViewBag.Title = "ServerError";
+}
+
+<div class="page-block not-found-page">
+
+    <h2>So it seems Shark is not doing his job very well and has broken the website...</h2>
+    <p>But hey, while you're here, why not watch some music...</p>
+
+    <div class="video-block">
+        <div id="yt-wrapper" class="full-width-video-container main-video promo">
+        </div>
+    </div>
+</div>
+@section Scripts {
+    <script>
+        $(document).ready(function () {
+            $('<iframe width="460" height="234" src="http://www.youtube.com/embed/JVyLC4Wjr6E?rel=0" frameborder="0" allowfullscreen></iframe>').appendTo('#yt-wrapper');
+        });
+    </script>
+}

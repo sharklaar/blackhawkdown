@@ -399,6 +399,9 @@
     <Content Include="Views\SharksEmail\EmailsSent.cshtml" />
     <Content Include="Views\Error\NotFound.cshtml" />
     <Content Include="Views\Error\ServerError.cshtml" />
+    <Content Include="Views\Emails\UpdateOne.cshtml" />
+    <Content Include="Views\Emails\UpdateOne.Html.cshtml" />
+    <Content Include="Views\Emails\UpdateOne.Text.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

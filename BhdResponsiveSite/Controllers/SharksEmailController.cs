@@ -31,7 +31,7 @@ namespace BhdResponsiveSite.Controllers
             {
                 var emailModel = new EmailOnlyModel { Email = email };
 
-                var result = "success";//emailHelper.SendAutoResponse(emailModel, emailSendingmodel.EmailType);
+                var result = emailHelper.SendAutoResponse(emailModel, emailSendingmodel.EmailType);
 
                 resultsList.Add(result);
             }

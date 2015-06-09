@@ -10,6 +10,8 @@
 
     @using (Html.BeginForm("SendEmails", "SharksEmail", FormMethod.Post, new { @Class = "email-type-form" }))
     {
+        @Html.LabelFor(m => m.IsTestEmail, "Check to send test email")
+        @Html.CheckBoxFor(m => m.IsTestEmail)
         @Html.TextBoxFor(m => m.EmailType, new { @placeholder = "Enter email type to send" })
         <input type="submit" value="Send Emails!" />
     }

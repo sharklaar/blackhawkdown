@@ -1,6 +1,13 @@
 ﻿@{
     ViewBag.Title = "EmailsSent";
 }
+@model BhdResponsiveSite.Models.EmailSendingResultsModel
 
-<h2>EmailsSent</h2>
-<h3>BOOM!</h3>
+<div class="page-block emails-sent">
+    <div class="promo">
+        <h2>EmailsSent</h2>
+        <p>Successes: @Model.Successes</p>
+        <p>Failures: @Model.Failures</p>
+        <h3>BOOM!</h3>
+    </div>
+</div>

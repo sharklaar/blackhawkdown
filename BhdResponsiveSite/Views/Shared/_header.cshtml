@@ -6,13 +6,6 @@
 @using System.Configuration
 @model BhdResponsiveSite.Models.AccountModel
 
-    
-    <div id="globalNavButton">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
-    </div>
-
     @if (ConfigurationManager.AppSettings["EnableLoginPage"] == "true")
     {
         <div class="login">
@@ -28,20 +21,29 @@
             }
         </div>
     }
+<header>
+    <div id="header-logo">
+        <a href="@Url.Action("Index", "Home")" class="link-logo">
+            <img src="/Content/images/logo/blackhawkdown.png" alt="BlackHawkDown header logo" />
+        </a>
 
-<div id="header-logo">
-    <a href="@Url.Action("Index", "Home")" class="link-logo">
-        <img src="/Content/images/logo/blackhawkdown.png" alt="down" />
-    </a>
+    </div>
+</header>
+<nav>
+    <div id="navigation" class="clearfix">
+        <ul>
+            <li>@Html.ActionLink("Home", "Index", "Home", null, new { @class = currentPage == "home-index" ? "current" : "" })</li>
+            <li>@Html.ActionLink("Videos/Music", "Music", "Home", null, new { @class = currentPage == "home-music" ? "current" : "" })</li>
+            <li>@Html.ActionLink("Gig Dates", "Gigs", "Home", null, new { @class = currentPage == "home-gigs" ? "current" : "" })</li>
+            <li>@Html.ActionLink("About", "About", "Home", null, new { @class = currentPage == "home-about" ? "current" : "" })</li>
+            <li>@Html.ActionLink("Contact/Press", "Index", "Contact", null, new { @class = currentPage == "contact-index" ? "current" : "" })</li>
+        </ul>
+    </div>
 
-</div>
 
-<div id="navigation" class="clearfix">
-    <ul>
-        <li>@Html.ActionLink("Home", "Index", "Home", null, new { @class = currentPage == "home-index" ? "current" : "" })</li>
-        <li>@Html.ActionLink("Videos/Music", "Music", "Home", null, new { @class = currentPage == "home-music" ? "current" : "" })</li>
-        <li>@Html.ActionLink("Gig Dates", "Gigs", "Home", null, new { @class = currentPage == "home-gigs" ? "current" : "" })</li>
-        <li>@Html.ActionLink("About", "About", "Home", null, new { @class = currentPage == "home-about" ? "current" : "" })</li>
-        <li>@Html.ActionLink("Contact/Press", "Index", "Contact", null, new { @class = currentPage == "contact-index" ? "current" : "" })</li>
-    </ul>
-</div>
+    <div id="globalNavButton">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+    </div>
+</nav>

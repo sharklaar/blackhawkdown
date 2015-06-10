@@ -28,7 +28,7 @@ namespace BhdResponsiveSite.Controllers
             }
             else
             {
-                emails = GetEmailList();
+                //emails = GetEmailList();
             }
 
             emailSendingmodel.EmailList = emails;

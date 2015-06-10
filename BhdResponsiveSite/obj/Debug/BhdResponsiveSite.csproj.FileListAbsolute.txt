@@ -62,3 +62,4 @@ C:\dev\blackhawkdown\BhdResponsiveSite\bin\System.Web.WebPages.Deployment.xml
 C:\dev\blackhawkdown\BhdResponsiveSite\bin\System.Web.WebPages.Razor.xml
 C:\dev\blackhawkdown\BhdResponsiveSite\obj\Debug\BhdResponsiveSite.dll
 C:\dev\blackhawkdown\BhdResponsiveSite\obj\Debug\BhdResponsiveSite.pdb
+C:\dev\blackhawkdown\BhdResponsiveSite\obj\Debug\BhdResponsiveSite.csprojResolveAssemblyReference.cache

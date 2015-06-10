@@ -16,7 +16,6 @@
         display: inline-block;
         border: 1px solid #8f0222;
         cursor: pointer;
-        border-radius: 10px;
     }
     
     .thumb-list .promo img {
@@ -24,7 +23,6 @@
         height: auto;
         margin: 0 auto;
         position: relative;
-        border-radius: 10px;
         top: 2px;
     }
     

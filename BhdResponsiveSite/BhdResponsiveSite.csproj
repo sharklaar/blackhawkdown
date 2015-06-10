@@ -172,6 +172,7 @@
     <Compile Include="Models\ContactViewModel.cs" />
     <Compile Include="Models\EmailOnlyModel.cs" />
     <Compile Include="Models\EmailSendingModel.cs" />
+    <Compile Include="Models\EmailSendingResultsModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

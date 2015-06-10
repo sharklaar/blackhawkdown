@@ -20,12 +20,22 @@ namespace BhdResponsiveSite.Controllers
 
         public ActionResult SendEmails(EmailSendingModel emailSendingmodel)
         {
-            var emails = GetEmailList();
+            var emails = new List<string>();
+
+            if (emailSendingmodel.IsTestEmail)
+            {
+                emails.Add("marc@blackhawkdown.org.uk");
+            }
+            else
+            {
+                emails = GetEmailList();
+            }
+
             emailSendingmodel.EmailList = emails;
 
             var emailHelper = new Library.Email();
 
-            var resultsList = new List<string>();
+            var sendingResults = new EmailSendingResultsModel();
 
             foreach (var email in emailSendingmodel.EmailList)
             {
@@ -33,10 +43,18 @@ namespace BhdResponsiveSite.Controllers
 
                 var result = emailHelper.SendAutoResponse(emailModel, emailSendingmodel.EmailType);
 
-                resultsList.Add(result);
+                if (result.Contains("success"))
+                {
+                    sendingResults.Successes++;
+                }
+                else
+                {
+                    sendingResults.Failures++;
+                }
+
             }
 
-            return View("EmailsSent");
+            return View("EmailsSent", sendingResults);
         }
 
         private List<string> GetEmailList()

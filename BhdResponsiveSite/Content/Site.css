@@ -646,3 +646,7 @@ img.store-item-img {
     text-align: center;
     margin: 0 auto;
 }
+
+.emails-sent {
+    text-align: center;
+}

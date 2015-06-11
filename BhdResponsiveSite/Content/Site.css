@@ -645,3 +645,13 @@ img.store-item-img {
 .emails-sent {
     text-align: center;
 }
+
+.about-page.page-block {
+    max-width: none;
+    padding: 20px;
+}
+
+.about-page .promo {
+    height: auto;
+    padding: 20px;
+}

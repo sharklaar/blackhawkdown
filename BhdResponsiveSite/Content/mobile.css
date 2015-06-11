@@ -96,34 +96,22 @@
             text-align: center;
         }
 
-    .about-page .about {
-        height: 4em;
-        width: 100%;
-        overflow: hidden;
-        position: relative;
-    }
 
     .about-page h2 {
         text-align: left;
     }
 
-    .about.closed p {
-        opacity: 0.4;
+    .about-page.page-block {
+        padding: 0;
     }
-
-    .about.open p {
-        opacity: 1;
-    }
-
-    .read-more {
-        float: right;
-        font-weight: bold;
-        border-bottom: 1px solid #8f0222;
+    .about-image {
+        margin: 10px auto;
         width: 100%;
-        text-align: right;
-        padding-bottom: 15px;
+        max-width: 500px;
     }
-
+    .about-image img {
+        width: 100%
+    }
     #navigation {
         display: none;
         width: 100%;

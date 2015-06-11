@@ -655,3 +655,27 @@ img.store-item-img {
     height: auto;
     padding: 20px;
 }
+
+.facebook-link, .twitter-link {
+    width: 60px;
+    height: 60px;
+    display: inline-block;
+    background-image: url('images/facebook.png');
+    font-size: 0;
+    margin: 0 auto;
+    background-size: 100%;
+}
+
+.twitter-link {
+    background-image: url('images/twitter.png');
+}
+
+.social-shit {
+    display: block;
+    text-align: center;
+}
+
+.social-shit h2 {
+    display: inline-block;
+    vertical-align: bottom;
+}

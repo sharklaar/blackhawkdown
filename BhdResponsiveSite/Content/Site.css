@@ -178,7 +178,6 @@ a {
     }
 
 #navigation {
-    border-radius: 0px 0px 10px 10px;
     margin: 0 auto;
     display: block;
 }
@@ -263,7 +262,6 @@ a {
     background: -webkit-gradient(linear, center top, center bottom, from(#4c69ba), to(#3b55a0));
     background: -webkit-linear-gradient(#4c69ba, #3b55a0);
     border: none;
-    -webkit-border-radius: 2px;
     color: #fff;
     cursor: pointer;
     font-weight: bold;
@@ -302,7 +300,6 @@ a {
     text-align: center;
     box-shadow: 0 0 20px #888;
     margin-top: 10px;
-    border-radius: 5px;
     padding: 7px;
     box-sizing: border-box;
 }
@@ -321,7 +318,6 @@ a {
     background: -ms-linear-gradient(top, rgba(0,0,0,1) 0%,rgba(143,2,34,1) 35%,rgba(143,2,34,1) 63%,rgba(0,0,0,1) 100%); /* IE10+ */
     background: linear-gradient(to bottom, rgba(0,0,0,1) 0%,rgba(143,2,34,1) 35%,rgba(143,2,34,1) 63%,rgba(0,0,0,1) 100%); /* W3C */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
-    border-radius: 5px;
     width: 100%;
     color: white;
 }
@@ -480,8 +476,7 @@ a {
     }
 
 .promo .music .promo-img {
-    background-position: -76px 0px;
-    border-radius: 10px;
+    background-position: -76px -2px;
 }
 
 .text-only {
@@ -654,4 +649,37 @@ img.store-item-img {
 .nav-list {
     display: flex;
     justify-content: space-between;
+}
+.about-page.page-block {
+    max-width: none;
+    padding: 20px;
+}
+
+.about-page .promo {
+    height: auto;
+    padding: 20px;
+}
+
+.facebook-link, .twitter-link {
+    width: 60px;
+    height: 60px;
+    display: inline-block;
+    background-image: url('images/facebook.png');
+    font-size: 0;
+    margin: 0 auto;
+    background-size: 100%;
+}
+
+.twitter-link {
+    background-image: url('images/twitter.png');
+}
+
+.social-shit {
+    display: block;
+    text-align: center;
+}
+
+.social-shit h2 {
+    display: inline-block;
+    vertical-align: bottom;
 }

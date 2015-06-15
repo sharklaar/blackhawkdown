@@ -124,6 +124,10 @@
             margin-top: 0;
         }
 
+        #navigation .nav-list {
+            display: block;
+        }
+
             #navigation ul li {
                 width: 100%;
             }

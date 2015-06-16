@@ -646,6 +646,10 @@ img.store-item-img {
     text-align: center;
 }
 
+.nav-list {
+    display: flex;
+    justify-content: space-between;
+}
 .about-page.page-block {
     max-width: none;
     padding: 20px;

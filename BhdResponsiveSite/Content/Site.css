@@ -683,3 +683,15 @@ img.store-item-img {
     display: inline-block;
     vertical-align: bottom;
 }
+.store-page {
+    text-align: center;
+}
+#dizzyjam-iframe {
+    margin: 20px auto;
+    box-sizing: border-box;
+}
+
+#dizzyjam-iframe body {
+    margin: 0 auto!important;
+    width: 100%!important;
+}

@@ -14,6 +14,9 @@ namespace BhdResponsiveSite
 
             bundles.Add(new ScriptBundle("~/bundles/aboutpage").Include(
                         "~/Scripts/custom/about-page.js"));
+            
+            bundles.Add(new ScriptBundle("~/bundles/storepage").Include(
+                        "~/Scripts/custom/store-styles.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/shared").Include(
                         "~/Scripts/custom/nav.js"));

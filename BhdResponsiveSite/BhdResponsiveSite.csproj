@@ -240,6 +240,7 @@
     <Content Include="Content\press-kit\images\thumbs\Hawk-thumb.png" />
     <Content Include="Content\press-kit\images\thumbs\hemy-rhythm-thumb.jpg" />
     <Content Include="Content\press-kit\images\thumbs\shark-drums-thumb.jpg" />
+    <Content Include="Content\store.css" />
     <Content Include="Content\themes\base\jquery-ui.css" />
     <Content Include="Content\themes\base\jquery.ui.accordion.css" />
     <Content Include="Content\themes\base\jquery.ui.all.css" />
@@ -288,6 +289,7 @@
     <Content Include="Scripts\custom\about-page.js" />
     <Content Include="Scripts\custom\music-page.js" />
     <Content Include="Scripts\custom\nav.js" />
+    <Content Include="Scripts\custom\store-styles.js" />
     <Content Include="Scripts\jquery-1.7.1-vsdoc.js" />
     <Content Include="Scripts\jquery-1.7.1.js" />
     <Content Include="Scripts\jquery-1.7.1.min.js" />

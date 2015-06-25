@@ -13,7 +13,7 @@
 var initialVideos = [
         new Video("Simplify", "9MbQ_i9P9aU", + "0"),
         new Video("Poison In My Blood", "g_66lMURxac", + "0"),
-        new Video("Free Man - Live", "mf5vExXL1vk", + "0")
+        new Video("Freeman - Live", "mf5vExXL1vk", + "0")
 ];
 
 

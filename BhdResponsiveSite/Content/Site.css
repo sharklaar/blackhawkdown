@@ -616,6 +616,11 @@ img.store-item-img {
     margin: 0 auto;
 }
 
+.home-page.page-block {
+    max-width: 95%;
+    margin: 0 auto;
+}
+
 .home-page .video-block {
     max-width: 800px;
     margin: 0 auto;
@@ -694,4 +699,21 @@ img.store-item-img {
 #dizzyjam-iframe body {
     margin: 0 auto!important;
     width: 100%!important;
+}
+
+.quote-block {
+    text-align: center;
+}
+
+.quote-block .promo {
+    height: auto;
+    background-color: black;
+}
+
+.quote-block a {
+    font-weight: bold;
+}
+
+.quote-block a:hover {
+    text-decoration: underline;
 }

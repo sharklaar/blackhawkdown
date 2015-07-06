@@ -69,3 +69,7 @@ C:\dev\blackhawkdown\BhdResponsiveSite\bin\System.Web.Http.WebHost.dll
 C:\dev\blackhawkdown\BhdResponsiveSite\bin\System.Net.Http.Formatting.xml
 C:\dev\blackhawkdown\BhdResponsiveSite\bin\System.Web.Http.xml
 C:\dev\blackhawkdown\BhdResponsiveSite\bin\System.Web.Http.WebHost.xml
+C:\dev\blackhawkdown\BhdResponsiveSite\bin\WebDriver.dll
+C:\dev\blackhawkdown\BhdResponsiveSite\bin\WebDriver.Support.dll
+C:\dev\blackhawkdown\BhdResponsiveSite\bin\WebDriver.xml
+C:\dev\blackhawkdown\BhdResponsiveSite\bin\WebDriver.Support.xml

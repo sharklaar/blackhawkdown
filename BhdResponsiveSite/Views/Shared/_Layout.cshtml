@@ -7,10 +7,18 @@
     <title>@ViewBag.Title</title>
     @Styles.Render("~/Content/css")
     <meta name="description" content="@ViewBag.Description">
-    <meta name="keywords" content="@ViewBag.Keywords"/>
+    <meta name="keywords" content="@ViewBag.Keywords" />
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="google-site-verification" content="MowVZN16pe6WGv5ctqjCcLR0zLOkdFoex0PWBxAo-88" />
-    <meta property="og:image" content="~/Content/images/band.jpg" />
+    @if (string.IsNullOrEmpty(ViewBag.OgImage))
+    {
+        <meta property="og:image" content="~/Content/images/band.jpg" />
+
+    }
+    else
+    {
+        <meta property="og:image" content="@ViewBag.OgImage" />
+    }
     <meta property="og:title" content="BlackHawkDown UK Official Website" />
     <meta property="og:url" content="@Request.Url" />
     <meta property="og:site_name" content="BlackHawkDown UK Official Website" />
@@ -28,7 +36,7 @@
 
             <li id="email" class="main-section clearfix">
                 @{
-                    Html.RenderAction("Email", "Home");
+            Html.RenderAction("Email", "Home");
                 }
             </li>
         }
@@ -52,32 +60,32 @@
     @RenderSection("scripts", required: false)
     <script type="text/javascript">
 
-    var _gaq = _gaq || [];
-    _gaq.push(['_setAccount', 'UA-39424304-1']);
-    _gaq.push(['_trackPageview']);
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-39424304-1']);
+        _gaq.push(['_trackPageview']);
 
-    (function () {
-        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-    })();
+        (function () {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
 
-    $(document).ready(function() {
-        $('#globalNavButton').click(function() {
-            var nav = $('#navigation');
-            var navButton = $('#globalNavButton');
-            if (!nav.hasClass('open')) {
-                nav.slideDown();
-                nav.addClass('open');
-                navButton.addClass('open');
+        $(document).ready(function () {
+            $('#globalNavButton').click(function () {
+                var nav = $('#navigation');
+                var navButton = $('#globalNavButton');
+                if (!nav.hasClass('open')) {
+                    nav.slideDown();
+                    nav.addClass('open');
+                    navButton.addClass('open');
 
-            } else {
-                nav.slideUp();
-                nav.removeClass('open');
-                navButton.removeClass('open');
-            }
+                } else {
+                    nav.slideUp();
+                    nav.removeClass('open');
+                    navButton.removeClass('open');
+                }
+            });
         });
-    });
     </script>
 </body>
 </html>

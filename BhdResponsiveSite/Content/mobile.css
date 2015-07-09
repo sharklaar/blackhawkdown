@@ -67,10 +67,14 @@
         margin: 0 auto;
     }
 
+    .thumb-list {
+        text-align: center;
+    }
+
     .thumb-list .promo {
         height: auto;
         position: relative;
-        width: 30%;
+        width: 38%;
         margin: 0 0 25px 1%;
         display: inline-block;
         border: 1px solid #8f0222;

@@ -8,6 +8,10 @@
         margin: 50px auto;        
     }
     
+    .thumb-list {
+        display: flex;
+    }
+
     .thumb-list .promo {
         height: auto;
         position: relative;

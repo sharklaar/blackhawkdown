@@ -76,7 +76,8 @@ namespace BhdResponsiveSite.Controllers
 
         public ActionResult Music()
         {
-            return View();
+            ViewBag.OgImage = "http://img.youtube.com/vi/gpoXAWDQd84/0.jpg";
+            return View(ViewBag);
         }
 
         public ActionResult NextGig()

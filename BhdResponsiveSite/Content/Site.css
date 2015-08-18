@@ -717,3 +717,26 @@ img.store-item-img {
 .quote-block a:hover {
     text-decoration: underline;
 }
+
+.buy-ep-links {
+    width: 100%;
+}
+
+.buy-ep-links li {
+    display: inline-block;
+    background: url('images/itunes-play-sprite.png') 0 0 no-repeat;
+    height: 77px;
+    width: 212px;
+}
+
+.buy-ep-links li.google-play {
+    background-position: 0 -87px;
+    height: 69px;
+    width: 217px;
+}
+
+.buy-ep-links li a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}

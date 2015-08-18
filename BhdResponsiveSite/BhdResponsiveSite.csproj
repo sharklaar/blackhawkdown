@@ -203,6 +203,8 @@
     <Content Include="Content\images\front-cover.png" />
     <Content Include="Content\images\gigs-thumb.jpg" />
     <Content Include="Content\images\header-band.jpg" />
+    <Content Include="Content\images\itunes-play-sprite.jpeg" />
+    <Content Include="Content\images\itunes-play-sprite.png" />
     <Content Include="Content\images\Layout\header-image.png" />
     <Content Include="Content\images\Layout\homepage-full-header.jpg" />
     <Content Include="Content\images\Layout\homepage-header.jpg" />

@@ -410,6 +410,9 @@
     <Content Include="Views\Emails\UpdateOne.cshtml" />
     <Content Include="Views\Emails\UpdateOne.Html.cshtml" />
     <Content Include="Views\Emails\UpdateOne.Text.cshtml" />
+    <Content Include="Views\Emails\UpdateTwo.cshtml" />
+    <Content Include="Views\Emails\UpdateTwo.Html.cshtml" />
+    <Content Include="Views\Emails\UpdateTwo.Text.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

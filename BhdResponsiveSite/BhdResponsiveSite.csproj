@@ -214,6 +214,9 @@
     <Content Include="Content\images\logo\hawk.png" />
     <Content Include="Content\images\music-thumb.jpg" />
     <Content Include="Content\images\store\Album.jpg" />
+    <Content Include="Content\images\store\ladies-tee.png" />
+    <Content Include="Content\images\store\mens-tee.png" />
+    <Content Include="Content\images\store\prefix.png" />
     <Content Include="Content\images\store\tshirt-bloke.jpg" />
     <Content Include="Content\images\store\tshirt-ladies.jpg" />
     <Content Include="Content\images\twitter.png" />
@@ -417,6 +420,7 @@
     <Content Include="Views\Emails\UpdateTwo.cshtml" />
     <Content Include="Views\Emails\UpdateTwo.Html.cshtml" />
     <Content Include="Views\Emails\UpdateTwo.Text.cshtml" />
+    <Content Include="Views\Store\Thanks.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

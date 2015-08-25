@@ -4,115 +4,83 @@
 }
 
 <div class="store-page">
-    @*   THIS IS THE BUTTON FOR A CD
-            =============================
-                <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+    <div class="store-heading-container">
+        <h1>MErch StorE</h1>
+
+        <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+            <input type="hidden" name="cmd" value="_s-xclick">
+            <input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----
+">
+            <input type="image" src="https://www.paypalobjects.com/en_GB/i/btn/btn_viewcart_LG.gif" border="0" name="submit" alt="PayPal – The safer, easier way to pay online.">
+            <img alt="" border="0" src="https://www.paypalobjects.com/en_GB/i/scr/pixel.gif" width="1" height="1">
+        </form>
+    </div>
+    <ul class="store-item-list">
+        <li class="store-item">
+            <h2>Prefix - the EP - £3.99</h2>
+            <img src="~/Content/images/store/prefix.png" />
+            <form class="album-cart-button" target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
                 <input type="hidden" name="cmd" value="_s-xclick">
-                <input type="hidden" name="hosted_button_id" value="BMR83MED74CEY">
-                <input type="image" src="https://www.paypalobjects.com/en_US/GB/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal – The safer, easier way to pay online.">
+                <input type="hidden" name="hosted_button_id" value="HGBMCYXY8CAP4">
+                <input type="image" src="https://www.paypalobjects.com/en_GB/i/btn/btn_cart_LG.gif" border="0" name="submit" alt="PayPal – The safer, easier way to pay online.">
                 <img alt="" border="0" src="https://www.paypalobjects.com/en_GB/i/scr/pixel.gif" width="1" height="1">
             </form>
-        ==================================
-    *@
-    @*<h2>Store</h2>
-
-        <div class="store-item">
-            <form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post" target="paypal">
-
-                <input type="hidden" name="cmd" value="_cart">
-                <input type="hidden" name="add" value="1">
-
-                <input type="hidden" name="business" value="marcdaffern-facilitator@hotmail.com">
-                <input type="hidden" name="item_name" value="Men's t-shirt">
-
-                <input type="hidden" name="amount" value="10.00">
-                <input type="hidden" name="shopping_url"
-                       value="@Request.Url">
-
-                <input type="hidden" name="return" value="@Request.Url">
-                <input type="hidden" name="cancel_return" value="@Request.Url">
-                <img class="store-item-img" src="~/Content/images/store/tshirt-bloke.jpg" />
-                <input type="hidden" name="bn" value="PP-ShopCartBF:x-click-but22.gif:NonHosted">
-                <input type="image" src="https://www.paypal.com/en_US/i/btn/x-click-but22.gif" border="0"
-
-                       name="submit" alt="Make payments with PayPal - it's fast, free and secure!">
-                <img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">
+        </li>
+        <li class="store-item">
+            <h2>Men's TEE - £6.99</h2>
+            <img src="~/Content/images/store/mens-tee.png" />
+            <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+                <input type="hidden" name="cmd" value="_s-xclick">
+                <input type="hidden" name="hosted_button_id" value="6WDD6ZNBGLR9A">
+                <table class="size-select">
+                    <tr><td><input type="hidden" name="on0" value="Size">Size</td></tr>
+                    <tr>
+                        <td>
+                            <select name="os0">
+                                <option value="XL">XL </option>
+                                <option value="L">L </option>
+                                <option value="M">M </option>
+                            </select>
+                        </td>
+                    </tr>
+                </table>
+                <input type="image" src="https://www.paypalobjects.com/en_GB/i/btn/btn_cart_LG.gif" border="0" name="submit" alt="PayPal – The safer, easier way to pay online.">
+                <img alt="" border="0" src="https://www.paypalobjects.com/en_GB/i/scr/pixel.gif" width="1" height="1">
             </form>
-        </div>
-        <div class="store-item">
-
-            <form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post" target="paypal">
-
-                <input type="hidden" name="cmd" value="_cart">
-                <input type="hidden" name="add" value="1">
-
-                <input type="hidden" name="business" value="marcdaffern-facilitator@hotmail.com">
-                <input type="hidden" name="item_name" value="Ladies' t-shirt">
-
-                <input type="hidden" name="amount" value="5.00">
-                <input type="hidden" name="shipping" value="1.00">
-
-                <input type="hidden" name="shopping_url"
-                       value="@Request.Url">
-                <input type="hidden" name="return" value="@Request.Url">
-
-                <input type="hidden" name="cancel_return" value="@Request.Url">
-
-                <img class="store-item-img" src="~/Content/images/store/tshirt-ladies.jpg" />
-                <input type="hidden" name="bn" value="PP-ShopCartBF:x-click-but22.gif:NonHosted">
-
-                <input type="image" src="https://www.paypal.com/en_US/i/btn/x-click-but22.gif" border="0"
-                       name="submit" alt="Make payments with PayPal - it's fast, free and secure!">
-
-                <img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1"
-                     height="1">
+        </li>
+        <li class="store-item">
+            <h2>Ladies' TEE - £6.99</h2>
+            <img src="~/Content/images/store/ladies-tee.png" />
+            <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+                <input type="hidden" name="cmd" value="_s-xclick">
+                <input type="hidden" name="hosted_button_id" value="ZK7358JH3PT6Q">
+                <table class="size-select">
+                    <tr><td><input type="hidden" name="on0" value="Size">Size</td></tr>
+                    <tr>
+                        <td>
+                            <select name="os0">
+                                <option value="S">S </option>
+                                <option value="M">M </option>
+                                <option value="L">L </option>
+                            </select>
+                        </td>
+                    </tr>
+                </table>
+                <input type="image" src="https://www.paypalobjects.com/en_GB/i/btn/btn_cart_LG.gif" border="0" name="submit" alt="PayPal – The safer, easier way to pay online.">
+                <img alt="" border="0" src="https://www.paypalobjects.com/en_GB/i/scr/pixel.gif" width="1" height="1">
             </form>
-        </div>
+        </li>
+    </ul>
 
-        <div class="store-item">
-            <form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post" target="paypal">
+    <div>
+        Postage on any item is £0.99 and all items will be dispatched next working day. 
+    </div>
 
-                <input type="hidden" name="cmd" value="_cart">
-                <input type="hidden" name="add" value="1">
 
-                <input type="hidden" name="business" value="marcdaffern-facilitator@hotmail.com">
-                <input type="hidden" name="item_name" value="CD Album">
 
-                <input type="hidden" name="amount" value="5.00">
-                <input type="hidden" name="shipping" value="1.00">
-
-                <input type="hidden" name="shopping_url"
-                       value="@Request.Url">
-                <input type="hidden" name="return" value="@Request.Url">
-
-                <input type="hidden" name="cancel_return" value="@Request.Url">
-                <img class="store-item-img" src="~/Content/images/store/Album.jpg" />
-                <input type="hidden" name="bn" value="PP-ShopCartBF:x-click-but22.gif:NonHosted">
-
-                <input type="image" src="https://www.paypal.com/en_US/i/btn/x-click-but22.gif" border="0"
-                       name="submit" alt="Make payments with PayPal - it's fast, free and secure!">
-
-                <img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1"
-                     height="1">
-            </form>
-        </div>
-
-        <form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post" target="paypal">
-
-            <input type="hidden" name="cmd" value="_cart">
-
-            <input type="hidden" name="display" value="1">
-            <input type="hidden" name="business" value="marcdaffern-facilitator@hotmail.com">
-
-            <input type="hidden" name="shopping_url"
-                   value="@Request.Url">
-            <input type="image" src="https://www.paypal.com/en_US/i/btn/view_cart_02.gif"
-                   name="submit" alt="Make payments with PayPal - it's fast, free and secure!">
-
-        </form>*@
 
     @*<script type="text/javascript" src="http://www.dizzyjam.com/widgets/1183.js"></script>*@
-    <script type="text/javascript" src="//www.dizzyjam.com/embed/js/blackhawkdown.js"></script>
+    @*<script type="text/javascript" src="//www.dizzyjam.com/embed/js/blackhawkdown.js"></script>*@
 </div>
 
 @*@section Scripts {

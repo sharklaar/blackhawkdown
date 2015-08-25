@@ -544,13 +544,33 @@ input {
 }
 
 /* store page */
-
+.store-heading-container h1, .store-heading-container form {
+    display: inline-block;
+}
+.store-heading-container h1 {
+    margin-right: 20px;
+}
 img.store-item-img {
     height: 200px;
     width: 200px;
 }
 
+.store-item-list {
+    display: block;
+    margin-bottom: 25px;
+}
 .store-item {
+    width: 30%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.album-cart-button {
+    margin-top: 1.8rem;
+}
+
+table.size-select {
+    display: inline-block;
 }
 
 .press-kit-page {

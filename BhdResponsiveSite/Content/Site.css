@@ -544,6 +544,9 @@ input {
 }
 
 /* store page */
+.store-page h2 {
+    font-size: 1.3rem;
+}
 .store-heading-container h1, .store-heading-container form {
     display: inline-block;
 }
@@ -552,7 +555,7 @@ input {
 }
 img.store-item-img {
     height: 200px;
-    width: 200px;
+    width: 100%;
 }
 
 .store-item-list {
@@ -563,6 +566,10 @@ img.store-item-img {
     width: 30%;
     display: inline-block;
     vertical-align: top;
+}
+
+.item-image {
+    width: 100%;
 }
 
 .album-cart-button {

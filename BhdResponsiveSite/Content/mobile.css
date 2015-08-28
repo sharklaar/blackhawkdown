@@ -317,10 +317,16 @@
     .submit-email {
         width: 100%;
     }
+    .store-item {
+        width: 45%;
+    }
 }
 
 
-@media (max-width: 321px) {
+@media (max-width: 541px) {
+    .store-item {
+        width: 100%;
+    }
 }
 
 @media (min-width: 321px) and (max-width: 470px) {
@@ -397,3 +403,4 @@ li.promo.text-only {
     right: 0;
     width: 48%;
 }
+

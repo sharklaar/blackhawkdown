@@ -192,6 +192,7 @@
     <Content Include="Content\images\about\hemy.jpg" />
     <Content Include="Content\images\about\shark.jpg" />
     <Content Include="Content\images\about\tank.jpg" />
+    <Content Include="Content\images\back-cover.png" />
     <Content Include="Content\images\band.jpg" />
     <Content Include="Content\images\bgs\hawk.png" />
     <Content Include="Content\images\bgs\treadplate_background.jpg" />
@@ -199,8 +200,11 @@
     <Content Include="Content\images\bhd-poster.jpg" />
     <Content Include="Content\images\courtesans.jpg" />
     <Content Include="Content\images\facebook.png" />
+    <Content Include="Content\images\front-cover.png" />
     <Content Include="Content\images\gigs-thumb.jpg" />
     <Content Include="Content\images\header-band.jpg" />
+    <Content Include="Content\images\itunes-play-sprite.jpeg" />
+    <Content Include="Content\images\itunes-play-sprite.png" />
     <Content Include="Content\images\Layout\header-image.png" />
     <Content Include="Content\images\Layout\homepage-full-header.jpg" />
     <Content Include="Content\images\Layout\homepage-header.jpg" />
@@ -210,6 +214,9 @@
     <Content Include="Content\images\logo\hawk.png" />
     <Content Include="Content\images\music-thumb.jpg" />
     <Content Include="Content\images\store\Album.jpg" />
+    <Content Include="Content\images\store\ladies-tee.png" />
+    <Content Include="Content\images\store\mens-tee.png" />
+    <Content Include="Content\images\store\prefix.png" />
     <Content Include="Content\images\store\tshirt-bloke.jpg" />
     <Content Include="Content\images\store\tshirt-ladies.jpg" />
     <Content Include="Content\images\twitter.png" />
@@ -410,6 +417,10 @@
     <Content Include="Views\Emails\UpdateOne.cshtml" />
     <Content Include="Views\Emails\UpdateOne.Html.cshtml" />
     <Content Include="Views\Emails\UpdateOne.Text.cshtml" />
+    <Content Include="Views\Emails\UpdateTwo.cshtml" />
+    <Content Include="Views\Emails\UpdateTwo.Html.cshtml" />
+    <Content Include="Views\Emails\UpdateTwo.Text.cshtml" />
+    <Content Include="Views\Store\Thanks.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

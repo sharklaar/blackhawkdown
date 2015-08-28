@@ -12,16 +12,22 @@
     <meta name="google-site-verification" content="MowVZN16pe6WGv5ctqjCcLR0zLOkdFoex0PWBxAo-88" />
     @if (string.IsNullOrEmpty(ViewBag.OgImage))
     {
-        <meta property="og:image" content="~/Content/images/band.jpg" />
-
+    <meta property="og:image" content="~/Content/images/band.jpg" />
     }
     else
     {
-        <meta property="og:image" content="@ViewBag.OgImage" />
+    <meta property="og:image" content="@ViewBag.OgImage" />
+    }
+    @if (string.IsNullOrEmpty(ViewBag.OgSiteName))
+    {
+    <meta property="og:site_name" content="BlackHawkDown UK Official Website" />
+    }
+    else
+    {
+    <meta property="og:site_name" content="@ViewBag.OgSiteName" />
     }
     <meta property="og:title" content="BlackHawkDown UK Official Website" />
     <meta property="og:url" content="@Request.Url" />
-    <meta property="og:site_name" content="BlackHawkDown UK Official Website" />
     <meta property="og:type" content="website" />
     <link rel="canonical" href="http://www.blackhawkdown.org.uk/" />
 </head>

@@ -400,6 +400,10 @@
   <ItemGroup>
     <Content Include="Content\fonts\die.ttf" />
     <Content Include="Content\press-kit\bhd-presskit-images.zip" />
+    <Content Include="Content\fonts\die-webfont.eot" />
+    <Content Include="Content\fonts\die-webfont.ttf" />
+    <Content Include="Content\fonts\die-webfont.woff" />
+    <Content Include="Content\fonts\die-webfont.woff2" />
     <None Include="Properties\PublishProfiles\Profile1.pubxml" />
     <Content Include="Views\Account\Members.cshtml" />
     <Content Include="Views\Account\Signup.cshtml" />

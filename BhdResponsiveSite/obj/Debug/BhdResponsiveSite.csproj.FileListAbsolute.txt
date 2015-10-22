@@ -73,3 +73,8 @@ C:\dev\blackhawkdown\BhdResponsiveSite\bin\System.Web.Http.WebHost.dll
 C:\dev\blackhawkdown\BhdResponsiveSite\bin\System.Net.Http.Formatting.xml
 C:\dev\blackhawkdown\BhdResponsiveSite\bin\System.Web.Http.xml
 C:\dev\blackhawkdown\BhdResponsiveSite\bin\System.Web.Http.WebHost.xml
+C:\dev\blackhawkdown\BhdResponsiveSite\bin\Content\fonts\die.ttf
+C:\dev\blackhawkdown\BhdResponsiveSite\bin\Content\fonts\die-webfont.eot
+C:\dev\blackhawkdown\BhdResponsiveSite\bin\Content\fonts\die-webfont.ttf
+C:\dev\blackhawkdown\BhdResponsiveSite\bin\Content\fonts\die-webfont.woff
+C:\dev\blackhawkdown\BhdResponsiveSite\bin\Content\fonts\die-webfont.woff2

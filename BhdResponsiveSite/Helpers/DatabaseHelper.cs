@@ -82,19 +82,32 @@ namespace BhdResponsiveSite.Helpers
                 while (reader.Read())
                 {
                     var gigDetail = new GigDetail();
-                    gigDetail.GigDate = (DateTime)reader[1];
-                    gigDetail.Venue = (string)reader[2];
+                    if (!string.IsNullOrEmpty(reader[1].ToString()))
+                    {
+                        gigDetail.GigDate = (DateTime) reader[1];
+                    }
+                    if (!string.IsNullOrEmpty(reader[2].ToString()))
+                    {
+                        gigDetail.Venue = (string) reader[2];
+                    }
                     if (!string.IsNullOrEmpty(reader[3].ToString()))
                     {
-                        gigDetail.LinkUrl = (string)reader[3];
+                        gigDetail.LinkUrl = (string) reader[3];
                     }
-                    gigDetail.Location = (string)reader[4];
+                    if (!string.IsNullOrEmpty(reader[4].ToString()))
+                    {
+                        gigDetail.Location = (string) reader[4];
+                    }
                     if (!string.IsNullOrEmpty(reader[5].ToString()))
                     {
-                        gigDetail.ExtraDetail = (string)reader[5];
+                        gigDetail.ExtraDetail = (string) reader[5];
                     }
                     gigs.Add(gigDetail);
                 }
+            }
+            catch (Exception ex)
+            {
+                return new List<GigDetail>();
             }
             finally
             {

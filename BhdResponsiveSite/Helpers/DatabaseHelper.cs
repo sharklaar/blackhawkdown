@@ -62,6 +62,40 @@ namespace BhdResponsiveSite.Helpers
             }
 
             return emails;
-        } 
+        }
+
+        public List<GigDetail> GetGigDetails()
+        {
+            var gigs = new List<GigDetail>();
+
+            _connectionString = ConfigurationManager.ConnectionStrings["dbConnection"].ConnectionString;
+            var connection = new SqlConnection(_connectionString);
+            connection.Open();
+            try
+            {
+                var cmd = new SqlCommand("GetGigDetails", connection)
+                {
+                    CommandType = CommandType.StoredProcedure
+                };
+
+                var reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    var gigDetail = new GigDetail();
+                    gigDetail.GigDate = (DateTime)reader[1];
+                    gigDetail.Venue = (string)reader[2];
+                    gigDetail.LinkUrl = (string)reader[3];
+                    gigDetail.Location = (string)reader[4];
+                    gigDetail.ExtraDetail = (string)reader[5];
+                    gigs.Add(gigDetail);
+                }
+            }
+            finally
+            {
+                connection.Close();
+            }
+
+            return gigs;
+        }
     }
 }

@@ -20,6 +20,7 @@
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -179,6 +180,7 @@
     <Compile Include="Models\EmailOnlyModel.cs" />
     <Compile Include="Models\EmailSendingModel.cs" />
     <Compile Include="Models\EmailSendingResultsModel.cs" />
+    <Compile Include="Models\GigDetail.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

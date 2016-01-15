@@ -12,7 +12,7 @@
         @foreach (var gig in Model)
         {
             <li>
-                @gig.GigDate.ToShortDateString() - <a href="@gig.LinkUrl" rel="nofollow" target="_blank">@gig.Venue</a>, @gig.Location @gig.ExtraDetail
+                @gig.GigDate.ToString("dd-MMMM-yyyy") - <a href="@gig.LinkUrl" rel="nofollow" target="_blank">@gig.Venue</a>, @gig.Location @gig.ExtraDetail
             </li>
         }
     </ul>

@@ -1,4 +1,5 @@
-﻿using System.Runtime.Remoting;
+﻿using System.Linq;
+using System.Runtime.Remoting;
 using BhdResponsiveSite.Library;
 using BhdResponsiveSite.Models;
 using System;
@@ -12,7 +13,9 @@ namespace BhdResponsiveSite.Controllers
     {
         public ActionResult Index()
         {
-            return View();
+            var nextGig = new DatabaseHelper().GetGigDetails().OrderBy(x => x.GigDate).FirstOrDefault();
+
+            return View(nextGig);
         }
         
         [ChildActionOnly]
@@ -61,7 +64,8 @@ namespace BhdResponsiveSite.Controllers
 
         public ActionResult Gigs()
         {
-            return View();
+            var gigList = new DatabaseHelper().GetGigDetails().OrderBy(x => x.GigDate).ToList();
+            return View(gigList);
         }
 
         public ActionResult About()

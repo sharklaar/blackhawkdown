@@ -3,28 +3,17 @@
     ViewBag.Description = "Find out where and when the next BlackHawkDown gig is happening";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+@model List<BhdResponsiveSite.Models.GigDetail>
+
 <div id="main-content" class="gigs-page page-block">
     <h1>
         Upcoming Gigs</h1>
     <ul class="gig-list">
-
-        <li>
-            29/01/2016 - <a href="https://www.facebook.com/events/1071195606232029/" rel="nofollow" target="_blank">The Cherry Tree</a>, Peterborough (Blacklist Promotions)
-        </li>
-        <li>
-            20/02/2016 - <a href="https://www.facebook.com/events/1105462626131345/" rel="nofollow" target="_blank">Voodoo Lounge</a>, Stamford (w/Viking Skull)
-        </li>
-        <li>
-            02/04/2016 - <a href="https://www.facebook.com/pages/Rock-Haven/100732353328490" rel="nofollow" target="_blank">Rock Haven</a>, Lincoln
-        </li>
-        <li>
-            05/03/2016 - <a href="https://www.facebook.com/pages/Castle-Tavern/159721734040628" rel="nofollow" target="_blank">The Castle Tavern</a>, Luton
-        </li>
-        <li>
-            11/06/2016 - DNR Bike Festival (details TBA)
-        </li>
-        <li>
-            10/09/2016 - <a href="https://www.facebook.com/pages/Rock-Haven/100732353328490" rel="nofollow" target="_blank">Rock Haven</a>, Lincoln
-        </li>
+        @foreach (var gig in Model)
+        {
+            <li>
+                @gig.GigDate.ToShortDateString() - <a href="@gig.LinkUrl" rel="nofollow" target="_blank">@gig.Venue</a>, @gig.Location @gig.ExtraDetail
+            </li>
+        }
     </ul>
 </div>

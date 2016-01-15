@@ -84,9 +84,15 @@ namespace BhdResponsiveSite.Helpers
                     var gigDetail = new GigDetail();
                     gigDetail.GigDate = (DateTime)reader[1];
                     gigDetail.Venue = (string)reader[2];
-                    gigDetail.LinkUrl = (string)reader[3];
+                    if (!string.IsNullOrEmpty(reader[3].ToString()))
+                    {
+                        gigDetail.LinkUrl = (string)reader[3];
+                    }
                     gigDetail.Location = (string)reader[4];
-                    gigDetail.ExtraDetail = (string)reader[5];
+                    if (!string.IsNullOrEmpty(reader[5].ToString()))
+                    {
+                        gigDetail.ExtraDetail = (string)reader[5];
+                    }
                     gigs.Add(gigDetail);
                 }
             }

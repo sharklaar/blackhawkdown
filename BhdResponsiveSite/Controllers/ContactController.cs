@@ -1,7 +1,6 @@
 ﻿using System.Web.Mvc;
 using BhdResponsiveSite.Library;
 using BhdResponsiveSite.Models;
-using BHDSite.Library;
 
 namespace BhdResponsiveSite.Controllers
 {

@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-
-namespace BHDSite.Library
+﻿namespace BhdResponsiveSite.Library
 {
     public class Contact
     {

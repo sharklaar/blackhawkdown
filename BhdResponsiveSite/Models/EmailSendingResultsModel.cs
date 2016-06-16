@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-
-namespace BhdResponsiveSite.Models
+﻿namespace BhdResponsiveSite.Models
 {
     public class EmailSendingResultsModel
     {

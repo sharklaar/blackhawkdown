@@ -4,8 +4,6 @@ using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Web;
 
 namespace BhdResponsiveSite.Helpers
 {
@@ -107,6 +105,7 @@ namespace BhdResponsiveSite.Helpers
             }
             catch (Exception ex)
             {
+                Console.WriteLine(ex);
                 return new List<GigDetail>();
             }
             finally

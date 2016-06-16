@@ -1,5 +1,4 @@
 ﻿using System.Linq;
-using System.Runtime.Remoting;
 using BhdResponsiveSite.Library;
 using BhdResponsiveSite.Models;
 using System;
@@ -52,6 +51,7 @@ namespace BhdResponsiveSite.Controllers
             }
             catch (Exception ex)
             {
+                Console.WriteLine(ex);
                 return PartialView("_email", emailVm);
             }
             

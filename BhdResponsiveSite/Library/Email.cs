@@ -2,8 +2,6 @@
 using System.Net;
 using System.Net.Mail;
 using BhdResponsiveSite.Models;
-using BHDSite.Library;
-using Postal;
 
 namespace BhdResponsiveSite.Library
 {
@@ -30,6 +28,7 @@ namespace BhdResponsiveSite.Library
             }
             catch (Exception ex)
             {
+                Console.WriteLine(ex);
             }
         }
 

@@ -32,6 +32,11 @@ c:\documents and settings\sharklaar\my documents\visual studio 2010\Projects\Bhd
 c:\documents and settings\sharklaar\my documents\visual studio 2010\Projects\BhdResponsiveSite\BhdResponsiveSite\obj\Debug\ResolveAssemblyReference.cache
 c:\documents and settings\sharklaar\my documents\visual studio 2010\Projects\BhdResponsiveSite\BhdResponsiveSite\obj\Debug\BhdResponsiveSite.dll
 c:\documents and settings\sharklaar\my documents\visual studio 2010\Projects\BhdResponsiveSite\BhdResponsiveSite\obj\Debug\BhdResponsiveSite.pdb
+C:\dev\blackhawkdown\BhdResponsiveSite\bin\Content\fonts\die.ttf
+C:\dev\blackhawkdown\BhdResponsiveSite\bin\Content\fonts\die-webfont.eot
+C:\dev\blackhawkdown\BhdResponsiveSite\bin\Content\fonts\die-webfont.ttf
+C:\dev\blackhawkdown\BhdResponsiveSite\bin\Content\fonts\die-webfont.woff
+C:\dev\blackhawkdown\BhdResponsiveSite\bin\Content\fonts\die-webfont.woff2
 C:\dev\blackhawkdown\BhdResponsiveSite\bin\BhdResponsiveSite.dll.config
 C:\dev\blackhawkdown\BhdResponsiveSite\bin\BhdResponsiveSite.dll
 C:\dev\blackhawkdown\BhdResponsiveSite\bin\BhdResponsiveSite.pdb
@@ -41,7 +46,10 @@ C:\dev\blackhawkdown\BhdResponsiveSite\bin\Microsoft.Web.Infrastructure.dll
 C:\dev\blackhawkdown\BhdResponsiveSite\bin\Newtonsoft.Json.dll
 C:\dev\blackhawkdown\BhdResponsiveSite\bin\Postal.dll
 C:\dev\blackhawkdown\BhdResponsiveSite\bin\System.Net.Http.dll
+C:\dev\blackhawkdown\BhdResponsiveSite\bin\System.Net.Http.Formatting.dll
 C:\dev\blackhawkdown\BhdResponsiveSite\bin\System.Net.Http.WebRequest.dll
+C:\dev\blackhawkdown\BhdResponsiveSite\bin\System.Web.Http.dll
+C:\dev\blackhawkdown\BhdResponsiveSite\bin\System.Web.Http.WebHost.dll
 C:\dev\blackhawkdown\BhdResponsiveSite\bin\System.Web.Mvc.dll
 C:\dev\blackhawkdown\BhdResponsiveSite\bin\System.Web.Optimization.dll
 C:\dev\blackhawkdown\BhdResponsiveSite\bin\System.Web.Providers.dll
@@ -49,32 +57,23 @@ C:\dev\blackhawkdown\BhdResponsiveSite\bin\System.Web.Razor.dll
 C:\dev\blackhawkdown\BhdResponsiveSite\bin\System.Web.WebPages.Deployment.dll
 C:\dev\blackhawkdown\BhdResponsiveSite\bin\System.Web.WebPages.dll
 C:\dev\blackhawkdown\BhdResponsiveSite\bin\System.Web.WebPages.Razor.dll
+C:\dev\blackhawkdown\BhdResponsiveSite\bin\WebDriver.dll
+C:\dev\blackhawkdown\BhdResponsiveSite\bin\WebDriver.Support.dll
 C:\dev\blackhawkdown\BhdResponsiveSite\bin\WebGrease.dll
 C:\dev\blackhawkdown\BhdResponsiveSite\bin\Newtonsoft.Json.xml
 C:\dev\blackhawkdown\BhdResponsiveSite\bin\Postal.xml
 C:\dev\blackhawkdown\BhdResponsiveSite\bin\EntityFramework.xml
 C:\dev\blackhawkdown\BhdResponsiveSite\bin\System.Net.Http.xml
+C:\dev\blackhawkdown\BhdResponsiveSite\bin\System.Net.Http.Formatting.xml
 C:\dev\blackhawkdown\BhdResponsiveSite\bin\System.Net.Http.WebRequest.xml
+C:\dev\blackhawkdown\BhdResponsiveSite\bin\System.Web.Http.xml
+C:\dev\blackhawkdown\BhdResponsiveSite\bin\System.Web.Http.WebHost.xml
 C:\dev\blackhawkdown\BhdResponsiveSite\bin\System.Web.Mvc.xml
 C:\dev\blackhawkdown\BhdResponsiveSite\bin\System.Web.Razor.xml
 C:\dev\blackhawkdown\BhdResponsiveSite\bin\System.Web.WebPages.xml
 C:\dev\blackhawkdown\BhdResponsiveSite\bin\System.Web.WebPages.Deployment.xml
 C:\dev\blackhawkdown\BhdResponsiveSite\bin\System.Web.WebPages.Razor.xml
-C:\dev\blackhawkdown\BhdResponsiveSite\obj\Debug\BhdResponsiveSite.dll
-C:\dev\blackhawkdown\BhdResponsiveSite\obj\Debug\BhdResponsiveSite.pdb
-C:\dev\blackhawkdown\BhdResponsiveSite\obj\Debug\BhdResponsiveSite.csprojResolveAssemblyReference.cache
-C:\dev\blackhawkdown\BhdResponsiveSite\bin\WebDriver.dll
-C:\dev\blackhawkdown\BhdResponsiveSite\bin\WebDriver.Support.dll
 C:\dev\blackhawkdown\BhdResponsiveSite\bin\WebDriver.xml
 C:\dev\blackhawkdown\BhdResponsiveSite\bin\WebDriver.Support.xml
-C:\dev\blackhawkdown\BhdResponsiveSite\bin\System.Net.Http.Formatting.dll
-C:\dev\blackhawkdown\BhdResponsiveSite\bin\System.Web.Http.dll
-C:\dev\blackhawkdown\BhdResponsiveSite\bin\System.Web.Http.WebHost.dll
-C:\dev\blackhawkdown\BhdResponsiveSite\bin\System.Net.Http.Formatting.xml
-C:\dev\blackhawkdown\BhdResponsiveSite\bin\System.Web.Http.xml
-C:\dev\blackhawkdown\BhdResponsiveSite\bin\System.Web.Http.WebHost.xml
-C:\dev\blackhawkdown\BhdResponsiveSite\bin\Content\fonts\die.ttf
-C:\dev\blackhawkdown\BhdResponsiveSite\bin\Content\fonts\die-webfont.eot
-C:\dev\blackhawkdown\BhdResponsiveSite\bin\Content\fonts\die-webfont.ttf
-C:\dev\blackhawkdown\BhdResponsiveSite\bin\Content\fonts\die-webfont.woff
-C:\dev\blackhawkdown\BhdResponsiveSite\bin\Content\fonts\die-webfont.woff2
+C:\dev\blackhawkdown\BhdResponsiveSite\obj\Debug\BhdResponsiveSite.dll
+C:\dev\blackhawkdown\BhdResponsiveSite\obj\Debug\BhdResponsiveSite.pdb

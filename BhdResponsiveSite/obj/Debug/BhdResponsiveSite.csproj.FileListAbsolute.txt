@@ -75,5 +75,6 @@ C:\dev\blackhawkdown\BhdResponsiveSite\bin\System.Web.WebPages.Deployment.xml
 C:\dev\blackhawkdown\BhdResponsiveSite\bin\System.Web.WebPages.Razor.xml
 C:\dev\blackhawkdown\BhdResponsiveSite\bin\WebDriver.xml
 C:\dev\blackhawkdown\BhdResponsiveSite\bin\WebDriver.Support.xml
+C:\dev\blackhawkdown\BhdResponsiveSite\obj\Debug\BhdResponsiveSite.csprojResolveAssemblyReference.cache
 C:\dev\blackhawkdown\BhdResponsiveSite\obj\Debug\BhdResponsiveSite.dll
 C:\dev\blackhawkdown\BhdResponsiveSite\obj\Debug\BhdResponsiveSite.pdb

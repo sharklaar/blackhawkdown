@@ -68,9 +68,9 @@ namespace BhdResponsiveSite.Helpers
 
             _connectionString = ConfigurationManager.ConnectionStrings["dbConnection"].ConnectionString;
             var connection = new SqlConnection(_connectionString);
-            connection.Open();
             try
             {
+                connection.Open();
                 var cmd = new SqlCommand("GetGigDetails", connection)
                 {
                     CommandType = CommandType.StoredProcedure

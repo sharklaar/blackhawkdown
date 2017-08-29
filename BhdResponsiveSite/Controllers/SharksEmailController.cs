@@ -22,6 +22,10 @@ namespace BhdResponsiveSite.Controllers
             if (emailSendingmodel.IsTestEmail)
             {
                 emails.Add("marc@blackhawkdown.org.uk");
+                emails.Add("lee@blackhawkdown.org.uk");
+                emails.Add("ben@blackhawkdown.org.uk");
+                emails.Add("andy@blackhawkdown.org.uk");
+                emails.Add("ant@blackhawkdown.org.uk");
             }
             else
             {
@@ -47,8 +51,8 @@ namespace BhdResponsiveSite.Controllers
                 else
                 {
                     sendingResults.Failures++;
+                    new DatabaseHelper().SoftDeleteContact(emailModel);
                 }
-
             }
 
             return View("EmailsSent", sendingResults);

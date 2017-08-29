@@ -10,55 +10,55 @@ namespace BhdResponsiveSite.Controllers
     {
         //
         // GET: /Account/
-        private readonly GoogleDriveHelper _driveHelper = new GoogleDriveHelper();
+        // TODO: replace with DB access ..... //private readonly GoogleDriveHelper _driveHelper = new GoogleDriveHelper();
 
-        public ActionResult Login(AccountModel account)
-        {
-            var validatedAccount = _driveHelper.GetUserWithLoginCredentials(account);
+        //public ActionResult Login(AccountModel account)
+        //{
+        //    var validatedAccount = _driveHelper.GetUserWithLoginCredentials(account);
 
-            if (validatedAccount != null)
-            {
-                AddCookie();
-                Session["login"] = validatedAccount;
+        //    if (validatedAccount != null)
+        //    {
+        //        AddCookie();
+        //        Session["login"] = validatedAccount;
 
-                return View("Members", validatedAccount);                
+        //        return View("Members", validatedAccount);                
 
-            }
+        //    }
 
-            return View("FailedLogin");
+        //    return View("FailedLogin");
 
-        }
+        //}
 
-        public ActionResult Members()
-        {
-            var sessionAccount = new AccountModel();
-            if (Session["login"] != null)
-            {
-                sessionAccount = Session["login"] as AccountModel;
-                return View(sessionAccount);
-            }
+        //public ActionResult Members()
+        //{
+        //    var sessionAccount = new AccountModel();
+        //    if (Session["login"] != null)
+        //    {
+        //        sessionAccount = Session["login"] as AccountModel;
+        //        return View(sessionAccount);
+        //    }
 
-            return View("FailedLogin");
-        }
+        //    return View("FailedLogin");
+        //}
 
 
-        public ActionResult Signup()
-        {
-            return View();
-        }
+        //public ActionResult Signup()
+        //{
+        //    return View();
+        //}
 
-        [HttpPost]
-        public ActionResult CreateAccount(AccountModel account)
-        {
-            if (ModelState.IsValid)
-            {
-                _driveHelper.WriteNewUserToDatabase(account);
-                AddCookie();
+        //[HttpPost]
+        //public ActionResult CreateAccount(AccountModel account)
+        //{
+        //    if (ModelState.IsValid)
+        //    {
+        //        _driveHelper.WriteNewUserToDatabase(account);
+        //        AddCookie();
 
-                return View("Members", account);
-            }
-            return View("Signup", account);
-        }
+        //        return View("Members", account);
+        //    }
+        //    return View("Signup", account);
+        //}
 
         private void AddCookie()
         {

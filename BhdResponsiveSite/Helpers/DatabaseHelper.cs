@@ -33,6 +33,25 @@ namespace BhdResponsiveSite.Helpers
             }
         }
 
+        public void SoftDeleteContact(EmailOnlyModel emailVm)
+        {
+            _connectionString = ConfigurationManager.ConnectionStrings["dbConnection"].ConnectionString;
+            var connection = new SqlConnection(_connectionString);
+            connection.Open();
+            try
+            {
+                var cmd = new SqlCommand("RemoveContact", connection);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@Email", emailVm.Email);
+
+                cmd.ExecuteNonQuery();
+            }
+            finally
+            {
+                connection.Close();
+            }
+        }
+
         public List<string> GetEmailAddresses()
         {
             var emails = new List<string>();

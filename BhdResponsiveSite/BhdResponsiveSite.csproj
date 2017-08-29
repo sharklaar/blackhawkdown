@@ -174,7 +174,6 @@
     <Compile Include="Helpers\DatabaseHelper.cs" />
     <Compile Include="Library\Contact.cs" />
     <Compile Include="Library\Email.cs" />
-    <Compile Include="Library\GoogleDriveHelper.cs" />
     <Compile Include="Models\AccountModel.cs" />
     <Compile Include="Models\ContactViewModel.cs" />
     <Compile Include="Models\EmailOnlyModel.cs" />
@@ -192,6 +191,9 @@
     <Content Include="Content\images\about\band.jpg" />
     <Content Include="Content\images\about\ben.jpg" />
     <Content Include="Content\images\about\hemy.jpg" />
+    <Content Include="Content\images\about\lee.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Content\images\about\shark.jpg" />
     <Content Include="Content\images\about\tank.jpg" />
     <Content Include="Content\images\back-cover.png" />

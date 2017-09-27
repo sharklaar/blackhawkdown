@@ -59,7 +59,10 @@ namespace BhdResponsiveSite.Controllers
 
         public ActionResult FreeTracks()
         {
-            return View();
+            AddCookie();
+            var freeTrackCode = new DatabaseHelper().GetFreeTrackCode();
+            var url = $"https://blackhawkdownuk.bandcamp.com/yum?code={freeTrackCode}";
+            return View(new FreeTrack {Url = url});
         }
 
         public ActionResult Gigs()

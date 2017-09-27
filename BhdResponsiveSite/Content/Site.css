@@ -1,11 +1,9 @@
 ﻿@font-face {
     font-family: 'die';
     src: url('fonts/die-webfont.eot');
-    src: url('fonts/die-webfont.woff2') format('woff2'),
-         url('fonts/die-webfont.woff') format('woff');
+    src: url('fonts/die-webfont.woff2') format('woff2'), url('fonts/die-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
-
 }
 
 * {
@@ -165,7 +163,7 @@ a {
     width: 100%;
     height: 100%;
     max-width: 128px;
-    max-height: 128px
+    max-height: 128px;
 }
 /*************** HEADER PARTIAL CSS **************************************************/
 
@@ -184,10 +182,10 @@ a {
 }
 
     #header-logo img {
-          width: 95%;
-          max-width: 800px;
-          margin: 0 auto;
-          display: block;
+        width: 95%;
+        max-width: 800px;
+        margin: 0 auto;
+        display: block;
     }
 
 #navigation {
@@ -348,7 +346,7 @@ a {
     }
 
 #email form {
-    width: 25%;
+    width: 100%;
     display: inline-block;
     vertical-align: top;
 }
@@ -498,17 +496,19 @@ a {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
-.text-only h2 {
-    text-align: center;
-}
-.text-only .promo {    
-    background-color: black;
-    min-height: 210px;
-}
 
-.text-only .promo-text {
-    width: 90%;
-}
+    .text-only h2 {
+        text-align: center;
+    }
+
+    .text-only .promo {
+        background-color: black;
+        min-height: 210px;
+    }
+
+    .text-only .promo-text {
+        width: 90%;
+    }
 
 .free-music {
     width: 100%;
@@ -562,15 +562,17 @@ input {
 }
 
 .store-page .quote-block {
-    margin-bottom: 20px;    
+    margin-bottom: 20px;
 }
 
 .store-heading-container h1, .store-heading-container form {
     display: inline-block;
 }
+
 .store-heading-container h1 {
     margin-right: 20px;
 }
+
 img.store-item-img {
     height: 200px;
     width: 100%;
@@ -580,6 +582,7 @@ img.store-item-img {
     display: block;
     margin-bottom: 25px;
 }
+
 .store-item {
     width: 30%;
     display: inline-block;
@@ -601,21 +604,23 @@ table.size-select {
 .press-kit-page {
     text-align: center;
 }
+
 .page .press-kit-page .promo h1, h2, h3, h4 {
-    text-align: center!important;
+    text-align: center !important;
 }
+
 .press-kit-page a {
     display: block;
     font-size: 1.3rem;
 }
 
-.press-kit-page a.download-images {
-    text-decoration: underline;
-}
+    .press-kit-page a.download-images {
+        text-decoration: underline;
+    }
 
-.press-kit-page a.download-images:hover {
-    text-decoration: none;
-}
+        .press-kit-page a.download-images:hover {
+            text-decoration: none;
+        }
 
 .press-kit-page h1, .press-kit-page h2, .press-kit-page h3 {
     font-size: 1.5rem;
@@ -646,6 +651,7 @@ table.size-select {
 .press-kit-page .bio {
     max-width: 960px;
 }
+
 .free-tracks-link {
     cursor: pointer;
     text-decoration: underline;
@@ -670,12 +676,13 @@ table.size-select {
     max-width: 800px;
     margin: 0 auto;
 }
+
 .home-page .main-video.promo {
-    position:relative;
-	padding-bottom:56.25%;
-	padding-top:30px;
-	height:0;
-	overflow:hidden;
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px;
+    height: 0;
+    overflow: hidden;
 }
 
 .home-page .full-width-video-container iframe {
@@ -700,6 +707,7 @@ table.size-select {
     display: flex;
     justify-content: space-between;
 }
+
 .about-page.page-block {
     max-width: none;
     padding: 20px;
@@ -729,59 +737,82 @@ table.size-select {
     text-align: center;
 }
 
-.social-shit h2 {
-    display: inline-block;
-    vertical-align: bottom;
-}
+    .social-shit h2 {
+        display: inline-block;
+        vertical-align: bottom;
+    }
+
 .store-page {
     text-align: center;
 }
+
 #dizzyjam-iframe {
     margin: 20px auto;
     box-sizing: border-box;
 }
 
-#dizzyjam-iframe body {
-    margin: 0 auto!important;
-    width: 100%!important;
-}
+    #dizzyjam-iframe body {
+        margin: 0 auto !important;
+        width: 100% !important;
+    }
 
 .quote-block {
     text-align: center;
 }
 
-.quote-block .promo {
-    height: auto;
-    background-color: black;
-}
+    .quote-block .promo {
+        height: auto;
+        background-color: black;
+    }
 
-.quote-block a {
-    font-weight: bold;
-}
+    .quote-block a {
+        font-weight: bold;
+    }
 
-.quote-block a:hover {
-    text-decoration: underline;
-}
+        .quote-block a:hover {
+            text-decoration: underline;
+        }
 
 .buy-ep-links {
     width: 100%;
 }
 
-.buy-ep-links li {
-    display: inline-block;
-    background: url('images/itunes-play-sprite.png') 0 0 no-repeat;
-    height: 77px;
-    width: 212px;
-}
+    .buy-ep-links li {
+        display: inline-block;
+        background: url('images/itunes-play-sprite.png') 0 0 no-repeat;
+        height: 77px;
+        width: 212px;
+    }
 
-.buy-ep-links li.google-play {
-    background-position: 0 -87px;
-    height: 69px;
-    width: 217px;
-}
+        .buy-ep-links li.google-play {
+            background-position: 0 -87px;
+            height: 69px;
+            width: 217px;
+        }
 
-.buy-ep-links li a {
+        .buy-ep-links li a {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+
+.free-track-button {
+    font-weight: bold;
+    margin: 0 auto;
     display: block;
+    padding: 20px;
+    background: linear-gradient(to bottom, rgba(0,0,0,1) 0,rgba(143,2,34,1) 35%,rgba(143,2,34,1) 63%,rgba(0,0,0,1) 100%);
+    border: 2px outset buttonface;
+    color: white !important;
+    border-radius: 5px;
+    text-align: center;
+    width: 200px;
+}
+
+#mc_embed_signup {
+    background: #000;
+    clear: left;
+    font: 14px Helvetica,Arial,sans-serif;
     width: 100%;
-    height: 100%;
+    color: #fff;
 }

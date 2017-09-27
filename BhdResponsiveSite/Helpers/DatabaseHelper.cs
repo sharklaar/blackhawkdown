@@ -52,6 +52,28 @@ namespace BhdResponsiveSite.Helpers
             }
         }
 
+        public string GetFreeTrackCode()
+        {
+            _connectionString = ConfigurationManager.ConnectionStrings["dbConnection"].ConnectionString;
+            var connection = new SqlConnection(_connectionString);
+            connection.Open();
+            try
+            {
+                var cmd = new SqlCommand("GetFreeTrackCode", connection);
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                return cmd.ExecuteScalar().ToString();
+            }
+            catch (Exception ex)
+            {
+                return ex.Message;
+            }
+            finally
+            {
+                connection.Close();
+            }
+        }
+
         public List<string> GetEmailAddresses()
         {
             var emails = new List<string>();

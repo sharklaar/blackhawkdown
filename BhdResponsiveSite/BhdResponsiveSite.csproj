@@ -179,6 +179,7 @@
     <Compile Include="Models\EmailOnlyModel.cs" />
     <Compile Include="Models\EmailSendingModel.cs" />
     <Compile Include="Models\EmailSendingResultsModel.cs" />
+    <Compile Include="Models\FreeTrack.cs" />
     <Compile Include="Models\GigDetail.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -12,19 +12,19 @@
     <meta name="google-site-verification" content="MowVZN16pe6WGv5ctqjCcLR0zLOkdFoex0PWBxAo-88" />
     @if (string.IsNullOrEmpty(ViewBag.OgImage))
     {
-    <meta property="og:image" content="~/Content/images/band.jpg" />
+        <meta property="og:image" content="~/Content/images/band.jpg" />
     }
     else
     {
-    <meta property="og:image" content="@ViewBag.OgImage" />
+        <meta property="og:image" content="@ViewBag.OgImage" />
     }
     @if (string.IsNullOrEmpty(ViewBag.OgSiteName))
     {
-    <meta property="og:site_name" content="BlackHawkDown UK Official Website" />
+        <meta property="og:site_name" content="BlackHawkDown UK Official Website" />
     }
     else
     {
-    <meta property="og:site_name" content="@ViewBag.OgSiteName" />
+        <meta property="og:site_name" content="@ViewBag.OgSiteName" />
     }
     <meta property="og:title" content="BlackHawkDown UK Official Website" />
     <meta property="og:url" content="@Request.Url" />
@@ -36,6 +36,16 @@
     <link rel="icon" href="~/Content/images/icons/favicon-64.png" sizes="64x64">
     <link rel="icon" href="~/Content/images/icons/favicon-128.png" sizes="128x128">
 </head>
+
+@if (Request.Cookies["bhd_subscribe"] == null)
+{
+    <script type="text/javascript" src="//downloads.mailchimp.com/js/signup-forms/popup/embed.js" data-dojo-config="usePlainJson: true, isDebug: false"></script>
+    <script type="text/javascript">require(["mojo/signup-forms/Loader"],
+    function(L) {
+        L.start({ "baseUrl": "mc.us16.list-manage.com", "uuid": "9076d68734334d09e6c42262d", "lid": "1fc6e722b2" })
+    })</script>
+}
+
 <body>
     <ul class="page">
         <li id="header" class="main-section">

@@ -21,7 +21,9 @@ namespace BhdResponsiveSite.Controllers
         public ActionResult Email()
         {
             if (Request.Cookies["bhd_subscribe"] != null)
+            {
                 return null;
+            }
 
             return PartialView("_email");
         }

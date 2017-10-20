@@ -751,10 +751,10 @@ table.size-select {
     box-sizing: border-box;
 }
 
-    #dizzyjam-iframe body {
-        margin: 0 auto !important;
-        width: 100% !important;
-    }
+#dizzyjam-iframe body {
+    margin: 0 auto !important;
+    width: 100% !important;
+}
 
 .quote-block {
     text-align: center;
@@ -816,3 +816,193 @@ table.size-select {
     width: 100%;
     color: #fff;
 }
+
+.grid-view-container {
+    display: flex;
+    flex-direction: row;
+    flex-flow: wrap;
+    justify-content: flex-start
+}
+
+@media (min-width: 992px) {
+    .grid-view-container {
+        padding-left: 28px
+    }
+}
+
+html, body {
+    height: 100%
+}
+
+a:hover {
+    cursor: pointer
+}
+
+header {
+    background-color: black
+}
+
+    header img {
+        width: 100%;
+        padding: 10px
+    }
+
+.music-section {
+    padding: 20px 0 10px;
+    font-size: 2rem;
+    color: white;
+    width: 100%;
+    background-color: black
+}
+
+    .music-section iframe {
+        font-size: 0
+    }
+
+.subscribe-section {
+    background-color: black;
+    height: 100px
+}
+
+.gigs-section {
+    font-size: 2rem;
+    color: black;
+    width: 100%;
+    background-color: white
+}
+
+.container {
+    width: 100%;
+    margin: 0 auto
+}
+
+section.module:last-child {
+    margin-bottom: 0
+}
+
+section.module h2 {
+    margin-bottom: 40px;
+    font-family: "Roboto Slab", serif;
+    font-size: 30px
+}
+
+section.module p {
+    margin-bottom: 40px;
+    font-size: 16px;
+    font-weight: 300
+}
+
+    section.module p:last-child {
+        margin-bottom: 0
+    }
+
+section.module.content {
+    padding: 0
+}
+
+section.module.parallax {
+    padding: 160px 0;
+    background-size: cover
+}
+
+    section.module.parallax h1 {
+        color: #1e1e1e;
+        font-size: 48px;
+        line-height: 1;
+        font-weight: 700;
+        text-align: center;
+        text-transform: uppercase;
+        text-shadow: 0 0 10px white
+    }
+
+section.module.parallax-1 {
+    background-image: url("/Content/images/bhdbg2.jpg")
+}
+
+section.module.parallax-2 {
+    background-image: url("/Content/images/bhdbg4.jpg")
+}
+
+section.module.parallax-3 {
+    background-image: url("/Content/images/bhdbg.png")
+}
+
+section.module.parallax-4 {
+    background-image: url("/Content/images/bhdbg3.jpg")
+}
+
+@media all and (min-width: 600px) {
+    section.module h2 {
+        font-size: 42px
+    }
+
+    section.module p {
+        font-size: 20px
+    }
+
+    section.module.parallax {
+        padding: 150px 0
+    }
+
+        section.module.parallax h1 {
+            font-size: 70px
+        }
+}
+
+@media all and (min-width: 960px) {
+    section.module.parallax h1 {
+        font-size: 90px
+    }
+}
+
+.spinner-animation--medium, .spinner-animation--small {
+    display: block;
+    margin: 0 auto 10px;
+    animation: rotate linear 1s infinite;
+    border-style: solid;
+    border-color: #ddd;
+    border-radius: 50%;
+    border-top-color: #428bca;
+    border-right-color: #428bca
+}
+
+.spinner-animation--medium {
+    border-width: 2px;
+    width: 33px;
+    height: 33px
+}
+
+.spinner-animation--small {
+    border-width: 1px;
+    width: 15px;
+    height: 15px
+}
+
+.spinner {
+    position: absolute;
+    top: -200px;
+    opacity: 0;
+    z-index: 100;
+    padding: 42px;
+    background: white;
+    border: none;
+    transition: opacity 1s ease-in-out
+}
+
+    .spinner.show {
+        opacity: 0.4;
+        transition: opacity 1s ease-in-out;
+        z-index: 200;
+        position: fixed;
+        top: 40%;
+        left: 45%
+    }
+
+.spinner-small {
+    margin: 17px 0 20px
+}
+
+    .spinner-small .spinner-small-animation {
+        float: left;
+        margin-right: 10px
+    }

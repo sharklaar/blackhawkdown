@@ -16,10 +16,11 @@ body {
     font-size: 1em;
     font-family: "Segoe UI", Verdana, Helvetica, Sans-Serif;
     color: whitesmoke;
-    background-color: #ccc;
-    background: url('/Content/images/bgs/treadplate_background_mobile.jpg') 0 0 repeat;
+    background-color: #000;
     width: 100%;
     margin: 0;
+    transition: 0s linear;
+    transition-property: background-position;
 }
 
 h1 {
@@ -310,7 +311,6 @@ a {
     background-color: black;
     text-align: center;
     box-shadow: 0 0 20px #888;
-    margin-top: 10px;
     padding: 7px;
     box-sizing: border-box;
 }
@@ -901,12 +901,12 @@ section.module.content {
 }
 
 section.module.parallax {
-    padding: 160px 0;
+    padding: 100px 0;
     background-size: cover
 }
 
     section.module.parallax h1 {
-        color: #1e1e1e;
+        color: #990234;
         font-size: 48px;
         line-height: 1;
         font-weight: 700;
@@ -941,7 +941,7 @@ section.module.parallax-4 {
     }
 
     section.module.parallax {
-        padding: 150px 0
+        padding: 140px 0
     }
 
         section.module.parallax h1 {
@@ -951,6 +951,7 @@ section.module.parallax-4 {
 
 @media all and (min-width: 960px) {
     section.module.parallax h1 {
+        padding: 160px 0;
         font-size: 90px
     }
 }

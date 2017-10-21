@@ -146,8 +146,7 @@
         font-size: .85em;
         font-family: "Segoe UI", Verdana, Helvetica, Sans-Serif;
         color: whitesmoke;
-        background-color: #ccc;
-        background: url('/Content/images/bgs/treadplate_background_mobile.jpg');
+        background-color: #000;
     }
 
     .page {
@@ -329,14 +328,8 @@
     }
 }
 
-@media (min-width: 321px) and (max-width: 470px) {
-}
-
-@media (min-width: 470px) and (max-width: 600px) {
-}
-
 .main-video.promo {
-    margin: 30px auto;
+    margin: 0 auto;
     border-radius: 0;
 }
 

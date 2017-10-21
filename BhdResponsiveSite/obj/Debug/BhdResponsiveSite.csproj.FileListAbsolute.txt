@@ -80,3 +80,4 @@ C:\dev\blackhawkdown\BhdResponsiveSite\obj\Debug\BhdResponsiveSite.dll
 C:\dev\blackhawkdown\BhdResponsiveSite\obj\Debug\BhdResponsiveSite.pdb
 C:\dev\blackhawkdown\BhdResponsiveSite\bin\Content\images\about\lee.jpg
 C:\dev\blackhawkdown\BhdResponsiveSite\obj\Debug\BhdResponsiveSite.csproj.CoreCompileInputs.cache
+C:\dev\blackhawkdown\BhdResponsiveSite\bin\Content\bootstrap.css

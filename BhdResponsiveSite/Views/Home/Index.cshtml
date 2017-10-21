@@ -1,63 +1,107 @@
 ﻿@{
     ViewBag.Title = "UK Heavy Rock Band | BlackHawkDown";
-    ViewBag.Description = "BlackHawkDown - A UK heavy rock band with music like you've never heard before";
+    ViewBag.Description = "BlackHawkDown - rifftastic rock in the UK";
     ViewBag.Keywords = "blackhawkdown, uk heavy rock, heavy rock, rock, grunge, midlands, unique, metal, alternative metal, seattle grunge, band, bhd";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-@model BhdResponsiveSite.Models.GigDetail
+@model BhdResponsiveSite.Models.GigList
 
-<div class="home-page page-block">
-    <h1>ChEck out our latEst video, FrEEman, hErE!</h1>
-
-    <div class="video-block">
-        <div id="yt-wrapper" class="full-width-video-container main-video promo">
+<div>
+    
+    <section class="module parallax parallax-2">
+        <div class="container" style="color: white;">
+            <h1>Our music</h1>
         </div>
-    </div>
+    </section>
 
-    <div class="main-section">
-       <div class="main-promo">
-            <div class="promo">
-                <a href="@Url.Action("Music", "Home")" class="promo-link music odd" onclick="_gaq.push(['_trackEvent', 'Home Links', 'Click', 'Music Page'])">
-                    <div class="promo-img"></div>
-                    <div class="promo-text">
-                        <h2>Our Music</h2>
-                        <p class="main-promo-text">CLICK HERE <br/> to watch a collection of live music and recorded videos
-                        </p>
-                    </div>
-                </a>
+    <section class="module content">
+        <div class="music-section col-md-12 container">
+            <div class="col-md-5">
+                <iframe style="border: 0; width: 100%; height: 307px;"
+                        src="https://bandcamp.com/EmbeddedPlayer/album=1757988678/size=large/bgcol=333333/linkcol=0f91ff/artwork=small/transparent=true/"
+                        seamless>
+                    <a href="http://blackhawkdownuk.bandcamp.com/album/prefix">
+                        Prefix by BlackHawkDown
+                    </a>
+                </iframe>
+            </div>
+            <div class="col-md-5 col-md-offset-1">
+                <blockquote class="blockquote">
+                    To be honest every song I hear I want to scream out the words. It’s so infectious and empowering it takes you over, especially “Annie Who”.<br />
+                    <a href="http://jamsphere.com/reviews/blackhawkdown-prefix-this-is-what-heavy-rock-is-all-about" class="blockquote-reverse pull-right">Jamsphere</a>
+                </blockquote>
+
+                <blockquote class="blockquote">
+                    The sound of the band reminds me of Pantera meets Danzig. Hard to understand why they have not made international headlines yet! My favorite is "Vision Up".<br />
+                    <a href="https://projectmetalmusic.wordpress.com/2016/07/10/blackhawkdown/" class="blockquote-reverse pull-right">Project Metal Music</a>
+                </blockquote>
             </div>
         </div>
-        @{if (Model != null)
+    </section>
+
+    <section class="module parallax parallax-3">
+        <div class="container">
+            <h1>Our next show</h1>
+        </div>
+    </section>
+
+    <section class="module content">
+        <div class="gigs-section container">
+
+            <div class="row">
+                <div class="col-sm-4 col-xs-4 col-md-4">
+                    <span>Link</span>
+                </div>
+
+                <div class="col-sm-4 col-xs-4 col-md-4">
+                    <span>Date</span>
+                </div>
+
+                <div class="col-sm-4 col-xs-4 col-md-4">
+                    <span>Info</span>
+                </div>
+            </div>
+            
+            @foreach (var gig in Model.Gigs)
             {
-                <div class="main-promo">
-                    <div class="promo">
-                        <a href="@Url.Action("Gigs", "Home")" class="promo-link gigs even" onclick="_gaq
-    .push(['_trackEvent', 'Home Links', 'Click', 'Gigs Page'])">
-                            <div class="promo-img"></div>
-                            <div class="promo-text">
-                                <div class="promo-text">
-                                    <h3>Our nExt gig!</h3>
-                                    <p>@Model.Venue<br />@Model.Location<br />@Model.GigDate.ToString("dd-MM-yyyy")</p>
-                                </div>
-                            </div>
+                <div class="row">
+                    <div class="col-sm-4 col-xs-4 col-md-4">
+                        <a href="@gig.LinkUrl" 
+                           target="_blank"
+                           onclick="_gaq.push(['_trackEvent', 'Home Links', 'Click', 'Gigs Page'])">
+                            <span>@gig.Venue</span>,
+                            <span>@gig.Location</span>
                         </a>
                     </div>
+
+                    <div class="col-sm-4 col-xs-4 col-md-4">
+                        <span>@gig.GigDate</span>
+                    </div>
+                    
+                    @if (gig.ExtraDetail != null)
+                    {
+                        <div class="col-sm-4 col-xs-4 col-md-4">
+                            <span>@gig.ExtraDetail</span>
+                        </div>
+                    }
                 </div>
             }
-        }
-        
-    </div>
+        </div>
+            
+    </section>
 
-    <ul class="promo-boxes">
-
-
-        <li class="promo">
-            <a href="@Url.Action("About", "Home")" class="promo-link about odd">
-                <div class="promo-img"></div>
-                <div class="promo-text"><h3>About Us</h3> Head to the band page to see who's who.</div>
-            </a>
-        </li>
-    </ul>
+    <section class="module parallax parallax-4">
+        <div class="container" style="color: white;">
+            <h1>Latest video - FrEEman</h1>
+        </div>
+    </section>
+    
+    <section class="module content">
+        <div class="video-block">
+            <div id="yt-wrapper" class="full-width-video-container main-video promo">
+            </div>
+        </div>
+    </section>
 </div>
 @section Scripts {
     <script>

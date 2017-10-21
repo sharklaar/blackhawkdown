@@ -1,7 +1,12 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace BhdResponsiveSite.Models
 {
+    public class GigList
+    {
+        public List<GigDetail> Gigs { get; set; }
+    }
     public class GigDetail
     {
         public DateTime GigDate { get; set; }

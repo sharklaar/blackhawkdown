@@ -12,9 +12,9 @@ namespace BhdResponsiveSite.Controllers
     {
         public ActionResult Index()
         {
-            var nextGig = new DatabaseHelper().GetGigDetails().OrderBy(x => x.GigDate).FirstOrDefault();
+            var gigList = new DatabaseHelper().GetGigDetails().OrderBy(x => x.GigDate).ToList();
 
-            return View(nextGig);
+            return View(new GigList{ Gigs = gigList});
         }
         
         [ChildActionOnly]

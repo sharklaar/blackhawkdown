@@ -861,14 +861,29 @@ header {
 
 .subscribe-section {
     background-color: black;
-    height: 100px
+    height: 100px;
 }
 
 .gigs-section {
-    font-size: 2rem;
+    padding: 75px 10px;
+    font-size: 3rem;
     color: black;
     width: 100%;
     background-color: white
+}
+
+.gigs-section a {
+    color: #0645AD;
+}
+
+.gigs-section .row {
+    margin: 10px 0;
+}
+
+.gigs-heading {
+    border-bottom: 1px solid black;
+    font-size: 3rem;
+    font-weight: 800;
 }
 
 .container {

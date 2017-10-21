@@ -37,23 +37,24 @@
                 </blockquote>
             </div>
         </div>
+        <div style="clear: both;"></div>
     </section>
 
     <section class="module parallax parallax-3">
         <div class="container">
-            <h1>Our next show</h1>
+            <h1>Upcoming shows</h1>
         </div>
     </section>
 
     <section class="module content">
         <div class="gigs-section container">
 
-            <div class="row">
-                <div class="col-sm-4 col-xs-4 col-md-4">
-                    <span>Link</span>
+            <div class="row gigs-heading">
+                <div class="col-sm-5 col-xs-5 col-md-5">
+                    <span>Venue</span>
                 </div>
 
-                <div class="col-sm-4 col-xs-4 col-md-4">
+                <div class="col-sm-3 col-xs-3 col-md-3">
                     <span>Date</span>
                 </div>
 
@@ -65,7 +66,7 @@
             @foreach (var gig in Model.Gigs)
             {
                 <div class="row">
-                    <div class="col-sm-4 col-xs-4 col-md-4">
+                    <div class="col-sm-5 col-xs-5 col-md-5">
                         <a href="@gig.LinkUrl" 
                            target="_blank"
                            onclick="_gaq.push(['_trackEvent', 'Home Links', 'Click', 'Gigs Page'])">
@@ -74,8 +75,8 @@
                         </a>
                     </div>
 
-                    <div class="col-sm-4 col-xs-4 col-md-4">
-                        <span>@gig.GigDate</span>
+                    <div class="col-sm-3 col-xs-3 col-md-3">
+                        <span>@gig.GigDate.ToShortDateString()</span>
                     </div>
                     
                     @if (gig.ExtraDetail != null)

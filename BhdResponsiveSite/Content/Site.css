@@ -19,7 +19,7 @@ body {
     background-color: #000;
     width: 100%;
     margin: 0;
-    transition: 0s linear;
+    transition: 0 linear;
     transition-property: background-position;
 }
 

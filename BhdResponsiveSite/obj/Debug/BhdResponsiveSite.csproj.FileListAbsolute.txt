@@ -81,3 +81,10 @@ C:\dev\blackhawkdown\BhdResponsiveSite\obj\Debug\BhdResponsiveSite.pdb
 C:\dev\blackhawkdown\BhdResponsiveSite\bin\Content\images\about\lee.jpg
 C:\dev\blackhawkdown\BhdResponsiveSite\obj\Debug\BhdResponsiveSite.csproj.CoreCompileInputs.cache
 C:\dev\blackhawkdown\BhdResponsiveSite\bin\Content\bootstrap.css
+C:\dev\blackhawkdown\BhdResponsiveSite\bin\Models\AccountModel.cs
+C:\dev\blackhawkdown\BhdResponsiveSite\bin\Models\ContactViewModel.cs
+C:\dev\blackhawkdown\BhdResponsiveSite\bin\Models\EmailOnlyModel.cs
+C:\dev\blackhawkdown\BhdResponsiveSite\bin\Models\EmailSendingModel.cs
+C:\dev\blackhawkdown\BhdResponsiveSite\bin\Models\EmailSendingResultsModel.cs
+C:\dev\blackhawkdown\BhdResponsiveSite\bin\Models\FreeTrack.cs
+C:\dev\blackhawkdown\BhdResponsiveSite\bin\Models\GigDetail.cs

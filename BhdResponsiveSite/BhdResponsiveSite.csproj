@@ -175,13 +175,27 @@
     <Compile Include="Helpers\DatabaseHelper.cs" />
     <Compile Include="Library\Contact.cs" />
     <Compile Include="Library\Email.cs" />
-    <Compile Include="Models\AccountModel.cs" />
-    <Compile Include="Models\ContactViewModel.cs" />
-    <Compile Include="Models\EmailOnlyModel.cs" />
-    <Compile Include="Models\EmailSendingModel.cs" />
-    <Compile Include="Models\EmailSendingResultsModel.cs" />
-    <Compile Include="Models\FreeTrack.cs" />
-    <Compile Include="Models\GigDetail.cs" />
+    <Compile Include="Models\AccountModel.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Models\ContactViewModel.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Models\EmailOnlyModel.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Models\EmailSendingModel.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Models\EmailSendingResultsModel.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Models\FreeTrack.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Models\GigDetail.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -222,8 +222,12 @@
     <Content Include="Content\images\bhd-logo.png" />
     <Content Include="Content\images\bhdbg.png" />
     <Content Include="Content\images\bhdbg2.jpg" />
+    <Content Include="Content\images\bhdbg2_small.jpg" />
     <Content Include="Content\images\bhdbg3.jpg" />
+    <Content Include="Content\images\bhdbg3_small.jpg" />
     <Content Include="Content\images\bhdbg4.jpg" />
+    <Content Include="Content\images\bhdbg4_small.jpg" />
+    <Content Include="Content\images\bhdbg_small.png" />
     <Content Include="Content\images\facebook.png" />
     <Content Include="Content\images\front-cover.png" />
     <Content Include="Content\images\gigs-thumb.jpg" />

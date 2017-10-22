@@ -1,6 +1,9 @@
 ﻿
 
 @media (max-width: 768px) {
+    .gigs-section {
+        font-size: 1.8rem;
+    }
     .press-kit-social-links a {
         font-size: 0.8rem;
     }

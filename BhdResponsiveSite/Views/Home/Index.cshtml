@@ -68,7 +68,7 @@
             @foreach (var gig in Model.Gigs)
             {
                 <div class="row">
-                    <div class="col-sm-5 col-xs-5 col-md-5">
+                    <div class="col-sm-4 col-xs-4 col-md-4">
                         <a href="@gig.LinkUrl" 
                            target="_blank"
                            onclick="_gaq.push(['_trackEvent', 'Home Links', 'Click', 'Gigs Page'])">
@@ -77,7 +77,7 @@
                         </a>
                     </div>
 
-                    <div class="col-sm-3 col-xs-3 col-md-3">
+                    <div class="col-sm-4 col-xs-4 col-md-4">
                         <span>@gig.GigDate.ToShortDateString()</span>
                     </div>
                     

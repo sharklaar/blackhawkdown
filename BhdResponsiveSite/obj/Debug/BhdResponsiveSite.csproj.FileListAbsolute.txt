@@ -88,3 +88,6 @@ C:\dev\blackhawkdown\BhdResponsiveSite\bin\Models\EmailSendingModel.cs
 C:\dev\blackhawkdown\BhdResponsiveSite\bin\Models\EmailSendingResultsModel.cs
 C:\dev\blackhawkdown\BhdResponsiveSite\bin\Models\FreeTrack.cs
 C:\dev\blackhawkdown\BhdResponsiveSite\bin\Models\GigDetail.cs
+C:\dev\blackhawkdown\BhdResponsiveSite\bin\Content\fonts\Comfortaa-Bold.ttf
+C:\dev\blackhawkdown\BhdResponsiveSite\bin\Content\fonts\Comfortaa-Light.ttf
+C:\dev\blackhawkdown\BhdResponsiveSite\bin\Content\fonts\Comfortaa-Regular.ttf

@@ -445,6 +445,15 @@
     <Content Include="Content\fonts\die-webfont.woff2">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Content\fonts\Comfortaa-Bold.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\fonts\Comfortaa-Light.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\fonts\Comfortaa-Regular.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <None Include="Properties\PublishProfiles\Profile1.pubxml" />
     <Content Include="Views\Account\Members.cshtml" />
     <Content Include="Views\Account\Signup.cshtml" />

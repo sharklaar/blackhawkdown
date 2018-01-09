@@ -14,5 +14,9 @@ namespace BhdResponsiveSite.Models
         public string Location { get; set; }
         public string LinkUrl { get; set; }
         public string ExtraDetail { get; set; }
+
+        public int Year => GigDate.Year;
+        public int Month => GigDate.Month;
+        public int Date => GigDate.Day;
     }
 }

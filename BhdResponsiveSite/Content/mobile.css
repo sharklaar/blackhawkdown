@@ -20,11 +20,16 @@
         background-image: url("/Content/images/bhdbg3_small.jpg");
         background-size: 160% !important;
     }
-    .gigs-section {
-        font-size: 1.8rem;
-    }
     .press-kit-social-links a {
         font-size: 0.8rem;
+    }
+
+    .gig-venue {
+        font-size: 2rem;
+    }
+
+    .gig-location {
+        font-size: 1.8rem;
     }
 
     .intro-text {

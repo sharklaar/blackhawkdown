@@ -4,6 +4,7 @@
     ViewBag.Keywords = "blackhawkdown, uk heavy rock, heavy rock, rock, grunge, midlands, unique, metal, alternative metal, seattle grunge, band, bhd";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+@using System.Globalization
 @model BhdResponsiveSite.Models.GigList
 
 <div>
@@ -49,45 +50,38 @@
 
     <section class="module content">
         <div class="gigs-section container">
-
-            <div class="row gigs-heading">
-                <div class="col-sm-4 col-xs-4 col-md-4">
-                    <span>Venue</span>
-                </div>
-
-                <div class="col-sm-4 col-xs-4 col-md-4">
-                    <span>Date</span>
-                </div>
-
-                <div class="col-sm-4 col-xs-4 col-md-4">
-                    <span>Info</span>
-                </div>
-            </div>
-
-            @foreach (var gig in Model.Gigs)
+            
+            @for (var imonth = DateTime.Now.Month; imonth <= 12; imonth++)
             {
-                <div class="row">
-                    <div class="col-sm-4 col-xs-4 col-md-4">
-                        <a href="@gig.LinkUrl" 
-                           target="_blank"
-                           onclick="_gaq.push(['_trackEvent', 'Home Links', 'Click', 'Gigs Page'])">
-                            <span>@gig.Venue</span>,
-                            <span>@gig.Location</span>
-                        </a>
-                    </div>
+                var imonth1 = imonth;
+                var monthContainsGigs = Model.Gigs.Any(x => x.Month == imonth1);
 
-                    <div class="col-sm-4 col-xs-4 col-md-4">
-                        <span>@gig.GigDate.ToShortDateString()</span>
-                    </div>
+                if (monthContainsGigs)
+                {
+                    var monthName = new DateTime(DateTime.Now.Year, imonth, 1).ToString("MMMM", CultureInfo.InvariantCulture);
+                    <div class="gig-month">
                     
-                    @if (gig.ExtraDetail != null)
-                    {
-                        <div class="col-sm-4 col-xs-4 col-md-4">
-                            <span>@gig.ExtraDetail</span>
-                        </div>
-                    }
-                </div>
+                        <h3>@monthName</h3>
+
+                        @foreach (var gig in Model.Gigs.Where(x => x.Month == imonth1))
+                        { 
+                            <div class="gig-detail">
+                            <div class="gig-date-day">@gig.Date</div>
+                                <div class="gig-venue-details">
+                                    <a href="@gig.LinkUrl"
+                                       target="_blank"
+                                       onclick="_gaq.push(['_trackEvent', 'Home Links', 'Click', 'Gigs Page'])">
+                                        @{ var gigTitle = gig.ExtraDetail ?? "BHD"; }
+                                        <div class="gig-venue">@gigTitle - @gig.Venue</div>
+                                        <div class="gig-location">@gig.Location</div>
+                                    </a>
+                                </div>
+                            </div>
+                        }
+                    </div>
+                }
             }
+            
         </div>
             
     </section>

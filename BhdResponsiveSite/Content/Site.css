@@ -1026,7 +1026,54 @@ section.module.parallax-4 {
     margin: 17px 0 20px
 }
 
-    .spinner-small .spinner-small-animation {
-        float: left;
-        margin-right: 10px
-    }
+.spinner-small .spinner-small-animation {
+    float: left;
+    margin-right: 10px
+}
+
+.gig-detail {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.gig-month {
+    display: block;
+}
+
+.gig-month h3 {
+    text-align: left !important;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid rgba(227, 227, 227, 0.51);
+}
+
+.gig-date-day {
+    display: inline-block;
+    background-color: lightgray;
+    border-radius: 5px;
+    width: 75px;
+    text-align: center;
+    height: 75px;
+    vertical-align: middle;
+    padding-top: 14px;
+}
+
+.gig-venue-details {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 10px;
+}
+
+.gig-venue {
+    display: block;
+    font-size: 25px;
+}
+
+.gig-location {
+    display: block;
+    font-size: 18px;
+}
+
+.gig-extra-detail {
+    display: inline-block;
+}

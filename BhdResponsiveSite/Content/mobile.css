@@ -347,6 +347,11 @@
     .store-item {
         width: 45%;
     }
+
+    .epk-column {
+        display: block;
+        width: 100%;
+    }
 }
 
 

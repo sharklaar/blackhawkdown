@@ -1077,3 +1077,23 @@ section.module.parallax-4 {
 .gig-extra-detail {
     display: inline-block;
 }
+
+.epk-row {
+    display: block;
+    width: 100%;
+    padding: 20px;
+}
+
+.epk-column {
+    display: inline-block;
+    width: 45%;
+}
+
+.epk-main-photo {
+    display: block;
+    background-image: url(/Content/images/bhdbg.png);
+    width: 100%;
+    height: 450px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}

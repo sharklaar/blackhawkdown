@@ -107,34 +107,7 @@ namespace BhdResponsiveSite.Controllers
 
         public ActionResult PressKit()
         {
-            //var gigList = new DatabaseHelper().GetGigDetails().OrderBy(x => x.GigDate).ToList();
-
-            var gigList = new List<GigDetail>
-            {
-                new GigDetail
-                {
-                    GigDate = new DateTime(2018,01,01),
-                    Venue = "A place",
-                    Location = "Stamford"
-                },
-                new GigDetail
-                {
-                    GigDate = new DateTime(2018,02,05),
-                    Venue = "Another place",
-                    Location = "blargh"
-                },
-                new GigDetail
-                {
-                    GigDate = new DateTime(2018,09,06),
-                    Venue = "Alleykat Cliub",
-                },
-                new GigDetail
-                {
-                    GigDate = new DateTime(2018, 10,07),
-                    Venue = "Alleykat Cliub",
-                    Location = "Lincoln"
-                }
-            };
+            var gigList = new DatabaseHelper().GetGigDetails().OrderBy(x => x.GigDate).ToList();
 
             return View(model: new GigList { Gigs = gigList });
         }

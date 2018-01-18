@@ -1,104 +1,89 @@
 ﻿@{
     ViewBag.Title = "BlackHawkDown - Online Press Kit";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+    Layout = "~/Views/Shared/_Layout-no-nav.cshtml";
 }
+@using System.Globalization
+@model BhdResponsiveSite.Models.GigList
+
 <div class="press-kit-page page-block;">
-    <h2>BlackHawkDown - accepting bookings</h2>
+    <h1 style="text-align: center">BlackHawkDown</h1>
+    <div>
+        <div class="epk-contact-info">
+        <h3>Accepting bookings - contact</h3>
+            <p>
+                Marc Daffern (drums &amp; main contact)<br />
+                <a href="tel:+447716373174" class="telephone-link">07716 373174</a>
+                <a href="mailto:marc@blackhawkdown.org.uk" class="email-link">marc@blackhawkdown.org.uk</a>
+            </p>
+        </div>
+    </div>
 
     <div class="epk-row">
         <div class="epk-column">
             <div class="epk-main-photo">
-                
             </div>
             <div class="epk-band-info">
-                
+                <h2>Artist information</h2>
+                <p><span class="bold">Label: </span>self-released</p>
+                <p><span class="bold">Genre: </span>Hard rock</p>
+                <p><span class="bold">Home town: </span>Stamford/Peterborough UK</p>
+                <p><span class="bold">Influences: </span>Guns N' Roses, Metallica, Alice in Chains, Pearl Jam, Nine inch Nails, Killswitch Engage</p>
+                <p><span class="bold">Sounds like: </span>Alter Bridge, Alice in Chains</p>
             </div>
             <div class="epk-bio">
-                
+                <h2>Biography</h2>
+                <p>BlackHawkDown is founded on a mutual love for heavy music. The debut EP, "Prefix", is a culmination of a four year long journey starting with four friends jamming in an attic to the current line up of five odd-shaped pieces which together have produced a unique, BHD-shaped unit;</p>
+                <p>Our often clashing artistic influences have allowed the five of us to discover a unique heavy sound grown from a mutual appreciation of metal, rock and alternative music. "Prefix" features four vastly different tracks and is a window to the coming album and a mirror to our influences and passions.</p>
+                <p>BlackHawkDown write songs as individual pieces of music and this is what binds the members together. We are incredibly excited to finally introduce ourselves, our music and our intent with this record!</p>
             </div>
         </div>
         <div class="epk-column">
             <div class="epk-gigs">
-                
+                <h2>Upcoming shows</h2>
+                <ul>
+                    @foreach (var gig in Model.Gigs)
+                    {
+                        <li>
+                            <span class="bold">@gig.GigDate.ToString("MMMM dd, yyyy")</span> // @gig.Venue, @gig.Location
+                        </li>
+                    }
+                </ul>
             </div>
             <div class="epk-music-player">
+                <h2>Our Music</h2>
                 
+                <iframe style="border: 0; width: 100%; height: 307px; padding: 20px;"
+                        src="https://bandcamp.com/EmbeddedPlayer/album=1757988678/size=large/bgcol=333333/linkcol=0f91ff/artwork=small/transparent=true/"
+                        seamless>
+                    <a href="http://blackhawkdownuk.bandcamp.com/album/prefix">
+                        Prefix by BlackHawkDown
+                    </a>
+                </iframe>
             </div>
             <div class="epk-press">
-                
+                <h2>Press reviews</h2>
+                <a target="_blank" href="http://www.divideandconquermusic.com/indie-music-album-reviews/blackhawkdown-prefix">Divide & Conquer</a>
+                <a target="_blank" href="http://jamsphere.com/reviews/blackhawkdown-prefix-this-is-what-heavy-rock-is-all-about">Jamsphere</a>
+                <a target="_blank" href="https://projectmetalmusic.wordpress.com/2016/07/10/blackhawkdown/">Project Metal Music</a>
             </div>
             <div class="epk-photos">
+                <h2>Photos</h2>
+                <div class="photo">
+                    <a class="download-images" href="~/Content/press-kit/bhd-presskit-images.zip">Download band imagery here</a>
                 
+                    <a href="~/Content/press-kit/bhd-presskit-images.zip" target="_blank">
+                        <img class="promo" src="~/Content/press-kit/images/band.jpg" alt="" />
+                    </a>
+                </div>
             </div>
             <div class="epk-online-links">
-                
+                <h2>BlackHawkDown Online</h2>
+                <a href="http://www.blackhawkdown.org.uk">Official Website</a>
+                <a href="http://www.facebook.com/blackhawkdownuk">Facebook</a>
+                <a href="http://www.youtube.com/user/blackhawkdownuk">Youtube</a>
+                <a href="http://www.twitter.com/blackhawkdownuk">Twitter</a>
+                <a href="http://www.soundcloud.co.uk/blackhawkdown-uk">Soundcloud</a>
             </div>
-        </div>
-    </div>
-    <div class="epk-row">
-        <div class="epk-contact-info"></div>
-    </div>
-    <div class="promo bio">
-        <h3>BIO</h3>
-        <p>BlackHawkDown is founded on a mutual love for heavy music. The debut EP, "Prefix", is a culmination of a four year long journey starting with four friends jamming in an attic to the current line up of five odd-shaped pieces which together have produced a unique, BHD-shaped unit;</p>
-        <p>Our often clashing artistic influences have allowed the five of us to discover a unique heavy sound grown from a mutual appreciation of metal, rock and alternative music. "Prefix" features four vastly different tracks and is a window to the coming album and a mirror to our influences and passions.</p>
-        <p>BlackHawkDown write songs as individual pieces of music and this is what binds the members together. We are incredibly excited to finally introduce ourselves, our music and our intent with this record!</p>
-    </div>
-    <div class="promo">
-        <h3>Contact</h3>
-        <p>
-            Marc Daffern (drums &amp; main contact)<br />
-            <a href="tel:+447716373174" class="telephone-link">07716 373174</a>
-            <a href="mailto:marc@blackhawkdown.org.uk" class="email-link">marc@blackhawkdown.org.uk</a>
-        </p>
-    </div>
-
-    <div class="promo">
-        <h3>Online prEsEncE</h3>
-        <div class="press-kit-social-links">
-            Official Website: <a href="http://www.blackhawkdown.org.uk">http://www.blackhawkdown.org.uk</a>
-            Facebook: <a href="http://www.facebook.com/blackhawkdownuk">http://www.facebook.com/blackhawkdownuk</a>
-            YouTube: <a href="http://www.youtube.com/user/blackhawkdownuk">http://www.youtube.com/user/blackhawkdownuk</a>
-            Twitter: <a href="http://www.twitter.com/blackhawkdownuk">http://www.twitter.com/blackhawkdownuk</a>
-            Soundcloud: <a href="http://www.soundcloud.co.uk/blackhawkdown-uk">http://www.soundcloud.co.uk/blackhawkdown-uk</a>
-        </div>
-    </div>
-    <div class="promo">
-        <h3>ImagEry</h3>
-        <div class="press-kit-images">
-            Click an image to download a hi-res copy, or <a class="download-images" href="~/Content/press-kit/bhd-presskit-images.zip">Download all images here</a>
-        </div>
-        <div class="press-kit-image-thumbs">
-            <a href="/Home/Download?file=BlackHawkDown1.jpg" target="_blank">
-                <img class="promo" src="~/Content/press-kit/images/thumbs/BlackHawkDown1-thumb.jpg" alt="" />
-            </a>
-            <a href="/Home/Download?file=ben-vocals.jpg" target="_blank">
-                <img class="promo" src="~/Content/press-kit/images/thumbs/ben-vocals-thumb.jpg" alt="" />
-            </a>
-            <a href="/Home/Download?file=shark-drums.jpg" target="_blank">
-                <img class="promo" src="~/Content/press-kit/images/thumbs/shark-drums-thumb.jpg" alt="" />
-            </a>
-            <a href="/Home/Download?file=ant-bass.jpg" target="_blank">
-                <img class="promo" src="~/Content/press-kit/images/thumbs/ant-bass-thumb.jpg" alt="" />
-            </a>
-            <a href="/Home/Download?file=hemy-rhythm.jpg" target="_blank">
-                <img class="promo" src="~/Content/press-kit/images/thumbs/hemy-rhythm-thumb.jpg" alt="" />
-            </a>
-            <a href="/Home/Download?file=BlackHawkDown3.jpg" target="_blank">
-                <img class="promo" src="~/Content/press-kit/images/thumbs/BlackHawkDown3-thumb.jpg" alt="" />
-            </a>
-            <a href="/Home/Download?file=BlackHawkDown2.jpg" target="_blank">
-                <img class="promo" src="~/Content/press-kit/images/thumbs/BlackHawkDown2-thumb.jpg" alt="" />
-            </a>
-            <a href="/Home/Download?file=andy-lead.jpg" target="_blank">
-                <img class="promo" src="~/Content/press-kit/images/thumbs/andy-lead-thumb.jpg" alt="" />
-            </a>
-            <a href="/Home/Download?file=hawk-skull.png" target="_blank">
-                <img class="promo white" src="~/Content/press-kit/images/thumbs/hawk-skull-thumb.png" alt="" />
-            </a>
-            <a href="/Home/Download?file=Hawk.png" target="_blank">
-                <img class="promo white" src="~/Content/press-kit/images/thumbs/Hawk-thumb.png" alt="" />
-            </a>
         </div>
     </div>
 </div>

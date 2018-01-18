@@ -259,6 +259,7 @@
     <Content Include="Content\mp3s\simplify.mp3" />
     <Content Include="Content\press-kit\images\andy-lead.jpg" />
     <Content Include="Content\press-kit\images\ant-bass.jpg" />
+    <Content Include="Content\press-kit\images\band.jpg" />
     <Content Include="Content\press-kit\images\ben-vocals.jpg" />
     <Content Include="Content\press-kit\images\BlackhawkDown-1-line.png" />
     <Content Include="Content\press-kit\images\BlackhawkDown-3-lines.png" />

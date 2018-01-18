@@ -608,57 +608,6 @@ table.size-select {
     display: inline-block;
 }
 
-.press-kit-page {
-    text-align: center;
-}
-
-.page .press-kit-page .promo h1, h2, h3, h4 {
-    text-align: center !important;
-}
-
-.press-kit-page a {
-    display: block;
-    font-size: 1.3rem;
-}
-
-    .press-kit-page a.download-images {
-        text-decoration: underline;
-    }
-
-        .press-kit-page a.download-images:hover {
-            text-decoration: none;
-        }
-
-.press-kit-page h1, .press-kit-page h2, .press-kit-page h3 {
-    font-size: 1.5rem;
-}
-
-.press-kit-page .promo {
-    height: auto;
-    padding: 10px;
-}
-
-.press-kit-page .press-kit-image-thumbs img {
-    display: inline-block;
-    width: 15%;
-    max-width: 100%;
-    min-width: 180px;
-    vertical-align: top;
-    margin: 5px;
-}
-
-.press-kit-page .press-kit-image-thumbs a {
-    display: inline-block;
-}
-
-.press-kit-page .press-kit-image-thumbs img.white {
-    background-color: #cfcfcf;
-}
-
-.press-kit-page .bio {
-    max-width: 960px;
-}
-
 .free-tracks-link {
     cursor: pointer;
     text-decoration: underline;
@@ -1078,15 +1027,57 @@ section.module.parallax-4 {
     display: inline-block;
 }
 
+.press-kit-page {
+    background-color: white;
+    color: black;
+    text-shadow: none;
+    font-size: 1.3rem;
+}
+
+.press-kit-page h1 {
+    font-weight: 600;
+    
+}
+
+.press-kit-page h2 {
+    padding: 10px;
+    border-bottom: 1px solid rgb(210, 210, 210);
+    font-weight: 600;
+}
+
+.press-kit-page a:focus, .press-kit-page a:hover {
+    color: #23527c;
+    text-decoration: underline;
+    display: block;
+}
+
+.press-kit-page a {
+    color: #23527c;
+    text-decoration: none;
+    display: block;
+}
+
 .epk-row {
     display: block;
     width: 100%;
     padding: 20px;
 }
 
+.epk-row:after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.epk-row * {
+    -moz-text-align-last: left !important;
+}
+
 .epk-column {
-    display: inline-block;
-    width: 45%;
+    float: left;
+    width: 50%;
+    padding: 20px;
+    text-align: left !important;
 }
 
 .epk-main-photo {
@@ -1096,4 +1087,27 @@ section.module.parallax-4 {
     height: 450px;
     background-size: 100%;
     background-repeat: no-repeat;
+}
+
+.epk-band-info p {
+    text-align: left;
+}
+
+.bold {
+    font-weight: 600;
+}
+
+.epk-contact-info {
+    text-align: center;
+    border-bottom: 1px solid rgb(210, 210, 210);
+}
+
+.epk-photos .photo {
+    text-align: center;
+}
+
+.epk-photos img {
+    margin: 0 auto;
+    width: 70%;
+    height: 100%;
 }

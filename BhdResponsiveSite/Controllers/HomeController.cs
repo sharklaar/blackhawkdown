@@ -2,7 +2,6 @@
 using BhdResponsiveSite.Library;
 using BhdResponsiveSite.Models;
 using System;
-using System.Collections.Generic;
 using System.Web.Mvc;
 using System.Web;
 using BhdResponsiveSite.Helpers;

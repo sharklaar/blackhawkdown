@@ -1528,7 +1528,7 @@ jQuery.support = (function() {
 		conMarginTop = 1;
 		ptlm = "position:absolute;top:0;left:0;width:1px;height:1px;margin:0;";
 		vb = "visibility:hidden;border:0;";
-		style = "style='" + ptlm + "border:5px solid #000;padding:0;'";
+		style = "style='" + ptlm + "border:5px solid #000000;padding:0;'";
 		html = "<div " + style + "><div></div></div>" +
 			"<table " + style + " cellpadding='0' cellspacing='0'>" +
 			"<tr><td></td></tr></table>";

@@ -2,6 +2,7 @@
 using BhdResponsiveSite.Library;
 using BhdResponsiveSite.Models;
 using System;
+using System.Collections.Generic;
 using System.Web.Mvc;
 using System.Web;
 using BhdResponsiveSite.Helpers;
@@ -16,7 +17,14 @@ namespace BhdResponsiveSite.Controllers
 
             return View(new GigList{ Gigs = gigList});
         }
-        
+
+        public ActionResult PressKit()
+        {
+            //var gigList = new DatabaseHelper().GetGigDetails().OrderBy(x => x.GigDate).ToList();
+            var gigList = new List<GigDetail>();
+            return View(model: new GigList { Gigs = gigList });
+        }
+
         [ChildActionOnly]
         public ActionResult Email()
         {
@@ -102,13 +110,6 @@ namespace BhdResponsiveSite.Controllers
         public ActionResult Demo()
         {
             return View();
-        }
-
-        public ActionResult PressKit()
-        {
-            var gigList = new DatabaseHelper().GetGigDetails().OrderBy(x => x.GigDate).ToList();
-
-            return View(model: new GigList { Gigs = gigList });
         }
 
         public FileResult Download(string file)

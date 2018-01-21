@@ -173,7 +173,7 @@
         font-size: .85em;
         font-family: "comfortaa", Verdana, Helvetica, Sans-Serif;
         color: whitesmoke;
-        background-color: #000;
+        background-color: #000000;
         text-shadow: 1px 1px 6px black;
     }
 
@@ -400,7 +400,7 @@ li.promo .promo-img {
 
 li.promo.text-only {
     height: 211px;
-    background-color: #000;
+    background-color: #000000;
 }
 
 .promo .music .promo-img {

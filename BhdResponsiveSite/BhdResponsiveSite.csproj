@@ -246,6 +246,7 @@
     <Content Include="Content\images\logo\down.png" />
     <Content Include="Content\images\logo\hawk.png" />
     <Content Include="Content\images\music-thumb.jpg" />
+    <Content Include="Content\images\social-sprite.png" />
     <Content Include="Content\images\store\ladies-tee.png" />
     <Content Include="Content\images\store\mens-tee.png" />
     <Content Include="Content\images\store\prefix.png" />

@@ -20,8 +20,8 @@ namespace BhdResponsiveSite.Controllers
 
         public ActionResult PressKit()
         {
-            //var gigList = new DatabaseHelper().GetGigDetails().OrderBy(x => x.GigDate).ToList();
-            var gigList = new List<GigDetail>();
+            var gigList = new DatabaseHelper().GetGigDetails().OrderBy(x => x.GigDate).ToList();
+            
             return View(model: new GigList { Gigs = gigList });
         }
 

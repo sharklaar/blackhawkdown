@@ -13,6 +13,22 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'droid';
+    src: url('fonts/DroidSans-Bold-webfont.eot');
+    src: url('fonts/DroidSans-Bold-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/DroidSans-Bold-webfont.woff') format('woff'), url('fonts/DroidSans-Bold-webfont.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'droid';
+    src: url('fonts/DroidSans-webfont.eot');
+    src: url('fonts/DroidSans-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/DroidSans-webfont.woff') format('woff'), url('fonts/DroidSans-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 * {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -21,7 +37,7 @@
 
 body {
     font-size: 1em;
-    font-family: "comfortaa", Verdana, Helvetica, Sans-Serif;
+    font-family: "droid", Verdana, Helvetica, Sans-Serif;
     text-shadow: 1px 1px 6px black;
     background-color: #000000;
     width: 100%;
@@ -32,12 +48,12 @@ body {
 
 h1 {
     font-size: 3em;
-    font-family: 'comfortaa', Verdana, Helvetica, sans-serif;
+    font-family: 'droid', Verdana, Helvetica, sans-serif;
     margin: 10px 0;
 }
 
 h2, h3 {
-    font-family: 'comfortaa', Verdana, Helvetica, sans-serif;
+    font-family: 'droid', Verdana, Helvetica, sans-serif;
 }
 
 .promo h2, .promo h3 {
@@ -707,10 +723,10 @@ table.size-select {
     box-sizing: border-box;
 }
 
-#dizzyjam-iframe body {
-    margin: 0 auto !important;
-    width: 100% !important;
-}
+    #dizzyjam-iframe body {
+        margin: 0 auto !important;
+        width: 100% !important;
+    }
 
 .quote-block {
     text-align: center;
@@ -828,13 +844,13 @@ header {
     background-color: black;
 }
 
-.gigs-section a {
-    color: whitesmoke;
-}
+    .gigs-section a {
+        color: whitesmoke;
+    }
 
-.gigs-section .row {
-    margin: 10px 0;
-}
+    .gigs-section .row {
+        margin: 10px 0;
+    }
 
 .gigs-heading {
     border-bottom: 1px solid whitesmoke;
@@ -975,10 +991,10 @@ section.module.parallax-4 {
     margin: 17px 0 20px
 }
 
-.spinner-small .spinner-small-animation {
-    float: left;
-    margin-right: 10px
-}
+    .spinner-small .spinner-small-animation {
+        float: left;
+        margin-right: 10px
+    }
 
 .gig-detail {
     display: block;
@@ -989,12 +1005,12 @@ section.module.parallax-4 {
     display: block;
 }
 
-.gig-month h3 {
-    text-align: left !important;
-    padding-bottom: 10px;
-    margin-bottom: 10px;
-    border-bottom: 1px solid rgba(227, 227, 227, 0.51);
-}
+    .gig-month h3 {
+        text-align: left !important;
+        padding-bottom: 10px;
+        margin-bottom: 10px;
+        border-bottom: 1px solid rgba(227, 227, 227, 0.51);
+    }
 
 .gig-date-day {
     display: inline-block;
@@ -1032,30 +1048,29 @@ section.module.parallax-4 {
     color: black;
     text-shadow: none;
     font-size: 1.3rem;
+    font-family: droid;
 }
 
-.press-kit-page h1 {
-    font-weight: 600;
-    
-}
+    .press-kit-page h1 {
+        font-weight: 600;
+    }
 
-.press-kit-page h2 {
-    padding: 10px;
-    border-bottom: 1px solid rgb(210, 210, 210);
-    font-weight: 600;
-}
+    .press-kit-page h2 {
+        padding: 10px;
+        border-bottom: 1px solid rgb(210, 210, 210);
+        font-weight: 600;
+    }
 
-.press-kit-page a:focus, .press-kit-page a:hover {
-    color: #23527c;
-    text-decoration: underline;
-    display: block;
-}
+    .press-kit-page a:focus, .press-kit-page a:hover {
+        color: #23527c;
+        text-decoration: underline;
+    }
 
-.press-kit-page a {
-    color: #23527c;
-    text-decoration: none;
-    display: block;
-}
+    .press-kit-page a {
+        color: #23527c;
+        text-decoration: none;
+        display: block;
+    }
 
 .epk-row {
     display: block;
@@ -1063,15 +1078,20 @@ section.module.parallax-4 {
     padding: 20px;
 }
 
-.epk-row:after {
-    content: "";
-    clear: both;
-    display: table;
+.epk-gigs h2 {
+    margin-top: 0;
+    padding-top: 0;
 }
 
-.epk-row * {
-    -moz-text-align-last: left !important;
-}
+    .epk-row:after {
+        content: "";
+        clear: both;
+        display: table;
+    }
+
+    .epk-row * {
+        -moz-text-align-last: left !important;
+    }
 
 .epk-column {
     float: left;
@@ -1112,9 +1132,35 @@ section.module.parallax-4 {
     height: 100%;
 }
 
+.epk-link-icons {
+    text-align: center;
+
+}
+
 .epk-link-icons a {
     display: inline-block;
-    width: 18%;
-    height: 100%;
+    width: 95px;
+    height: 95px;
+    margin: 5px;
+    background-image: url(/Content/images/social-sprite.png);
+}
 
+.epk-link-icons a.website-icon {
+    background-position: 95px 0;
+}
+
+.epk-link-icons a.facebook-icon {
+    background-position: 435px 0;
+}
+
+.epk-link-icons a.youtube-icon {
+    background-position: 208px 0;
+}
+
+.epk-link-icons a.twitter-icon {
+    background-position: 327px 0;
+}
+
+.epk-link-icons a.soundcloud-icon {
+    background-position: 0 0;
 }

@@ -22,13 +22,48 @@
         <div class="epk-column">
             <div class="epk-main-photo">
             </div>
+        </div>
+        
+        <div class="epk-column">
+            <div class="epk-gigs">
+                <h2>Upcoming shows</h2>
+                <ul>
+                    @foreach (var gig in Model.Gigs)
+                    {
+                        <li>
+                            <span class="bold">@gig.GigDate.ToString("MMMM dd, yyyy")</span> // @gig.Venue, @gig.Location
+                        </li>
+                    }
+                </ul>
+            </div>
+            <div class="epk-press">
+                <h2>Press reviews</h2>
+                <a target="_blank" href="http://www.divideandconquermusic.com/indie-music-album-reviews/blackhawkdown-prefix">Divide & Conquer</a>
+                <a target="_blank" href="http://jamsphere.com/reviews/blackhawkdown-prefix-this-is-what-heavy-rock-is-all-about">Jamsphere</a>
+                <a target="_blank" href="https://projectmetalmusic.wordpress.com/2016/07/10/blackhawkdown/">Project Metal Music</a>
+            </div>
+        </div>
+    </div>
+        
+    <div class="epk-row">     
+        <div class="epk-column">
             <div class="epk-band-info">
                 <h2>Artist information</h2>
-                <p><span class="bold">Label: </span>self-released</p>
-                <p><span class="bold">Genre: </span>Hard rock</p>
-                <p><span class="bold">Home town: </span>Stamford/Peterborough UK</p>
-                <p><span class="bold">Influences: </span>Guns N' Roses, Metallica, Alice in Chains, Pearl Jam, Nine inch Nails, Killswitch Engage</p>
-                <p><span class="bold">Sounds like: </span>Alter Bridge, Alice in Chains</p>
+                <p>
+                    <span class="bold">Label: </span>self-released
+                </p>
+                <p>
+                    <span class="bold">Genre: </span>Hard rock
+                </p>
+                <p>
+                    <span class="bold">Home town: </span>Stamford/Peterborough UK
+                </p>
+                <p>
+                    <span class="bold">Influences: </span>Guns N' Roses, Metallica, Alice in Chains, Pearl Jam, Nine inch Nails, Killswitch Engage
+                </p>
+                <p>
+                    <span class="bold">Sounds like: </span>Alter Bridge, Alice in Chains
+                </p>
             </div>
             <div class="epk-bio">
                 <h2>Biography</h2>
@@ -76,7 +111,7 @@
                 <p>
                     You can expect an energetic and honest live performance from BHD. Ben sees each song as a short
                     story/performance piece. From the very beginning we have looked to replicate the power and aggression
-                    of our live music into our recordings. We have walked many paths in recording, mixing and  mastering
+                    of our live music into our recordings. We have walked many paths in recording, mixing and mastering
                     our previous tracks – from DIY bedroom takes, pro-studio sessions, garage productions and combination
                     approaches. Our current EP was mixed by Dave Chang (Orange Goblin, Napalm Death) after laying down
                     the stems in a behind the curtain special housed in a breeze block building somewhere near
@@ -86,17 +121,7 @@
             </div>
         </div>
         <div class="epk-column">
-            <div class="epk-gigs">
-                <h2>Upcoming shows</h2>
-                <ul>
-                    @foreach (var gig in Model.Gigs)
-                    {
-                        <li>
-                            <span class="bold">@gig.GigDate.ToString("MMMM dd, yyyy")</span> // @gig.Venue, @gig.Location
-                        </li>
-                    }
-                </ul>
-            </div>
+            
             <div class="epk-music-player">
                 <h2>Our Music</h2>
 
@@ -108,12 +133,7 @@
                     </a>
                 </iframe>
             </div>
-            <div class="epk-press">
-                <h2>Press reviews</h2>
-                <a target="_blank" href="http://www.divideandconquermusic.com/indie-music-album-reviews/blackhawkdown-prefix">Divide & Conquer</a>
-                <a target="_blank" href="http://jamsphere.com/reviews/blackhawkdown-prefix-this-is-what-heavy-rock-is-all-about">Jamsphere</a>
-                <a target="_blank" href="https://projectmetalmusic.wordpress.com/2016/07/10/blackhawkdown/">Project Metal Music</a>
-            </div>
+            
             <div class="epk-photos">
                 <h2>Photos</h2>
                 <div class="photo">
@@ -127,11 +147,10 @@
             <div class="epk-online-links">
                 <h2>BlackHawkDown Online</h2>
                 <div class="epk-link-icons">
-                    <a href="http://www.blackhawkdown.org.uk" class="website-icon"></a>
-                    <a href="http://www.facebook.com/blackhawkdownuk" class="facebook-icon"></a>
-                    <a href="http://www.youtube.com/user/blackhawkdownuk" class="youtube-icon"></a>
-                    <a href="http://www.twitter.com/blackhawkdownuk" class="twitter-icon"></a>
-                    <a href="http://www.soundcloud.co.uk/blackhawkdown-uk" class="soundcloud-icon"></a>
+                    <a href="http://www.blackhawkdown.org.uk" target="_blank" class="website-icon"></a>
+                    <a href="http://www.facebook.com/blackhawkdownuk" target="_blank" class="facebook-icon"></a>
+                    <a href="http://www.youtube.com/user/blackhawkdownuk" target="_blank" class="youtube-icon"></a>
+                    <a href="http://www.soundcloud.com/blackhawkdown-uk" target="_blank" class="soundcloud-icon"></a>
                 </div>
             </div>
         </div>

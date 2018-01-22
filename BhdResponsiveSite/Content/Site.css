@@ -1131,7 +1131,7 @@ section.module.parallax-4 {
 }
 
 .epk-photos img {
-    margin: 0 auto;
+    margin: 0 auto 10px;
     width: 70%;
     height: 100%;
 }
@@ -1140,7 +1140,32 @@ section.module.parallax-4 {
     text-align: left;
 }
 
-.epk-link-icons a {
+.epk-photos div.left, .epk-photos div.right {
+    height: 240px;
+    width: 49.5%;
+    margin: 1px;
+    background-size: cover;
+    box-sizing: border-box;
+}
+
+.epk-photos div.left {
+    background-image: url('/Content/press-kit/images/band.jpg');
+    display: inline-block;
+}
+
+.epk-photos div.right {
+    background-image: url('/Content/press-kit/images/BlackHawkDown1.jpg');
+    display: inline-block;
+}
+
+.epk-photos div.full-width {
+    width: 100%;
+    height: 200px;
+    background-size: cover;
+    margin: 1px;
+    background-image: url('/Content/press-kit/images/on-stage.jpg');
+}
+    .epk-link-icons a {
     display: inline-block;
     width: 95px;
     height: 95px;

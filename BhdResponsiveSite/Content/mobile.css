@@ -352,6 +352,9 @@
         display: block;
         width: 100%;
     }
+    .epk-link-icons {
+        text-align: center;
+    }
 }
 
 

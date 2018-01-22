@@ -1072,6 +1072,10 @@ section.module.parallax-4 {
         display: block;
     }
 
+.press-kit-page blockquote {
+    font-size: 11.5px;
+}
+
 .epk-row {
     display: block;
     width: 100%;

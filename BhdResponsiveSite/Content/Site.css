@@ -1096,7 +1096,7 @@ section.module.parallax-4 {
 .epk-column {
     float: left;
     width: 50%;
-    padding: 30px;
+    padding: 0 30px;
     text-align: left !important;
 }
 

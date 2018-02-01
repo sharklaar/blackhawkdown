@@ -11,15 +11,15 @@
     }
 
     section.module.parallax-2 {
-        background-image: url("/Content/images/BenBG1.png");
+        background-image: url("/Content/images/BenBG1_small.png");
     }
 
     section.module.parallax-3 {
-        background-image: url("/Content/images/BandBG1.png");
+        background-image: url("/Content/images/BandBG1_small.png");
     }
 
     section.module.parallax-4 {
-        background-image: url("/Content/images/Lee_BlackHawkDown_853x1280.png");
+        background-image: url("/Content/images/Lee_small.png");
         background-size: 160% !important;
     }
     .press-kit-social-links a {

@@ -2,7 +2,9 @@
 
 @media (max-width: 768px) {
     .video-block {
-        padding: 30px;
+        margin: 10px;
+        box-shadow: 0px 0px 12px 5px black;
+        padding: 0;
     }
     section.module.parallax-1 {
         background-image: url("/Content/images/bhdbg2_small.jpg");
@@ -17,7 +19,7 @@
     }
 
     section.module.parallax-4 {
-        background-image: url("/Content/images/bhdbg3_small.jpg");
+        background-image: url("/Content/images/Lee_BlackHawkDown_853x1280.png");
         background-size: 160% !important;
     }
     .press-kit-social-links a {

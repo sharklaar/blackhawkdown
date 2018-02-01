@@ -644,8 +644,8 @@ table.size-select {
     margin: 0 auto;
 }
 
-.home-page .video-block {
-    max-width: 800px;
+.video-block {
+    padding: 100px;
     margin: 0 auto;
 }
 
@@ -916,7 +916,7 @@ section.module.parallax-3 {
 }
 
 section.module.parallax-4 {
-    background-image: url("/Content/images/bhdbg3.jpg")
+    background-image: url("/Content/images/Lee_BlackHawkDown_853x1280.png")
 }
 
 @media all and (min-width: 600px) {

@@ -262,6 +262,11 @@
     <Content Include="Content\press-kit\images\ant-bass.jpg" />
     <Content Include="Content\press-kit\images\band.jpg" />
     <Content Include="Content\press-kit\images\ben-vocals.jpg" />
+    <Content Include="Content\press-kit\images\Ben_BlackHawkDown_1280x853.png" />
+    <Content Include="Content\press-kit\images\BlackHawkDown1_1280x853.png" />
+    <Content Include="Content\press-kit\images\BlackHawkDown2_1280x853.png" />
+    <Content Include="Content\press-kit\images\BlackHawkDown3_1280x853.png" />
+    <Content Include="Content\press-kit\images\BlackHawkDown4_1280x853.png" />
     <Content Include="Content\press-kit\images\on-stage.jpg" />
     <Content Include="Content\press-kit\images\BlackhawkDown-1-line.png" />
     <Content Include="Content\press-kit\images\BlackhawkDown-3-lines.png" />
@@ -279,8 +284,11 @@
     <Content Include="Content\press-kit\images\thumbs\BlackhawkDown-1-line-thumb.png" />
     <Content Include="Content\press-kit\images\thumbs\BlackhawkDown-3-lines-thumb.png" />
     <Content Include="Content\press-kit\images\thumbs\BlackHawkDown1-thumb.jpg" />
+    <Content Include="Content\press-kit\images\thumbs\BlackHawkDown1.png" />
     <Content Include="Content\press-kit\images\thumbs\BlackHawkDown2-thumb.jpg" />
     <Content Include="Content\press-kit\images\thumbs\BlackHawkDown3-thumb.jpg" />
+    <Content Include="Content\press-kit\images\thumbs\BlackHawkDown3.png" />
+    <Content Include="Content\press-kit\images\thumbs\BlackHawkDown4.png" />
     <Content Include="Content\press-kit\images\thumbs\generic-poster-thumb.png" />
     <Content Include="Content\press-kit\images\thumbs\hawk-skull-thumb.png" />
     <Content Include="Content\press-kit\images\thumbs\hawk-skull.png" />

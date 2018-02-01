@@ -217,6 +217,7 @@
     <Content Include="Content\images\about\tank.jpg" />
     <Content Include="Content\images\back-cover.png" />
     <Content Include="Content\images\band.jpg" />
+    <Content Include="Content\images\BenBG1.png" />
     <Content Include="Content\images\bgs\treadplate_background.jpg" />
     <Content Include="Content\images\bgs\treadplate_background_mobile.jpg" />
     <Content Include="Content\images\bhd-logo.png" />

@@ -147,7 +147,8 @@ namespace BhdResponsiveSite.Helpers
             catch (Exception ex)
             {
                 Console.WriteLine(ex);
-                return new List<GigDetail>();
+                throw;
+                //return new List<GigDetail>();
             }
             finally
             {

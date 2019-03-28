@@ -839,13 +839,14 @@ header {
 .gigs-section {
     padding: 20px 10px;
     font-size: 3rem;
-    color: whitesmoke;
+    color: black;
     width: 100%;
-    background-color: black;
+    background-color: whitesmoke;
+    text-shadow: 1px 1px 5px grey;
 }
 
     .gigs-section a {
-        color: whitesmoke;
+        color: black;
     }
 
     .gigs-section .row {
@@ -1009,12 +1010,14 @@ section.module.parallax-4 {
         text-align: left !important;
         padding-bottom: 10px;
         margin-bottom: 10px;
-        border-bottom: 1px solid rgba(227, 227, 227, 0.51);
+        border-bottom: 1px solid rgba(193, 176, 176, 0.5098039215686);
     }
 
 .gig-date-day {
+    box-shadow: -2px 2px 15px black;
     display: inline-block;
-    background-color: lightgray;
+    background-color: dodgerblue;
+    color: whitesmoke;
     border-radius: 5px;
     width: 75px;
     text-align: center;

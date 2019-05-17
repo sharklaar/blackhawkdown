@@ -865,59 +865,60 @@ header {
     margin: 0 auto
 }
 
-section.module:last-child {
-    margin-bottom: 0
+.cd-section {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
 }
 
-section.module h2 {
-    margin-bottom: 40px;
-    font-family: "Roboto Slab", serif;
+.cd-section--bg-fixed {
+    min-height: 100vh;
+    background-attachment: fixed;
     font-size: 30px
 }
 
-section.module p {
+.cd-section h1 {
+    color: whitesmoke;
+    font-size: 48px;
+    line-height: 1;
+    font-weight: 400;
+    text-align: center;
+    text-transform: uppercase;
+    text-shadow: 0 0 10px black;
+    padding-top: 40%;
+}
+
+.cd-section h2 {
     margin-bottom: 40px;
-    font-size: 16px;
-    font-weight: 300
+    font-size: 30px
 }
 
-    section.module p:last-child {
-        margin-bottom: 0
-    }
-
-section.module.content {
-    padding: 0
+.cd-section p {
+    padding: 0 50px;
+    font-size: 24px;
+    font-weight: 300;
+    text-align: center;
 }
 
-section.module.parallax {
-    padding: 100px 0;
-    background-size: cover
+/* backgrounds */
+.cd-section:nth-child(1) {
+    background-image: url("/Content/images/band-arch.jpg");
 }
 
-    section.module.parallax h1 {
-        color: whitesmoke;
-        font-size: 48px;
-        line-height: 1;
-        font-weight: 400;
-        text-align: center;
-        text-transform: uppercase;
-        text-shadow: 0 0 10px black
-    }
-
-section.module.parallax-1 {
-    background-image: url("/Content/images/bhdbg2.jpg")
+.cd-section:nth-child(2) {
+    background-color: var(--cd-color-2);
 }
 
-section.module.parallax-2 {
-    background-image: url("/Content/images/BenBG1.png")
+.cd-section:nth-child(3) {
+    background-image: url("/Content/images/band-in-line.jpg");
 }
 
-section.module.parallax-3 {
-    background-image: url("/Content/images/BandBG1.png")
+.cd-section:nth-child(4) {
+    background-color: var(--cd-color-2);
 }
 
-section.module.parallax-4 {
-    background-image: url("/Content/images/Lee_BlackHawkDown_853x1280.png")
+.cd-section:nth-child(5) {
+    background-image: url("/Content/images/band-steps.jpg");
 }
 
 @media all and (min-width: 600px) {

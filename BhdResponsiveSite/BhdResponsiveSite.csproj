@@ -216,6 +216,12 @@
     <Content Include="Content\images\about\shark.jpg" />
     <Content Include="Content\images\about\tank.jpg" />
     <Content Include="Content\images\back-cover.png" />
+    <Content Include="Content\images\band-arch-small.jpg" />
+    <Content Include="Content\images\band-arch.jpg" />
+    <Content Include="Content\images\band-in-line-small.jpg" />
+    <Content Include="Content\images\band-in-line.jpg" />
+    <Content Include="Content\images\band-steps-small.jpg" />
+    <Content Include="Content\images\band-steps.jpg" />
     <Content Include="Content\images\band.jpg" />
     <Content Include="Content\images\BandBG1.png" />
     <Content Include="Content\images\BandBG1_small.png" />

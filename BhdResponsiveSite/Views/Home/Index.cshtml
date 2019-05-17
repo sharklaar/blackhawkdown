@@ -8,7 +8,7 @@
 @model BhdResponsiveSite.Models.GigList
 
 <div>
-    <section class="module parallax parallax-2">
+    <section class="cd-section cd-section--bg-fixed">
         <div class="container" style="color: white;">
             <h1>Our music</h1>
             <p>Listen to our latest release, "Prefix", below... we have more music coming your way soon - the guys are in the studio as we speak preparing our first full-length album for your listening pleasure.</p>
@@ -16,7 +16,7 @@
         </div>
     </section>
 
-    <section class="module content">
+    <section class="cd-section">
         <div class="music-section col-md-12 container">
             <div class="col-md-5">
                 <iframe style="border: 0; width: 100%; height: 307px;"
@@ -42,13 +42,13 @@
         <div style="clear: both;"></div>
     </section>
 
-    <section class="module parallax parallax-3">
+    <section class="cd-section cd-section--bg-fixed">
         <div class="container">
             <h1>Upcoming shows</h1>
         </div>
     </section>
 
-    <section class="module content">
+    <section class="cd-section">
         <div class="gigs-section container">
             
             @for (var imonth = DateTime.Now.Month; imonth <= 12; imonth++)
@@ -86,7 +86,7 @@
             
     </section>
 
-    <section class="module parallax parallax-4">
+    <section class="cd-section cd-section--bg-fixed">
         <div class="container" style="color: white;">
             <h1>Latest video - FrEEman</h1>
         </div>

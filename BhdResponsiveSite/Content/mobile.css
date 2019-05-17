@@ -6,21 +6,25 @@
         box-shadow: 0px 0px 12px 5px black;
         padding: 0;
     }
-    section.module.parallax-1 {
-        background-image: url("/Content/images/bhdbg2_small.jpg");
+    /* backgrounds */
+    .cd-section:nth-child(1) {
+        background-image: url("/Content/images/band-arch-small.jpg");
     }
 
-    section.module.parallax-2 {
-        background-image: url("/Content/images/BenBG1_small.png");
+    .cd-section:nth-child(2) {
+        background-color: var(--cd-color-2);
     }
 
-    section.module.parallax-3 {
-        background-image: url("/Content/images/BandBG1_small.png");
+    .cd-section:nth-child(3) {
+        background-image: url("/Content/images/band-in-line-small.jpg");
     }
 
-    section.module.parallax-4 {
-        background-image: url("/Content/images/Lee_small.png");
-        background-size: 160% !important;
+    .cd-section:nth-child(4) {
+        background-color: var(--cd-color-2);
+    }
+
+    .cd-section:nth-child(5) {
+        background-image: url("/Content/images/band-steps-small.jpg");
     }
     .press-kit-social-links a {
         font-size: 0.8rem;

@@ -85,27 +85,27 @@
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 <script src="http://cdnjs.cloudflare.com/ajax/libs/knockout/2.3.0/knockout-min.js" type="text/javascript"></script>
-<script type="text/javascript">
-    (function() {
-
-        window.onscroll = function () {
-            updateParallaxPositions();
-        };
-
-        var parallax = document.querySelectorAll(".parallax");
-        var speed = 0.4;
-
-        function updateParallaxPositions() {
-            [].slice.call(parallax).forEach(function(el) {
-                var windowYOffset = window.pageYOffset;
-                var elementYOffset = el.offsetTop;
-                el.style.backgroundPosition = "50% " + ((windowYOffset - elementYOffset) * speed) + "px";
-            });
-        }
-
-        updateParallaxPositions();
-    })();
-</script>
+@* <script type="text/javascript"> *@
+@*     (function() { *@
+@* *@
+@*         window.onscroll = function () { *@
+@*             updateParallaxPositions(); *@
+@*         }; *@
+@* *@
+@*         var parallax = document.querySelectorAll(".parallax"); *@
+@*         var speed = 0.4; *@
+@* *@
+@*         function updateParallaxPositions() { *@
+@*             [].slice.call(parallax).forEach(function(el) { *@
+@*                 var windowYOffset = window.pageYOffset; *@
+@*                 var elementYOffset = el.offsetTop; *@
+@*                 el.style.backgroundPosition = "50% " + ((windowYOffset - elementYOffset) * speed) + "px"; *@
+@*             }); *@
+@*         } *@
+@* *@
+@*         updateParallaxPositions(); *@
+@*     })(); *@
+@* </script> *@
 @Scripts.Render("~/bundles/shared")
 @RenderSection("scripts", required: false)
 <script type="text/javascript">

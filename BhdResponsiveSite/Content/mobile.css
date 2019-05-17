@@ -7,7 +7,7 @@
         padding: 0;
     }
     .cd-section {
-        background-size: cover;
+        background-size: initial;
         background-repeat: no-repeat;
         background-position: center center;
     }

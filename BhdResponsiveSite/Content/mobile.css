@@ -6,6 +6,39 @@
         box-shadow: 0px 0px 12px 5px black;
         padding: 0;
     }
+    .cd-section {
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+
+    .cd-section--bg-fixed {
+        min-height: 100vh;
+        background-attachment: fixed;
+        font-size: 30px
+    }
+    .cd-section h1 {
+        color: whitesmoke;
+        font-size: 48px;
+        line-height: 1;
+        font-weight: 400;
+        text-align: center;
+        text-transform: uppercase;
+        text-shadow: 0 0 10px black;
+        padding-top: 40%;
+    }
+
+    .cd-section h2 {
+        margin-bottom: 40px;
+        font-size: 30px
+    }
+
+    .cd-section p {
+        padding: 0 50px;
+        font-size: 24px;
+        font-weight: 300;
+        text-align: center;
+    }
     /* backgrounds */
     .cd-section:nth-child(1) {
         background-image: url("/Content/images/band-arch-small.jpg");

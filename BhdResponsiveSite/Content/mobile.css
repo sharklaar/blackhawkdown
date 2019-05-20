@@ -7,7 +7,7 @@
         padding: 0;
     }
     .cd-section {
-        background-size: initial;
+        background-size: cover;
         background-repeat: no-repeat;
         background-position: center center;
     }
@@ -19,13 +19,13 @@
     }
     .cd-section h1 {
         color: whitesmoke;
-        font-size: 48px;
+        font-size: 32px;
         line-height: 1;
         font-weight: 400;
         text-align: center;
         text-transform: uppercase;
         text-shadow: 0 0 10px black;
-        padding-top: 40%;
+        padding-top: 20%;
     }
 
     .cd-section h2 {
@@ -35,7 +35,7 @@
 
     .cd-section p {
         padding: 0 50px;
-        font-size: 24px;
+        font-size: 20px;
         font-weight: 300;
         text-align: center;
     }

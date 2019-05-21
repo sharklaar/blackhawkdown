@@ -7,19 +7,29 @@
         padding: 0;
     }
     .cd-section {
-        background-size: cover;
+        background-image: none !important;
+        position: relative;
+    }
+    .cd-section--bg-fixed:before {
+        content: "";
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -10;
         background-repeat: no-repeat;
         background-position: center center;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
     }
 
-    .cd-section--bg-fixed {
-        min-height: 100vh;
-        background-position: top;
-        font-size: 30px
-    }
     .cd-section h1 {
         color: whitesmoke;
-        font-size: 32px;
+        font-size: 24px;
         line-height: 1;
         font-weight: 400;
         text-align: center;
@@ -34,30 +44,33 @@
     }
 
     .cd-section p {
-        padding: 0 50px;
-        font-size: 20px;
+        padding: 0;
+        font-size: 14px;
         font-weight: 300;
         text-align: center;
     }
     /* backgrounds */
-    .cd-section:nth-child(1) {
+    .cd-section-1:before {
         background-image: url("/Content/images/band-arch-small.jpg");
+        z-index: -5;
     }
 
     .cd-section:nth-child(2) {
         background-color: var(--cd-color-2);
     }
 
-    .cd-section:nth-child(3) {
+    .cd-section-2:before {
         background-image: url("/Content/images/band-in-line-small.jpg");
+        z-index: -4;
     }
 
     .cd-section:nth-child(4) {
         background-color: var(--cd-color-2);
     }
 
-    .cd-section:nth-child(5) {
+    .cd-section-3:before {
         background-image: url("/Content/images/band-steps-small.jpg");
+        z-index: -3;
     }
     .press-kit-social-links a {
         font-size: 0.8rem;

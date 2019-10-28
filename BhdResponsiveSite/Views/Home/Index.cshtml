@@ -50,38 +50,47 @@
 
     <section class="cd-section">
         <div class="gigs-section container">
-            
-            @for (var imonth = DateTime.Now.Month; imonth <= 12; imonth++)
+            @for (var iyear = DateTime.Now.Year; iyear <= 2025; iyear++)
             {
-                var imonth1 = imonth;
-                var monthContainsGigs = Model.Gigs.Any(x => x.Month == imonth1);
-
-                if (monthContainsGigs)
+                var yearContainsGigs = Model.Gigs.Any(x => x.Year == iyear);
+                if (yearContainsGigs)
                 {
-                    var monthName = new DateTime(DateTime.Now.Year, imonth, 1).ToString("MMMM", CultureInfo.InvariantCulture);
-                    <div class="gig-month">
-                    
-                        <h3>@monthName</h3>
+                    <div class="gig-year">@iyear</div>
+                    for (var imonth = 0; imonth <= 12; imonth++)
+                    {
+                        var imonth1 = imonth;
+                        var monthContainsGigs = Model.Gigs.Any(x => x.Month == imonth1 && x.Year == iyear);
 
-                        @foreach (var gig in Model.Gigs.Where(x => x.Month == imonth1))
-                        { 
-                            <div class="gig-detail">
-                            <div class="gig-date-day">@gig.Date</div>
-                                <div class="gig-venue-details">
-                                    <a href="@gig.LinkUrl"
-                                       target="_blank"
-                                       onclick="_gaq.push(['_trackEvent', 'Home Links', 'Click', 'Gigs Page'])">
-                                        @{ var gigTitle = gig.ExtraDetail ?? "BHD"; }
-                                        <div class="gig-venue">@gigTitle - @gig.Venue</div>
-                                        <div class="gig-location">@gig.Location</div>
-                                    </a>
-                                </div>
+                        if (monthContainsGigs)
+                        {
+                            var monthName = new DateTime(DateTime.Now.Year, imonth, 1).ToString("MMMM", CultureInfo.InvariantCulture);
+                            <div class="gig-month">
+
+                                <h3>@monthName</h3>
+
+                                @foreach (var gig in Model.Gigs.Where(x => x.Month == imonth1 && x.Year == iyear))
+                                {
+                                    <div class="gig-detail">
+                                        <div class="gig-date-day">@gig.Date</div>
+                                        <div class="gig-venue-details">
+                                            <a href="@gig.LinkUrl"
+                                               target="_blank"
+                                               onclick="_gaq.push(['_trackEvent', 'Home Links', 'Click', 'Gigs Page'])">
+                                                @{ var gigTitle = gig.ExtraDetail ?? "BHD"; }
+                                                <div class="gig-venue">@gigTitle - @gig.Venue</div>
+                                                <div class="gig-location">@gig.Location</div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                }
                             </div>
                         }
-                    </div>
+                    }
                 }
             }
-            
+
+
+
         </div>
             
     </section>

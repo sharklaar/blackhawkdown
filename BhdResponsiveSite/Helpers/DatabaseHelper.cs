@@ -11,10 +11,14 @@ namespace BhdResponsiveSite.Helpers
     {
         private string _connectionString;
 
+        public DatabaseHelper()
+        {
+            _connectionString = ConfigurationManager.ConnectionStrings["dbConnection"].ConnectionString
+                .Replace("{replaceme}", Environment.GetEnvironmentVariable("BHD_SITE"));
+        }
+
         public void WriteEmailToDatabase(EmailOnlyModel emailVm)
         {
-
-            _connectionString = ConfigurationManager.ConnectionStrings["dbConnection"].ConnectionString;
             var connection = new SqlConnection(_connectionString);
             connection.Open();
             try
@@ -35,7 +39,6 @@ namespace BhdResponsiveSite.Helpers
 
         public void SoftDeleteContact(EmailOnlyModel emailVm)
         {
-            _connectionString = ConfigurationManager.ConnectionStrings["dbConnection"].ConnectionString;
             var connection = new SqlConnection(_connectionString);
             connection.Open();
             try
@@ -54,7 +57,6 @@ namespace BhdResponsiveSite.Helpers
 
         public string GetFreeTrackCode()
         {
-            _connectionString = ConfigurationManager.ConnectionStrings["dbConnection"].ConnectionString;
             var connection = new SqlConnection(_connectionString);
             connection.Open();
             try
@@ -78,7 +80,6 @@ namespace BhdResponsiveSite.Helpers
         {
             var emails = new List<string>();
 
-            _connectionString = ConfigurationManager.ConnectionStrings["dbConnection"].ConnectionString;
             var connection = new SqlConnection(_connectionString);
             connection.Open();
             try
@@ -107,7 +108,6 @@ namespace BhdResponsiveSite.Helpers
         {
             var gigs = new List<GigDetail>();
 
-            _connectionString = ConfigurationManager.ConnectionStrings["dbConnection"].ConnectionString;
             var connection = new SqlConnection(_connectionString);
             try
             {

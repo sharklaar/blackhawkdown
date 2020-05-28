@@ -8,104 +8,114 @@
 @model BhdResponsiveSite.Models.GigList
 
     <div>
-
         <section class="cd-section cd-section-1 cd-section--bg-fixed">
             <div class="container" style="color: white;">
-                <h1>Our music</h1>
-                <p>Listen to our latest release, "Prefix", below... we have more music coming your way soon - the guys are in the studio as we speak preparing our first full-length album for your listening pleasure.</p>
-                <p>If you like what you hear, you can sign up to our newsletter to get a free track download, or you can buy the EP either online or get an actual, real-life physical CD!</p>
-            </div>
-        </section>
-
-        <section class="cd-section">
-            <div class="music-section col-md-12 container">
-                <div class="col-md-5">
-                    <iframe style="border: 0; width: 100%; height: 307px;"
-                            src="https://bandcamp.com/EmbeddedPlayer/album=1757988678/size=large/bgcol=333333/linkcol=0f91ff/artwork=small/transparent=true/"
-                            seamless>
-                        <a href="http://blackhawkdownuk.bandcamp.com/album/prefix">
-                            Prefix by BlackHawkDown
-                        </a>
-                    </iframe>
-                </div>
-                <div class="col-md-5 col-md-offset-1">
-                    <blockquote class="blockquote">
-                        To be honest every song I hear I want to scream out the words. It’s so infectious and empowering it takes you over, especially “Annie Who”.<br />
-                        <a href="http://jamsphere.com/reviews/blackhawkdown-prefix-this-is-what-heavy-rock-is-all-about" class="blockquote-reverse pull-right">Jamsphere</a>
-                    </blockquote>
-
-                    <blockquote class="blockquote">
-                        The sound of the band reminds me of Pantera meets Danzig. Hard to understand why they have not made international headlines yet! My favorite is "Vision Up".<br />
-                        <a href="https://projectmetalmusic.wordpress.com/2016/07/10/blackhawkdown/" class="blockquote-reverse pull-right">Project Metal Music</a>
-                    </blockquote>
-                </div>
-            </div>
-            <div style="clear: both;"></div>
-        </section>
-
-        <section class="cd-section cd-section-2 cd-section--bg-fixed">
-            <div class="container">
-                <h1>Upcoming shows</h1>
-            </div>
-        </section>
-
-        <section class="cd-section">
-            <div class="gigs-section container">
-                @for (var iyear = DateTime.Now.Year; iyear <= 2025; iyear++)
-                {
-                    var yearContainsGigs = Model.Gigs.Any(x => x.Year == iyear);
-                    if (yearContainsGigs)
-                    {
-                        <div class="gig-year">@iyear</div>
-                        for (var imonth = 0; imonth <= 12; imonth++)
-                        {
-                            var imonth1 = imonth;
-                            var monthContainsGigs = Model.Gigs.Any(x => x.Month == imonth1 && x.Year == iyear);
-
-                            if (monthContainsGigs)
-                            {
-                                var monthName = new DateTime(DateTime.Now.Year, imonth, 1).ToString("MMMM", CultureInfo.InvariantCulture);
-                                <div class="gig-month">
-
-                                    <h3>@monthName</h3>
-
-                                    @foreach (var gig in Model.Gigs.Where(x => x.Month == imonth1 && x.Year == iyear))
-                                    {
-                                        <div class="gig-detail">
-                                            <div class="gig-date-day">@gig.Date</div>
-                                            <div class="gig-venue-details">
-                                                <a href="@gig.LinkUrl"
-                                                   target="_blank"
-                                                   onclick="_gaq.push(['_trackEvent', 'Home Links', 'Click', 'Gigs Page'])">
-                                                    @{ var gigTitle = gig.ExtraDetail ?? "BHD"; }
-                                                    <div class="gig-venue">@gigTitle - @gig.Venue</div>
-                                                    <div class="gig-location">@gig.Location</div>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    }
-                                </div>
-                            }
-                        }
-                    }
-                }
-
-
-
-            </div>
-
-        </section>
-        <section class="cd-section cd-section-3 cd-section--bg-fixed">
-            <div class="container" style="color: white;">
-                <h1>Latest video - Calling</h1>
-                <p>The first video from the upcoming album "Chapter One". Look out for the album release coming soon!</p>
+                <h1>Album news!</h1>
+                <p>
+                    The long-awaited "Chapter One" has been scheduled for release on 31st July 2020! It will be
+                    <a href="https://blackhawkdownuk.bandcamp.com/" target="_blank">available for pre-order</a> on 29th May.
+                </p>
+                <p>The first single, "Sick Kind", will be released on 29th May, with the video following on 5th June.</p>
             </div>
             <div class="video-block">
                 <div id="yt-wrapper" class="full-width-video-container main-video promo">
                     <iframe width="460" height="234" src="https://www.youtube.com/embed/SarCKsgXKV4?rel=0" frameborder="0" allowfullscreen></iframe>
                 </div>
             </div>
+            <div class="container col-md-12" style="background-color: black; color: white; text-align: center;">
+                <h2>Latest video - Calling</h2>
+                <p>
+                    Here's our latest video, "Calling", from the upcoming album.
+                </p>
+            </div>
         </section>
+        <section class="cd-section">
+           
+        </section>
+
+            <section class="cd-section cd-section-2 cd-section--bg-fixed">
+                <div class="container" style="color: white;">
+                    <h1>Our music</h1>
+                    <p>Listen to our latest release, "Prefix", below... we have more music coming your way soon - the guys are in the studio as we speak preparing our first full-length album for your listening pleasure.</p>
+                    <p>If you like what you hear, you can sign up to our newsletter to get a free track download, or you can buy the EP either online or get an actual, real-life physical CD!</p>
+                </div>
+            </section>
+
+            <section class="cd-section">
+                <div class="music-section col-md-12 container">
+                    <div class="col-md-5">
+                        <iframe style="border: 0; width: 100%; height: 307px;"
+                                src="https://bandcamp.com/EmbeddedPlayer/album=1757988678/size=large/bgcol=333333/linkcol=0f91ff/artwork=small/transparent=true/"
+                                seamless>
+                            <a href="http://blackhawkdownuk.bandcamp.com/album/prefix">
+                                Prefix by BlackHawkDown
+                            </a>
+                        </iframe>
+                    </div>
+                    <div class="col-md-5 col-md-offset-1">
+                        <blockquote class="blockquote">
+                            To be honest every song I hear I want to scream out the words. It’s so infectious and empowering it takes you over, especially “Annie Who”.<br />
+                            <a href="http://jamsphere.com/reviews/blackhawkdown-prefix-this-is-what-heavy-rock-is-all-about" class="blockquote-reverse pull-right">Jamsphere</a>
+                        </blockquote>
+
+                        <blockquote class="blockquote">
+                            The sound of the band reminds me of Pantera meets Danzig. Hard to understand why they have not made international headlines yet! My favorite is "Vision Up".<br />
+                            <a href="https://projectmetalmusic.wordpress.com/2016/07/10/blackhawkdown/" class="blockquote-reverse pull-right">Project Metal Music</a>
+                        </blockquote>
+                    </div>
+                </div>
+                <div style="clear: both;"></div>
+            </section>
+
+            <section class="cd-section cd-section-3 cd-section--bg-fixed">
+                <div class="container">
+                    <h1>Upcoming shows</h1>
+                </div>
+            </section>
+
+            <section class="cd-section">
+                <div class="gigs-section container">
+                    <p>Due to the COVID situation, all gigs are cancelled until further notice :(</p>
+                    @*@for (var iyear = DateTime.Now.Year; iyear <= 2025; iyear++)
+                    {
+                        var yearContainsGigs = Model.Gigs.Any(x => x.Year == iyear);
+                        if (yearContainsGigs)
+                        {
+                            <div class="gig-year">@iyear</div>
+                            for (var imonth = 0; imonth <= 12; imonth++)
+                            {
+                                var imonth1 = imonth;
+                                var monthContainsGigs = Model.Gigs.Any(x => x.Month == imonth1 && x.Year == iyear);
+
+                                if (monthContainsGigs)
+                                {
+                                    var monthName = new DateTime(DateTime.Now.Year, imonth, 1).ToString("MMMM", CultureInfo.InvariantCulture);
+                                    <div class="gig-month">
+
+                                        <h3>@monthName</h3>
+
+                                        @foreach (var gig in Model.Gigs.Where(x => x.Month == imonth1 && x.Year == iyear))
+                                        {
+                                            <div class="gig-detail">
+                                                <div class="gig-date-day">@gig.Date</div>
+                                                <div class="gig-venue-details">
+                                                    <a href="@gig.LinkUrl"
+                                                       target="_blank"
+                                                       onclick="_gaq.push(['_trackEvent', 'Home Links', 'Click', 'Gigs Page'])">
+                                                        @{ var gigTitle = gig.ExtraDetail ?? "BHD"; }
+                                                        <div class="gig-venue">@gigTitle - @gig.Venue</div>
+                                                        <div class="gig-location">@gig.Location</div>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        }
+                                    </div>
+                                }
+                            }
+                        }
+                    }*@
+                </div>
+            </section>
     </div>
 @section Scripts {
     <script>

@@ -645,7 +645,7 @@ table.size-select {
 }
 
 .video-block {
-    padding: 100px;
+    padding: 100px 100px 0 100px;
     margin: 0 auto;
 }
 
@@ -869,6 +869,15 @@ header {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
+}
+
+.cd-section a {
+    color: lightblue;
+    text-decoration: underline;
+}
+
+.cd-section a:hover {
+    text-decoration: none;
 }
 
 .cd-section--bg-fixed {
